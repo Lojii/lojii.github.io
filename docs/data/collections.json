@@ -1,7 +1,402 @@
 {
-  "lastUpdated": "2026-01-22T08:51:12.209Z",
-  "total": 31,
+  "lastUpdated": "2026-01-22T09:45:19.041Z",
+  "total": 51,
   "items": [
+    {
+      "id": "codeformer-VcETN9",
+      "type": "repo",
+      "name": "CodeFormer",
+      "nameEn": "CodeFormer",
+      "summary": "迈向基于码本查找Transformer的鲁棒盲人脸复原",
+      "url": "https://github.com/sczhou/CodeFormer",
+      "thumbnail": "/assets/images/codeformer-VcETN9/2.jpg",
+      "category": "ai",
+      "tags": [
+        "照片恢复"
+      ],
+      "stars": 17765,
+      "forks": 3693,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "zulip-oFaRzh",
+      "type": "repo",
+      "name": "zulip",
+      "nameEn": "zulip",
+      "summary": "开源的团队聊天应用\nhttps://zulip.com/",
+      "url": "https://github.com/zulip/zulip",
+      "thumbnail": "/assets/images/zulip-oFaRzh/1.jpg",
+      "category": "tools",
+      "tags": [
+        "聊天"
+      ],
+      "stars": 24279,
+      "forks": 9391,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "social-auto-upload-kgplu9",
+      "type": "repo",
+      "name": "social-auto-upload",
+      "nameEn": "social-auto-upload",
+      "summary": "自动化上传视频到社交媒体：抖音、小红书、视频号、tiktok、youtube、bilibili",
+      "url": "https://github.com/dreammis/social-auto-upload",
+      "thumbnail": "/assets/images/social-auto-upload-kgplu9/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "自动化",
+        "视频"
+      ],
+      "stars": 8147,
+      "forks": 1479,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "paddleocr-8WcFzM",
+      "type": "repo",
+      "name": "PaddleOCR",
+      "nameEn": "PaddleOCR",
+      "summary": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "thumbnail": "/assets/images/paddleocr-8WcFzM/thumb.gif",
+      "category": "ai",
+      "tags": [
+        "ocr"
+      ],
+      "stars": 68589,
+      "forks": 9682,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "edge-tts-vwVrRp",
+      "type": "repo",
+      "name": "edge-tts",
+      "nameEn": "edge-tts",
+      "summary": "使用 Microsoft Edge 的在线文本转语音服务",
+      "url": "https://github.com/rany2/edge-tts",
+      "thumbnail": "/assets/images/edge-tts-vwVrRp/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "tts"
+      ],
+      "stars": 9840,
+      "forks": 940,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "lookscanned-io-oozgOH",
+      "type": "repo",
+      "name": "lookscanned.io",
+      "nameEn": "lookscanned.io",
+      "summary": "把 PDF 和文档变成逼真的扫描件\nhttps://lookscanned.io/",
+      "url": "https://github.com/lookscanned/lookscanned.io",
+      "thumbnail": "/assets/images/lookscanned-io-oozgOH/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "pdf"
+      ],
+      "stars": 3422,
+      "forks": 280,
+      "language": "Vue",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "moneyprinterturbo-ucCSzK",
+      "type": "repo",
+      "name": "MoneyPrinterTurbo",
+      "nameEn": "MoneyPrinterTurbo",
+      "summary": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "thumbnail": "/assets/images/moneyprinterturbo-ucCSzK/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "自动化"
+      ],
+      "stars": 49091,
+      "forks": 6964,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "ebook2audiobook-4OcsO6",
+      "type": "repo",
+      "name": "ebook2audiobook",
+      "nameEn": "ebook2audiobook",
+      "summary": "将电子书转换为有声书，支持语音克隆及1158多种语言！",
+      "url": "https://github.com/DrewThomasson/ebook2audiobook",
+      "thumbnail": null,
+      "category": "ai",
+      "tags": [
+        "电子书",
+        "语音"
+      ],
+      "stars": 17036,
+      "forks": 1375,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "genesis-XS1Uii",
+      "type": "repo",
+      "name": "Genesis 通用物理引擎",
+      "nameEn": "Genesis",
+      "summary": "Genesis 是专为 机器人/嵌入式 AI/物理 AI 应用设计的通用物理平台，集成了以下核心功能：\n\n通用物理引擎: 从底层重建,支持多种材料和物理现象模拟\n机器人模拟平台: 轻量、高速、Python友好的开发环境\n真实感渲染: 内置光线追踪渲染系统\n生成数据引擎: 自然语言驱动的多模态数据生成",
+      "url": "https://github.com/Genesis-Embodied-AI/Genesis",
+      "thumbnail": "/assets/images/genesis-XS1Uii/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "机器人"
+      ],
+      "stars": 28001,
+      "forks": 2593,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "ai-kOiECk",
+      "type": "repo",
+      "name": "AI首席情报官",
+      "nameEn": "wiseflow",
+      "summary": "能够智能监控、追踪包括主流社交媒体、网站、RSS、搜索引擎在内的各类网络信源，并从中智能提取你最关注的信息",
+      "url": "https://github.com/TeamWiseFlow/wiseflow",
+      "thumbnail": "/assets/images/ai-kOiECk/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "资讯",
+        "新闻",
+        "爬虫"
+      ],
+      "stars": 8022,
+      "forks": 1406,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "pdf-9o35ee",
+      "type": "repo",
+      "name": "PDF 翻译",
+      "nameEn": "PDFMathTranslate",
+      "summary": "科学 PDF 文档翻译及双语对照工具\n\n📊 保留公式、图表、目录和注释 (预览效果)\n🌐 支持 多种语言 和 诸多翻译服务\n🤖 提供 命令行工具，图形交互界面，以及 容器化部署\n\n基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/MCP/Docker/Zotero\n\nhttps://pdf2zh.com/",
+      "url": "https://github.com/PDFMathTranslate/PDFMathTranslate",
+      "thumbnail": "/assets/images/pdf-9o35ee/thumb.gif",
+      "category": "ai",
+      "tags": [
+        "pdf",
+        "翻译"
+      ],
+      "stars": 31431,
+      "forks": 2828,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "newsnow-QwKyAb",
+      "type": "repo",
+      "name": "newsnow",
+      "nameEn": "newsnow",
+      "summary": "每日实时热榜，类似于今日热榜\nhttps://newsnow.busiyi.world/\n",
+      "url": "https://github.com/ourongxing/newsnow",
+      "thumbnail": "/assets/images/newsnow-QwKyAb/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "新闻",
+        "爬虫"
+      ],
+      "stars": 17498,
+      "forks": 5032,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "-7bGXn6",
+      "type": "repo",
+      "name": "卡卡字幕助手",
+      "nameEn": "VideoCaptioner",
+      "summary": "🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手 - 视频字幕生成、断句、校正、字幕翻译全流程处理！- A powered tool for easy and efficient video subtitling.",
+      "url": "https://github.com/WEIFENG2333/VideoCaptioner",
+      "thumbnail": "/assets/images/-7bGXn6/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "字幕",
+        "自动化",
+        "翻译"
+      ],
+      "stars": 12880,
+      "forks": 1032,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "videolingo-YlzHAA",
+      "type": "repo",
+      "name": "VideoLingo",
+      "nameEn": "VideoLingo",
+      "summary": "一站式视频翻译本地化配音工具，能够一键生成 Netflix 级别的高质量字幕，告别生硬机翻，告别多行字幕，还能加上高质量的克隆配音，让全世界的知识能够跨越语言的障碍共享。\nhttps://videolingo.io/zh",
+      "url": "https://github.com/Huanshere/VideoLingo",
+      "thumbnail": "/assets/images/videolingo-YlzHAA/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "自动化",
+        "字幕",
+        "翻译"
+      ],
+      "stars": 15729,
+      "forks": 1621,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "fish-speech-vxWzet",
+      "type": "repo",
+      "name": "fish-speech",
+      "nameEn": "fish-speech",
+      "summary": "真人级语音生成 & 声音克隆\nhttps://speech.fish.audio/",
+      "url": "https://github.com/fishaudio/fish-speech",
+      "thumbnail": "/assets/images/fish-speech-vxWzet/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "声音克隆"
+      ],
+      "stars": 24674,
+      "forks": 2045,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "-ZNrOGb",
+      "type": "repo",
+      "name": "自媒体平台爬虫",
+      "nameEn": "MediaCrawler",
+      "summary": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫\nhttps://nanmicoder.github.io/MediaCrawler/",
+      "url": "https://github.com/NanmiCoder/MediaCrawler",
+      "thumbnail": null,
+      "category": "tools",
+      "tags": [
+        "爬虫"
+      ],
+      "stars": 43060,
+      "forks": 9507,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "proxypin-ZQ7Thr",
+      "type": "repo",
+      "name": "proxypin",
+      "nameEn": "proxypin",
+      "summary": "开源免费抓包工具，支持Windows、Mac、Android、IOS、Linux 全平台系统",
+      "url": "https://github.com/wanghongenpin/proxypin",
+      "thumbnail": "/assets/images/proxypin-ZQ7Thr/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "抓包",
+        "flutter"
+      ],
+      "stars": 11441,
+      "forks": 998,
+      "language": "Dart",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "funasr-PQA3Jr",
+      "type": "repo",
+      "name": "FunASR",
+      "nameEn": "FunASR",
+      "summary": "FunASR 是一个基础语音识别工具包，提供多种功能，包括语音识别（ASR）、语音端点检测（VAD）、标点恢复、语言模型、说话人验证、说话人分离和多人对话语音识别等。FunASR 提供了便捷的脚本和教程，支持预训练好的模型的推理与微调。",
+      "url": "https://github.com/modelscope/FunASR",
+      "thumbnail": "/assets/images/funasr-PQA3Jr/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "语音识别"
+      ],
+      "stars": 14600,
+      "forks": 1527,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "cobalt-ify5N5",
+      "type": "repo",
+      "name": "cobalt",
+      "nameEn": "cobalt",
+      "summary": "视频下载器\nhttps://cobalt.tools/\n",
+      "url": "https://github.com/imputnet/cobalt",
+      "thumbnail": "/assets/images/cobalt-ify5N5/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "视频下载"
+      ],
+      "stars": 38223,
+      "forks": 3158,
+      "language": "Svelte",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "-WZr906",
+      "type": "repo",
+      "name": "妙幕",
+      "nameEn": "SmartSub",
+      "summary": "「妙幕」是一款跨平台客户端工具，可以批量为视频或者音频生成字幕文件，并支持对字幕进行翻译，支持百度、火山、openai、ollama、deepseek 等多家翻译\nhttps://smartsub.lxd.one/\n",
+      "url": "https://github.com/buxuku/SmartSub",
+      "thumbnail": "/assets/images/-WZr906/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "自动化",
+        "字幕"
+      ],
+      "stars": 3468,
+      "forks": 237,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
     {
       "id": "assetripper-QJgXMo",
       "type": "repo",
