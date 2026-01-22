@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Stars 管理后台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #1a1a2e;
+            --card: #16213e;
+            --accent: #0f3460;
+            --primary: #e94560;
+            --text: #eee;
+            --text-dim: #999;
+            --success: #27ae60;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--accent);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: var(--accent);
+            border: none;
+            border-radius: 8px;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .tab.active {
+            background: var(--primary);
+        }
+
+        .panel {
+            display: none;
+        }
+
+        .panel.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            background: var(--card);
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: var(--text);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: #fff;
+        }
+
+        .btn-danger {
+            background: #c0392b;
+            color: #fff;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .form-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-title .mode-badge {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: var(--primary);
+        }
+
+        .form-title .mode-badge.edit {
+            background: var(--success);
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: var(--accent);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .list-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .list-item-name {
+            font-weight: 500;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .list-item-meta {
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        .list-item-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 16px 24px;
+            border-radius: 8px;
+            background: var(--success);
+            color: #fff;
+            display: none;
+            z-index: 1000;
+        }
+
+        .toast.error {
+            background: #c0392b;
+        }
+
+        .toast.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--accent);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .log {
+            background: #0d0d1a;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 13px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .preview-link {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            background: var(--accent);
+            margin-left: 8px;
+        }
+
+        .badge.archived {
+            background: #7f8c8d;
+        }
+
+        .image-preview {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .image-preview img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid var(--accent);
+        }
+
+        .image-preview .remove-img {
+            position: relative;
+        }
+
+        .image-preview .remove-img::after {
+            content: '×';
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            width: 18px;
+            height: 18px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        /* 图片上传区域 */
+        .upload-zone {
+            display: block;
+            border: 2px dashed var(--accent);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--card);
+        }
+
+        .upload-zone:hover,
+        .upload-zone.dragover {
+            border-color: var(--primary);
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        .upload-zone input[type="file"] {
+            display: none !important;
+        }
+
+        .upload-zone p {
+            color: var(--text-dim);
+            margin-bottom: 8px;
+            pointer-events: none;
+        }
+
+        .upload-zone .hint {
+            font-size: 12px;
+            color: var(--text-dim);
+            pointer-events: none;
+        }
+
+        .upload-preview {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .upload-preview-item {
+            position: relative;
+            width: 100px;
+            height: 75px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--accent);
+        }
+
+        .upload-preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .upload-preview-item .remove-btn {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        .upload-preview-item .file-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 10px;
+            padding: 2px 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>⭐ GitHub Stars 管理</h1>
+            <a href="/docs/" target="_blank" class="preview-link">预览博客 →</a>
+        </header>
+        <div class="tabs">
+            <button class="tab active" data-tab="add">➕ 添加/编辑</button>
+            <button class="tab" data-tab="list">📋 管理列表</button>
+            <button class="tab" data-tab="batch">🔄 批量更新</button>
+        </div>
+
+        <!-- 添加/编辑收藏 -->
+        <div class="panel active" id="panel-add">
+            <div class="card">
+                <div class="form-title">
+                    <span id="formTitleText">添加新收藏</span>
+                    <span class="mode-badge" id="modeBadge">新增模式</span>
+                </div>
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label>URL地址</label>
+                    <div style="display:flex;gap:8px">
+                        <input type="text" id="addUrl" placeholder="输入 GitHub 仓库或文章 URL">
+                        <button class="btn btn-secondary" onclick="parseUrl()">解析</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>中文名称 *</label><input type="text" id="addName"></div>
+                    <div class="form-group"><label>英文名称</label><input type="text" id="addNameEn"></div>
+                </div>
+                <div class="form-group"><label>简介 *</label><textarea id="addSummary" rows="2"></textarea></div>
+                <div class="form-group"><label>详细描述</label><textarea id="addDescription" rows="4"></textarea></div>
+                <div class="form-row">
+                    <div class="form-group"><label>分类 *</label><select id="addCategory"></select></div>
+                    <div class="form-group"><label>标签 (逗号分隔)</label><input type="text" id="addTags"></div>
+                </div>
+                <div class="form-group">
+                    <label>当前图片</label>
+                    <div class="image-preview" id="currentImages"></div>
+                </div>
+                <div class="form-group"><label>添加图片URL (每行一个)</label><textarea id="addImages" rows="3"
+                        placeholder="https://..."></textarea></div>
+                <div class="form-group">
+                    <label>上传图片 (支持多选、拖拽)</label>
+                    <label class="upload-zone" id="uploadZone">
+                        <input type="file" id="addFiles" multiple accept="image/*" onchange="handleFileSelect(event)">
+                        <p>📁 点击选择图片 或 拖拽图片到此处</p>
+                        <span class="hint">支持 JPG、PNG、GIF、WebP，可多选</span>
+                    </label>
+                    <div class="upload-preview" id="uploadPreview"></div>
+                </div>
+                <div class="form-group"><label>个人备注</label><textarea id="addNotes" rows="2"></textarea></div>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="addArchived">
+                        <label for="addArchived" style="margin-bottom:0">归档（不在首页显示）</label>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="submitBtn" onclick="submitItem()">添加收藏</button>
+                    <button class="btn btn-secondary" onclick="clearForm()">清空/取消</button>
+                    <button class="btn btn-success" id="refetchBtn" style="display:none"
+                        onclick="refetchContent()">重新抓取原文</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 管理列表 -->
+        <div class="panel" id="panel-list">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">收藏列表 (<span id="totalCount">0</span>)</span>
+                    <input type="text" id="listSearch" placeholder="搜索..." style="width:200px;padding:8px">
+                </div>
+                <div id="listItems"></div>
+            </div>
+        </div>
+
+        <!-- 批量更新 -->
+        <div class="panel" id="panel-batch">
+            <div class="card">
+                <h3 style="margin-bottom:16px">批量更新 GitHub 信息</h3>
+                <p style="color:var(--text-dim);margin-bottom:16px">自动获取所有 GitHub 仓库的最新 Stars、Forks、语言、更新时间等信息。</p>
+                <button class="btn btn-primary" id="batchBtn" onclick="batchUpdate()">开始更新</button>
+                <div id="batchProgress" style="display:none;margin-top:20px">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="progressFill"></div>
+                    </div>
+                    <div id="progressText" style="font-size:13px;color:var(--text-dim)"></div>
+                </div>
+                <div id="batchLog" class="log" style="display:none;margin-top:16px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script>
+        let collections = { items: [] }, categories = { categories: [], tags: [] }, parsedData = null, editMode = false, editingItem = null, selectedFiles = [];
+
+        async function init() {
+            [collections, categories] = await Promise.all([
+                fetch('/api/collections').then(r => r.json()),
+                fetch('/api/categories').then(r => r.json())
+            ]);
+            renderCategories();
+            renderList();
+            initUploadZone();
+        }
+
+        // 处理文件选择
+        function handleFileSelect(e) {
+            const files = Array.from(e.target.files);
+            if (files.length) {
+                addFiles(files);
+            }
+            e.target.value = ''; // 清空以便再次选择相同文件
+        }
+
+        // 初始化上传区域（只处理拖拽）
+        function initUploadZone() {
+            const zone = document.getElementById('uploadZone');
+
+            // 阻止默认拖拽行为
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                zone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+            });
+
+            // 拖拽进入/悬停
+            ['dragenter', 'dragover'].forEach(eventName => {
+                zone.addEventListener(eventName, () => {
+                    zone.classList.add('dragover');
+                });
+            });
+
+            // 拖拽离开
+            ['dragleave', 'drop'].forEach(eventName => {
+                zone.addEventListener(eventName, () => {
+                    zone.classList.remove('dragover');
+                });
+            });
+
+            // 拖拽放下
+            zone.addEventListener('drop', (e) => {
+                const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+                if (files.length) {
+                    addFiles(files);
+                }
+            });
+        }
+
+        // 添加文件到列表
+        function addFiles(files) {
+            selectedFiles = [...selectedFiles, ...files];
+            renderUploadPreview();
+        }
+
+        // 移除文件
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+            renderUploadPreview();
+        }
+
+        // 渲染上传预览
+        function renderUploadPreview() {
+            const preview = document.getElementById('uploadPreview');
+            if (!selectedFiles.length) {
+                preview.innerHTML = '';
+                return;
+            }
+
+            preview.innerHTML = selectedFiles.map((file, i) => {
+                const url = URL.createObjectURL(file);
+                return `
+          <div class="upload-preview-item">
+            <img src="${url}" alt="${file.name}">
+            <button class="remove-btn" onclick="removeFile(${i})">×</button>
+            <div class="file-name">${file.name}</div>
+          </div>
+        `;
+            }).join('');
+        }
+
+        async function init() {
+            [collections, categories] = await Promise.all([
+                fetch('/api/collections').then(r => r.json()),
+                fetch('/api/categories').then(r => r.json())
+            ]);
+            renderCategories();
+            renderList();
+        }
+
+        function renderCategories() {
+            const sel = document.getElementById('addCategory');
+            sel.innerHTML = categories.categories.map(c => `<option value="${c.id}">${c.icon} ${c.name}</option>`).join('');
+        }
+
+        function renderList() {
+            const search = document.getElementById('listSearch').value.toLowerCase();
+            const items = collections.items.filter(i => !search || i.name.toLowerCase().includes(search) || i.tags?.some(t => t.includes(search)));
+            document.getElementById('totalCount').textContent = collections.items.length;
+            document.getElementById('listItems').innerHTML = items.length ? items.map(i => `
+        <div class="list-item">
+          <div class="list-item-info">
+            <div class="list-item-name">${i.name} ${i.archived ? '<span class="badge archived">已归档</span>' : ''}</div>
+            <div class="list-item-meta">⭐${i.stars || 0} · ${i.category} · ${i.tags?.slice(0, 3).join(', ') || '无标签'}</div>
+          </div>
+          <div class="list-item-actions">
+            <button class="btn btn-success btn-sm" onclick="editItem('${i.id}')">编辑</button>
+            <button class="btn btn-secondary btn-sm" onclick="toggleArchive('${i.id}', ${!i.archived})">${i.archived ? '取消归档' : '归档'}</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteItem('${i.id}')">删除</button>
+          </div>
+        </div>
+      `).join('') : '<p style="color:var(--text-dim);text-align:center;padding:40px">暂无数据</p>';
+        }
+
+        async function editItem(id) {
+            try {
+                showToast('加载中...');
+                const item = await fetch(`/api/items/${id}`).then(r => r.json());
+                if (item.error) throw new Error(item.error);
+
+                editMode = true;
+                editingItem = item;
+                selectedFiles = []; // 清空已选择的文件
+                document.getElementById('editId').value = id;
+                document.getElementById('addUrl').value = item.url || '';
+                document.getElementById('addName').value = item.name || '';
+                document.getElementById('addNameEn').value = item.nameEn || '';
+                document.getElementById('addSummary').value = item.summary || '';
+                document.getElementById('addDescription').value = item.description || '';
+                document.getElementById('addCategory').value = item.category || '';
+                document.getElementById('addTags').value = (item.tags || []).join(', ');
+                document.getElementById('addNotes').value = item.notes || '';
+                document.getElementById('addArchived').checked = item.archived || false;
+                document.getElementById('addImages').value = '';
+                document.getElementById('addFiles').value = '';
+                document.getElementById('uploadPreview').innerHTML = ''; // 清空上传预览
+
+                // 显示当前图片
+                const imgPreview = document.getElementById('currentImages');
+                imgPreview.innerHTML = (item.images || []).map((src, i) =>
+                    `<div class="remove-img" onclick="removeImage(${i})"><img src="${src}" alt="图片${i + 1}"></div>`
+                ).join('') || '<span style="color:var(--text-dim);font-size:13px">暂无图片</span>';
+
+                // 更新UI状态
+                document.getElementById('formTitleText').textContent = `编辑: ${item.name}`;
+                document.getElementById('modeBadge').textContent = '编辑模式';
+                document.getElementById('modeBadge').classList.add('edit');
+                document.getElementById('submitBtn').textContent = '保存修改';
+                document.getElementById('refetchBtn').style.display = 'inline-block';
+
+                // 切换到添加/编辑面板
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+                document.querySelector('[data-tab="add"]').classList.add('active');
+                document.getElementById('panel-add').classList.add('active');
+
+                showToast('已加载，可以编辑');
+            } catch (e) { showToast(e.message, true); }
+        }
+
+        function removeImage(index) {
+            if (!editingItem || !confirm('确定移除这张图片吗？')) return;
+            editingItem.images.splice(index, 1);
+            const imgPreview = document.getElementById('currentImages');
+            imgPreview.innerHTML = editingItem.images.map((src, i) =>
+                `<div class="remove-img" onclick="removeImage(${i})"><img src="${src}" alt="图片${i + 1}"></div>`
+            ).join('') || '<span style="color:var(--text-dim);font-size:13px">暂无图片</span>';
+        }
+
+        async function parseUrl() {
+            const url = document.getElementById('addUrl').value.trim();
+            if (!url) return showToast('请输入 URL', true);
+            try {
+                showToast('正在解析...');
+                parsedData = await fetch('/api/parse-url', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url }) }).then(r => r.json());
+                if (parsedData.error) throw new Error(parsedData.error);
+                document.getElementById('addName').value = parsedData.name || '';
+                document.getElementById('addNameEn').value = parsedData.nameEn || parsedData.name || '';
+                document.getElementById('addSummary').value = parsedData.summary || '';
+                document.getElementById('addTags').value = (parsedData.github?.topics || []).join(', ');
+                showToast('解析成功');
+            } catch (e) { showToast(e.message, true); }
+        }
+
+        async function submitItem() {
+            const id = document.getElementById('editId').value;
+            const data = {
+                url: document.getElementById('addUrl').value,
+                name: document.getElementById('addName').value,
+                nameEn: document.getElementById('addNameEn').value,
+                summary: document.getElementById('addSummary').value,
+                description: document.getElementById('addDescription').value,
+                category: document.getElementById('addCategory').value,
+                tags: document.getElementById('addTags').value.split(',').map(t => t.trim().toLowerCase()).filter(Boolean),
+                imageUrls: document.getElementById('addImages').value.split('\n').map(s => s.trim()).filter(Boolean),
+                notes: document.getElementById('addNotes').value,
+                archived: document.getElementById('addArchived').checked,
+                type: parsedData?.type || editingItem?.type || 'repo',
+                github: parsedData?.github || editingItem?.github,
+                homepage: parsedData?.homepage || editingItem?.homepage
+            };
+
+            if (!data.name) return showToast('请填写名称', true);
+            if (!data.summary) return showToast('请填写简介', true);
+
+            const formData = new FormData();
+            formData.append('data', JSON.stringify(editMode ? { ...data, images: editingItem?.images } : data));
+            // 使用 selectedFiles 数组而不是 input.files
+            for (const f of selectedFiles) formData.append('files', f);
+
+            try {
+                showToast(editMode ? '正在保存...' : '正在添加...');
+                const url = editMode ? `/api/items/${id}` : '/api/items';
+                const method = editMode ? 'PUT' : 'POST';
+                const res = await fetch(url, { method, body: formData }).then(r => r.json());
+                if (res.error) throw new Error(res.error);
+                const fileCount = selectedFiles.length;
+                const urlCount = data.imageUrls.length;
+                const imgMsg = (fileCount + urlCount) > 0 ? `，已处理 ${fileCount + urlCount} 张图片` : '';
+                showToast((editMode ? '保存成功！' : '添加成功！') + imgMsg);
+                clearForm();
+                collections = await fetch('/api/collections').then(r => r.json());
+                renderList();
+            } catch (e) { showToast(e.message, true); }
+        }
+
+        async function refetchContent() {
+            if (!editingItem) return;
+            try {
+                showToast('正在重新抓取原文内容...');
+                const res = await fetch(`/api/items/${editingItem.id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ refetchContent: true })
+                }).then(r => r.json());
+                if (res.error) throw new Error(res.error);
+                showToast('原文内容已更新！');
+            } catch (e) { showToast(e.message, true); }
+        }
+
+        function clearForm() {
+            editMode = false;
+            editingItem = null;
+            parsedData = null;
+            selectedFiles = [];
+            document.getElementById('editId').value = '';
+            ['addUrl', 'addName', 'addNameEn', 'addSummary', 'addDescription', 'addTags', 'addImages', 'addNotes'].forEach(id => document.getElementById(id).value = '');
+            document.getElementById('addFiles').value = '';
+            document.getElementById('addArchived').checked = false;
+            document.getElementById('currentImages').innerHTML = '';
+            document.getElementById('uploadPreview').innerHTML = '';
+            document.getElementById('formTitleText').textContent = '添加新收藏';
+            document.getElementById('modeBadge').textContent = '新增模式';
+            document.getElementById('modeBadge').classList.remove('edit');
+            document.getElementById('submitBtn').textContent = '添加收藏';
+            document.getElementById('refetchBtn').style.display = 'none';
+        }
+
+        async function toggleArchive(id, archived) {
+            await fetch(`/api/items/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ archived }) });
+            collections = await fetch('/api/collections').then(r => r.json());
+            renderList();
+            showToast(archived ? '已归档' : '已取消归档');
+        }
+
+        async function deleteItem(id) {
+            if (!confirm('确定要删除吗？此操作不可恢复！')) return;
+            await fetch(`/api/items/${id}`, { method: 'DELETE' });
+            collections = await fetch('/api/collections').then(r => r.json());
+            renderList();
+            showToast('已删除');
+            if (editMode && editingItem?.id === id) clearForm();
+        }
+
+        async function batchUpdate() {
+            document.getElementById('batchBtn').disabled = true;
+            document.getElementById('batchProgress').style.display = 'block';
+            document.getElementById('batchLog').style.display = 'block';
+            document.getElementById('batchLog').textContent = '';
+
+            const repoCount = collections.items.filter(i => i.type === 'repo').length;
+            const es = new EventSource('/api/batch-update');
+            es.onmessage = e => {
+                const data = JSON.parse(e.data);
+                if (data.type === 'start') {
+                    document.getElementById('progressText').textContent = `0 / ${data.total}`;
+                } else if (data.type === 'progress') {
+                    const pct = (data.current / repoCount) * 100;
+                    document.getElementById('progressFill').style.width = pct + '%';
+                    document.getElementById('progressText').textContent = `${data.current} / ${repoCount}`;
+                    document.getElementById('batchLog').textContent += `${data.success ? '✅' : '❌'} ${data.name}\n`;
+                    document.getElementById('batchLog').scrollTop = document.getElementById('batchLog').scrollHeight;
+                } else if (data.type === 'done') {
+                    es.close();
+                    document.getElementById('batchBtn').disabled = false;
+                    showToast('批量更新完成');
+                    init();
+                } else if (data.type === 'error') {
+                    es.close();
+                    document.getElementById('batchBtn').disabled = false;
+                    showToast(data.message, true);
+                }
+            };
+        }
+
+        function showToast(msg, isError = false) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = 'toast show' + (isError ? ' error' : '');
+            setTimeout(() => t.className = 'toast', 3000);
+        }
+
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.onclick = () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+            };
+        });
+        document.getElementById('listSearch').oninput = renderList;
+        init();
+    </script>
+</body>
+
+</html>

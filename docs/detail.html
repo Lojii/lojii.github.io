@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目详情 - GitHub Stars</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0d1117;
+            --bg-secondary: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --tag-bg: #21262d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .detail-header {
+            margin-bottom: 32px;
+        }
+
+        .detail-title {
+            font-size: 32px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .detail-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .detail-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .meta-item .label {
+            color: var(--text-secondary);
+        }
+
+        .meta-item .value {
+            font-weight: 600;
+        }
+
+        .lang-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+        }
+
+        .detail-links {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .detail-links a {
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #4d9aef;
+        }
+
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+        }
+
+        .detail-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .tag {
+            padding: 6px 14px;
+            background: var(--tag-bg);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .gallery {
+            margin-bottom: 32px;
+        }
+
+        .gallery h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 10px 0 20px;
+            scroll-behavior: smooth;
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .gallery-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .gallery-scroll img {
+            height: 300px;
+            width: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery-scroll img:hover {
+            transform: scale(1.02);
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-content {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .section-content p {
+            margin-bottom: 16px;
+        }
+
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .notes {
+            background: #1c2128;
+            border-left: 4px solid var(--accent);
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            padding: 100px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error {
+            text-align: center;
+            padding: 100px 20px;
+            color: var(--text-secondary);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            color: #fff;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        /* 原文内容样式 */
+        .original-content {
+            background: var(--bg-secondary);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            max-height: 800px;
+            overflow-y: auto;
+        }
+
+        .original-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .original-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .original-content::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .original-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .original-content h1,
+        .original-content h2,
+        .original-content h3,
+        .original-content h4 {
+            margin: 24px 0 12px;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .original-content h1 {
+            font-size: 28px;
+        }
+
+        .original-content h2 {
+            font-size: 24px;
+        }
+
+        .original-content h3 {
+            font-size: 20px;
+        }
+
+        .original-content p {
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+
+        .original-content a {
+            color: var(--accent);
+        }
+
+        .original-content code {
+            background: var(--tag-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 0.9em;
+        }
+
+        .original-content pre {
+            background: #0d1117;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .original-content pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        .original-content ul,
+        .original-content ol {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+
+        .original-content li {
+            margin: 6px 0;
+        }
+
+        .original-content blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 16px;
+            margin: 16px 0;
+            color: var(--text-secondary);
+        }
+
+        .original-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        .original-content th,
+        .original-content td {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: left;
+        }
+
+        .original-content th {
+            background: var(--tag-bg);
+        }
+
+        .toggle-btn {
+            font-size: 13px;
+            padding: 6px 12px;
+            background: var(--tag-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        .toggle-btn:hover {
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
+        .collapsed {
+            max-height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collapsed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, var(--bg-secondary));
+            pointer-events: none;
+        }
+
+        .no-content {
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回列表</a>
+        <main id="content">
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
+        </main>
+    </div>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="navImage(-1)">‹</span>
+        <img id="lightboxImg" src="" alt="">
+        <span class="lightbox-nav lightbox-next" onclick="navImage(1)">›</span>
+    </div>
+    <script>
+        const langColors = { JavaScript: '#f1e05a', TypeScript: '#3178c6', Python: '#3572A5', Go: '#00ADD8', Rust: '#dea584', Java: '#b07219', 'C++': '#f34b7d', Swift: '#F05138', Kotlin: '#A97BFF', Dart: '#00B4AB', Ruby: '#701516', PHP: '#4F5D95', 'C#': '#178600', Scala: '#c22d40', Vue: '#41b883' };
+        let currentImages = [], currentIndex = 0, contentExpanded = false;
+
+        async function init() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            if (!id) { showError('未指定项目ID'); return; }
+            try {
+                const res = await fetch(`data/items/${id}.json`);
+                if (!res.ok) throw new Error('项目不存在');
+                const item = await res.json();
+                document.title = `${item.name} - GitHub Stars`;
+                renderDetail(item);
+            } catch (e) { showError(e.message); }
+        }
+
+        function showError(msg) {
+            document.getElementById('content').innerHTML = `<div class="error"><h2>😢 加载失败</h2><p>${msg}</p><p><a href="index.html" style="color:var(--accent)">返回首页</a></p></div>`;
+        }
+
+        function renderDetail(item) {
+            currentImages = item.images || [];
+            const github = item.github || {};
+            const hasOriginalContent = item.originalContent && item.originalContent.trim().length > 0;
+
+            document.getElementById('content').innerHTML = `
+        <header class="detail-header">
+          <h1 class="detail-title">${item.name}</h1>
+          ${item.nameEn ? `<div class="detail-subtitle">${item.nameEn}</div>` : ''}
+          <div class="detail-meta">
+            <div class="meta-item"><span class="lang-dot" style="background:${langColors[github.language] || '#8b949e'}"></span><span class="value">${github.language || '未知'}</span></div>
+            <div class="meta-item"><span class="label">⭐ Stars</span><span class="value">${formatNumber(github.stars)}</span></div>
+            <div class="meta-item"><span class="label">🍴 Forks</span><span class="value">${formatNumber(github.forks)}</span></div>
+            <div class="meta-item"><span class="label">📜 License</span><span class="value">${github.license || '未知'}</span></div>
+            <div class="meta-item"><span class="label">📅 更新</span><span class="value">${github.lastUpdate || '未知'}</span></div>
+          </div>
+          <div class="detail-links">
+            <a href="${item.url}" target="_blank" class="btn-primary">🔗 ${item.type === 'repo' ? '访问仓库' : '阅读原文'}</a>
+            ${item.homepage ? `<a href="${item.homepage}" target="_blank" class="btn-secondary">🌐 官网</a>` : ''}
+          </div>
+          <div class="detail-tags">
+            ${(item.tags || []).map(t => `<span class="tag">#${t}</span>`).join('')}
+          </div>
+        </header>
+        ${currentImages.length ? `
+        <section class="gallery">
+          <h3>📷 预览图片</h3>
+          <div class="gallery-scroll">${currentImages.map((src, i) => `<img src="${src}" alt="预览图${i + 1}" onclick="openLightbox(${i})">`).join('')}</div>
+        </section>` : ''}
+        <section class="section">
+          <h3>📖 项目简介</h3>
+          <div class="section-content"><p>${item.summary}</p></div>
+        </section>
+        ${item.description ? `
+        <section class="section">
+          <h3>📝 详细介绍</h3>
+          <div class="section-content">${formatDescription(item.description)}</div>
+        </section>` : ''}
+        ${item.notes ? `
+        <section class="section">
+          <h3>📌 个人备注</h3>
+          <div class="section-content notes"><p>${item.notes}</p></div>
+        </section>` : ''}
+        <section class="section">
+          <h3>ℹ️ 收藏信息</h3>
+          <div class="section-content">
+            <p><strong>收藏时间：</strong>${item.createdAt || '未知'}</p>
+            <p><strong>最后更新：</strong>${item.updatedAt || '未知'}</p>
+            <p><strong>类型：</strong>${item.type === 'repo' ? 'GitHub仓库' : '技术文章'}</p>
+          </div>
+        </section>
+        <section class="section">
+          <h3>
+            <span>📄 ${item.type === 'repo' ? 'README 原文' : '文章原文'}</span>
+            ${hasOriginalContent ? `<button class="toggle-btn" onclick="toggleContent()">${contentExpanded ? '收起' : '展开全部'}</button>` : ''}
+          </h3>
+          ${hasOriginalContent ? `
+            <div class="original-content ${contentExpanded ? '' : 'collapsed'}" id="originalContent">
+              ${item.originalContent}
+            </div>
+          ` : `
+            <div class="section-content no-content">
+              <p>暂无原文内容</p>
+              <p style="font-size:13px;margin-top:8px">可以通过管理后台的「重新抓取原文」功能获取</p>
+            </div>
+          `}
+        </section>
+      `;
+
+            // 绑定滚轮事件
+            document.querySelector('.gallery-scroll')?.addEventListener('wheel', e => {
+                if (Math.abs(e.deltaY) > 0) { e.preventDefault(); e.currentTarget.scrollLeft += e.deltaY; }
+            }, { passive: false });
+        }
+
+        function toggleContent() {
+            contentExpanded = !contentExpanded;
+            const el = document.getElementById('originalContent');
+            const btn = document.querySelector('.toggle-btn');
+            if (contentExpanded) {
+                el.classList.remove('collapsed');
+                btn.textContent = '收起';
+            } else {
+                el.classList.add('collapsed');
+                btn.textContent = '展开全部';
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function formatDescription(desc) { return desc.split('\n').map(p => p.trim() ? `<p>${p}</p>` : '').join(''); }
+        function formatNumber(n) { return n >= 1000 ? (n / 1000).toFixed(1) + 'k' : (n || 0); }
+        function openLightbox(index) { currentIndex = index; document.getElementById('lightboxImg').src = currentImages[index]; document.getElementById('lightbox').classList.add('active'); }
+        function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+        function navImage(dir) { currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length; document.getElementById('lightboxImg').src = currentImages[currentIndex]; }
+        document.getElementById('lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLightbox(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowLeft') navImage(-1); if (e.key === 'ArrowRight') navImage(1); });
+        init();
+    </script>
+</body>
+
+</html>

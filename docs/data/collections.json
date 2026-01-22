@@ -1,0 +1,200 @@
+{
+  "lastUpdated": "2026-01-22T06:44:51.828Z",
+  "total": 10,
+  "items": [
+    {
+      "id": "aitu-bBR6qy",
+      "type": "repo",
+      "name": "aitu",
+      "nameEn": "aitu",
+      "summary": "AI图片视频创作（SaaS） + 一体化白板\n思维导图 · 流程图 · 自由画 · AI生图 · AI生视频\nhttps://aitu-lemon.vercel.app/",
+      "url": "https://github.com/ljquan/aitu",
+      "thumbnail": "/assets/images/aitu-bBR6qy/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "ai"
+      ],
+      "stars": 57,
+      "forks": 15,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "flutter-easy-refresh-MGrO8h",
+      "type": "repo",
+      "name": "flutter_easy_refresh",
+      "nameEn": "flutter_easy_refresh",
+      "summary": "下拉刷新以及上拉加载\n在线预览地址：https://xuelongqy.github.io/flutter_easy_refresh/",
+      "url": "https://github.com/xuelongqy/flutter_easy_refresh",
+      "thumbnail": "/assets/images/flutter-easy-refresh-MGrO8h/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "下拉刷新"
+      ],
+      "stars": 4048,
+      "forks": 667,
+      "language": "Dart",
+      "lastUpdate": "2026-01-19",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "flutter-pulltorefresh-cpGt52",
+      "type": "repo",
+      "name": "flutter_pulltorefresh",
+      "nameEn": "flutter_pulltorefresh",
+      "summary": "上拉加载和下拉刷新的组件",
+      "url": "https://github.com/peng8350/flutter_pulltorefresh",
+      "thumbnail": "/assets/images/flutter-pulltorefresh-cpGt52/thumb.jpg",
+      "category": "flutter",
+      "tags": [],
+      "stars": 2736,
+      "forks": 752,
+      "language": "Dart",
+      "lastUpdate": "2026-01-12",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "waterfall-flow-ZxIIpq",
+      "type": "repo",
+      "name": "waterfall_flow",
+      "nameEn": "waterfall_flow",
+      "summary": "快速构建瀑布流布局的列表",
+      "url": "https://github.com/fluttercandies/waterfall_flow",
+      "thumbnail": "/assets/images/waterfall-flow-ZxIIpq/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "瀑布流"
+      ],
+      "stars": 487,
+      "forks": 51,
+      "language": "Dart",
+      "lastUpdate": "2026-01-16",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "flutter-drawing-board-TVzMlv",
+      "type": "repo",
+      "name": "flutter_drawing_board",
+      "nameEn": "flutter_drawing_board",
+      "summary": "功能强大且高度可定制的 Flutter 绘图板插件，提供丰富的绘图功能和高级特性。\n预览地址：https://xsilencex.github.io/flutter_drawing_board_demo/",
+      "url": "https://github.com/fluttercandies/flutter_drawing_board",
+      "thumbnail": "/assets/images/flutter-drawing-board-TVzMlv/1.jpg",
+      "category": "flutter",
+      "tags": [
+        "绘图",
+        "画板"
+      ],
+      "stars": 233,
+      "forks": 97,
+      "language": "Dart",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "flutter-smart-dialog-jYVvi8",
+      "type": "repo",
+      "name": "flutter_smart_dialog",
+      "nameEn": "flutter_smart_dialog",
+      "summary": "一种更优雅的 Flutter Dialog 解决方案 | \n预览与使用方式地址：https://xdd666t.github.io/flutter_use/web/index.html#/smartDialog",
+      "url": "https://github.com/fluttercandies/flutter_smart_dialog",
+      "thumbnail": "/assets/images/flutter-smart-dialog-jYVvi8/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "弹窗"
+      ],
+      "stars": 1237,
+      "forks": 147,
+      "language": "Dart",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "flutter-wechat-assets-picker-MdJ9W2",
+      "type": "repo",
+      "name": "flutter_wechat_assets_picker",
+      "nameEn": "flutter_wechat_assets_picker",
+      "summary": "基于 微信 UI 的 Flutter 图片选择器（同时支持视频和音频）。\n当前的界面设计基于的微信版本：8.0.51 界面更新将在微信版本更新后随时进行跟进。",
+      "url": "https://github.com/fluttercandies/flutter_wechat_assets_picker",
+      "thumbnail": "/assets/images/flutter-wechat-assets-picker-MdJ9W2/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "照片选择器"
+      ],
+      "stars": 1636,
+      "forks": 513,
+      "language": "Dart",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "extended-image-IlSE93",
+      "type": "repo",
+      "name": "extended_image",
+      "nameEn": "extended_image",
+      "summary": "强大的官方 Image 扩展组件, 支持加载以及失败显示，缓存网络图片，缩放拖拽图片，图片浏览(微信掘金效果)，滑动退出页面(微信掘金效果)，编辑图片(裁剪旋转翻转)，保存，绘制自定义效果等功能\n图片查看器、编辑器，总之就是很强大了\n预览地址：https://fluttercandies.github.io/extended_image/",
+      "url": "https://github.com/fluttercandies/extended_image",
+      "thumbnail": "/assets/images/extended-image-IlSE93/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "图片查看器",
+        "图片编辑器",
+        "图片缓存"
+      ],
+      "stars": 2038,
+      "forks": 521,
+      "language": "Dart",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "extended-text-IGSLgu",
+      "type": "repo",
+      "name": "extended_text",
+      "nameEn": "extended_text",
+      "summary": "官方Text扩展组件，支持特殊文本效果（比如图片，@人）,自定义背景，自定义文本溢出效果,文本选择以及自定义选择菜单和选择器",
+      "url": "https://github.com/fluttercandies/extended_text",
+      "thumbnail": "/assets/images/extended-text-IGSLgu/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "富文本",
+        "文本截断"
+      ],
+      "stars": 716,
+      "forks": 142,
+      "language": "Dart",
+      "lastUpdate": "2026-01-13",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "extended-nested-scroll-view-Wm55jt",
+      "type": "repo",
+      "name": "extended_nested_scroll_view",
+      "nameEn": "extended_nested_scroll_view",
+      "summary": "嵌套滚动视图插件. 很强大的多个 listview 嵌套，可以横屏滑动切换 listview\n在线预览地址：https://fluttercandies.github.io/extended_nested_scroll_view/",
+      "url": "https://github.com/fluttercandies/extended_nested_scroll_view",
+      "thumbnail": "/assets/images/extended-nested-scroll-view-Wm55jt/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "flutter",
+        "列表",
+        "tab"
+      ],
+      "stars": 646,
+      "forks": 135,
+      "language": "Dart",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    }
+  ]
+}
