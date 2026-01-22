@@ -1,7 +1,420 @@
 {
-  "lastUpdated": "2026-01-22T06:44:51.828Z",
-  "total": 10,
+  "lastUpdated": "2026-01-22T08:51:12.209Z",
+  "total": 31,
   "items": [
+    {
+      "id": "assetripper-QJgXMo",
+      "type": "repo",
+      "name": "AssetRipper",
+      "nameEn": "AssetRipper",
+      "summary": "Unity游戏逆向工具\n用于处理引擎资源、资源包和序列化文件的图形用户界面应用程序\n开源版本，只能逆向 2019 年 6 月之前的游戏",
+      "url": "https://github.com/AssetRipper/AssetRipper",
+      "thumbnail": "/assets/images/assetripper-QJgXMo/thumb.jpg",
+      "category": "unity",
+      "tags": [
+        "逆向"
+      ],
+      "stars": 6779,
+      "forks": 808,
+      "language": "C#",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "ai-9g5Xya",
+      "type": "repo",
+      "name": "AI漫导",
+      "nameEn": "director_ai",
+      "summary": "AI 漫剧制作 APP，能一键生成剧本、分镜及合成视频，让你在手机上也能快速制作漫剧。",
+      "url": "https://github.com/freestylefly/director_ai",
+      "thumbnail": "/assets/images/ai-9g5Xya/thumb.jpg",
+      "category": "ai",
+      "tags": [],
+      "stars": 749,
+      "forks": 175,
+      "language": "Dart",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "-N_NOtB",
+      "type": "repo",
+      "name": "火宝短剧",
+      "nameEn": "huobao-drama",
+      "summary": "🎬 火宝短剧 - 基于AI的一站式短剧生成平台 《一句话生成完整短剧，从剧本到成片全自动化》",
+      "url": "https://github.com/chatfire-AI/huobao-drama",
+      "thumbnail": "/assets/images/-N_NOtB/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "短剧",
+        "自动化"
+      ],
+      "stars": 5385,
+      "forks": 914,
+      "language": "Vue",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "app-privacy-manifest-fixer-09CpNV",
+      "type": "repo",
+      "name": "app_privacy_manifest_fixer",
+      "nameEn": "app_privacy_manifest_fixer",
+      "summary": "该工具是一款基于Shell脚本的自动化解决方案，旨在分析和修复iOS/macOS应用的隐私清单，以确保符合App Store的要求。\n",
+      "url": "https://github.com/crasowas/app_privacy_manifest_fixer",
+      "thumbnail": "/assets/images/app-privacy-manifest-fixer-09CpNV/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "appstore",
+        "上架"
+      ],
+      "stars": 226,
+      "forks": 22,
+      "language": "Shell",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "awesome-ios-animation-leaKrh",
+      "type": "repo",
+      "name": "awesome-ios-animation",
+      "nameEn": "awesome-ios-animation",
+      "summary": "精选的iOS动画资源列表，包含Objective-C和Swift库\n原生动画实现，有些还是很不错的，可以参考参考",
+      "url": "https://github.com/v5tech/awesome-ios-animation",
+      "thumbnail": "/assets/images/awesome-ios-animation-leaKrh/thumb.jpg",
+      "category": "iOS",
+      "tags": [
+        "动画"
+      ],
+      "stars": 5411,
+      "forks": 884,
+      "language": null,
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "pixelle-video-Oq6i3N",
+      "type": "repo",
+      "name": "Pixelle-Video",
+      "nameEn": "Pixelle-Video",
+      "summary": "🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine",
+      "url": "https://github.com/AIDC-AI/Pixelle-Video",
+      "thumbnail": "/assets/images/pixelle-video-Oq6i3N/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "自动化"
+      ],
+      "stars": 1895,
+      "forks": 308,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "mangayomi-ujfwqB",
+      "type": "repo",
+      "name": "mangayomi",
+      "nameEn": "mangayomi",
+      "summary": "免费开源的应用程序，适用于在Android、iOS、macOS、Linux和Windows平台上阅读漫画、小说和观看动漫\n",
+      "url": "https://github.com/kodjodevf/mangayomi",
+      "thumbnail": "/assets/images/mangayomi-ujfwqB/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "app",
+        "漫画",
+        "小说",
+        "flutter",
+        "apk"
+      ],
+      "stars": 2920,
+      "forks": 63,
+      "language": "Dart",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "youdub-webui-KkFxwm",
+      "type": "repo",
+      "name": "英文视频转中文语音",
+      "nameEn": "YouDub-webui",
+      "summary": "一套完整的视频中文化工具包，其主要特点包括：\n视频下载、AI 语音识别、大型语言模型翻译、AI 声音克隆、视频处理、自动上传\n\n这个作者往 B 站上传了一万多个视频\nhttps://space.bilibili.com/1263732318",
+      "url": "https://github.com/liuzhao1225/YouDub-webui",
+      "thumbnail": "/assets/images/youdub-webui-KkFxwm/1.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "自动化"
+      ],
+      "stars": 3693,
+      "forks": 385,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "awesome-telegram-ZHIGJt",
+      "type": "repo",
+      "name": "awesome-telegram",
+      "nameEn": "awesome-telegram",
+      "summary": "精选Telegram上的优秀群组、频道、机器人和库",
+      "url": "https://github.com/ebertti/awesome-telegram",
+      "thumbnail": null,
+      "category": "article",
+      "tags": [
+        "telegram"
+      ],
+      "stars": 4182,
+      "forks": 374,
+      "language": null,
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "ai-KtG4Am",
+      "type": "repo",
+      "name": "AI小说生成",
+      "nameEn": "MuMuAINovel",
+      "summary": "一款基于 AI 的智能小说创作助手，帮助你轻松创作精彩故事\nhttps://mumuverse.space:1566/",
+      "url": "https://github.com/xiamuceer-j/MuMuAINovel",
+      "thumbnail": "/assets/images/ai-KtG4Am/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "小说"
+      ],
+      "stars": 1318,
+      "forks": 269,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "-MsnRSc",
+      "type": "repo",
+      "name": "热门提示词，图片生成",
+      "nameEn": "banana-prompt-quicker",
+      "summary": "🍌Awesome Prompts; \n热门提示词：https://glidea.github.io/banana-prompt-quicker/#gallery\n有好几百个\n",
+      "url": "https://github.com/glidea/banana-prompt-quicker",
+      "thumbnail": "/assets/images/-MsnRSc/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "提示词",
+        "图片生成"
+      ],
+      "stars": 2062,
+      "forks": 160,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "video-materials-autogen-workst-gLaT_b",
+      "type": "repo",
+      "name": "Video-Materials-AutoGEN-Workstation",
+      "nameEn": "Video-Materials-AutoGEN-Workstation",
+      "summary": "一个集内容策划、AI文案自动生成、TTS 批量自动配音、(AI)图片素材合成、ASR自动提取语言字幕脚本、AI自由创作于一体的(短视频)生成工作站。方便管理每期的视频项目。",
+      "url": "https://github.com/Norsico/Video-Materials-AutoGEN-Workstation",
+      "thumbnail": "/assets/images/video-materials-autogen-workst-gLaT_b/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "自动化"
+      ],
+      "stars": 1266,
+      "forks": 248,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "-blXght",
+      "type": "repo",
+      "name": "微舆",
+      "nameEn": "BettaFish",
+      "summary": "微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。",
+      "url": "https://github.com/666ghj/BettaFish",
+      "thumbnail": "/assets/images/-blXght/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "ai",
+        "分析",
+        "舆情"
+      ],
+      "stars": 34811,
+      "forks": 6710,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "githubdaily-kbxYia",
+      "type": "repo",
+      "name": "GitHubDaily",
+      "nameEn": "GitHubDaily",
+      "summary": "坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",
+      "url": "https://github.com/GitHubDaily/GitHubDaily",
+      "thumbnail": "/assets/images/githubdaily-kbxYia/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "github"
+      ],
+      "stars": 44694,
+      "forks": 4508,
+      "language": null,
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "1000userguide-PQvMHt",
+      "type": "repo",
+      "name": "1000UserGuide",
+      "nameEn": "1000UserGuide",
+      "summary": "1000UserGuide：对独立开发者和创业者来说，找到前1000个早期用户太关键了。这里精心整理了300多个国内外渠道，适合独立开发者和创业者推广产品的渠道。\nhttps://1000userguide.com/#/",
+      "url": "https://github.com/naxiaoduo/1000UserGuide",
+      "thumbnail": "/assets/images/1000userguide-PQvMHt/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "独立开发",
+        "推广"
+      ],
+      "stars": 3542,
+      "forks": 317,
+      "language": "HTML",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "flameshot-LqmVhp",
+      "type": "repo",
+      "name": "flameshot",
+      "nameEn": "flameshot",
+      "summary": "功能强大且易于使用的截图软件",
+      "url": "https://github.com/flameshot-org/flameshot",
+      "thumbnail": "/assets/images/flameshot-LqmVhp/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "pc",
+        "app"
+      ],
+      "stars": 28682,
+      "forks": 1833,
+      "language": "C++",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "gkd-D3bCpF",
+      "type": "repo",
+      "name": "gkd",
+      "nameEn": "gkd",
+      "summary": "基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用，可以用来自动跳过广告之类的操作\nhttps://gkd.li/\n",
+      "url": "https://github.com/gkd-kit/gkd",
+      "thumbnail": "/assets/images/gkd-D3bCpF/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "安卓",
+        "apk",
+        "自动化"
+      ],
+      "stars": 35293,
+      "forks": 1714,
+      "language": "Kotlin",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "remote-working-gHlRFN",
+      "type": "repo",
+      "name": "remote-working",
+      "nameEn": "remote-working",
+      "summary": "收集整理远程工作相关的资料\nhttps://remote-china.com/",
+      "url": "https://github.com/greatghoul/remote-working",
+      "thumbnail": "/assets/images/remote-working-gHlRFN/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "工作"
+      ],
+      "stars": 11370,
+      "forks": 881,
+      "language": "Ruby",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "wepush-H3lo9d",
+      "type": "repo",
+      "name": "WePush",
+      "nameEn": "WePush",
+      "summary": "专注批量推送的小而美的工具，目前支持：模板消息-公众号、模板消息-小程序、微信客服消息、微信企业号/企业微信消息、阿里云短信、阿里大于模板短信 、腾讯云短信、云片网短信、E-Mail、HTTP请求、钉钉、华为云短信、百度云短信、又拍云短信、七牛云短信\n官网：https://rememberber.github.io/WePush/",
+      "url": "https://github.com/rememberber/WePush",
+      "thumbnail": "/assets/images/wepush-H3lo9d/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "推送"
+      ],
+      "stars": 4639,
+      "forks": 1015,
+      "language": "Java",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "billd-desk-oc0mAi",
+      "type": "repo",
+      "name": "billd-desk",
+      "nameEn": "billd-desk",
+      "summary": "基于Vue3 + WebRTC + Nodejs + Flutter搭建的远程桌面控制\n官网：https://desk.hsslive.cn\n【有收费版本】",
+      "url": "https://github.com/galaxy-s10/billd-desk",
+      "thumbnail": "/assets/images/billd-desk-oc0mAi/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "远程控制"
+      ],
+      "stars": 4796,
+      "forks": 607,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "ads-kit-tTaNkZ",
+      "type": "repo",
+      "name": "ads-kit",
+      "nameEn": "ads-kit",
+      "summary": "适用于 Unity 的一体化广告解决方案",
+      "url": "https://github.com/voxelbusters/ads-kit",
+      "thumbnail": "/assets/images/ads-kit-tTaNkZ/thumb.jpg",
+      "category": "unity",
+      "tags": [
+        "广告"
+      ],
+      "stars": 54,
+      "forks": 4,
+      "language": "C#",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-22"
+    },
     {
       "id": "aitu-bBR6qy",
       "type": "repo",

@@ -35,7 +35,8 @@ export async function processImages(images, itemId) {
     for (let i = 0; i < images.length; i++) {
         const img = images[i];
         const ext = getExtension(img);
-        const filename = `${i + 1}${ext}`;
+        const isGif = ext === '.gif';
+        const filename = `${i + 1}${isGif ? '.gif' : '.jpg'}`;
         const filepath = path.join(itemDir, filename);
 
         try {
@@ -50,23 +51,40 @@ export async function processImages(images, itemId) {
                 buffer = await fs.readFile(img);
             }
 
-            // 压缩并保存图片
-            await sharp(buffer)
-                .resize(1200, 800, { fit: 'inside', withoutEnlargement: true })
-                .jpeg({ quality: 85 })
-                .toFile(filepath.replace(ext, '.jpg'));
+            if (isGif) {
+                // GIF 图片：保持原格式，只调整尺寸（保留动画）
+                await sharp(buffer, { animated: true })
+                    .resize(1200, 800, { fit: 'inside', withoutEnlargement: true })
+                    .toFile(filepath);
+            } else {
+                // 其他格式：压缩并转换为 JPG
+                await sharp(buffer)
+                    .resize(1200, 800, { fit: 'inside', withoutEnlargement: true })
+                    .jpeg({ quality: 85 })
+                    .toFile(filepath);
+            }
 
-            const savedPath = `/assets/images/${itemId}/${filename.replace(ext, '.jpg')}`;
+            const savedPath = `/assets/images/${itemId}/${filename}`;
             processedImages.push(savedPath);
 
             // 第一张图作为缩略图
             if (i === 0) {
-                const thumbPath = path.join(itemDir, 'thumb.jpg');
-                await sharp(buffer)
-                    .resize(400, 225, { fit: 'cover', position: 'top' })
-                    .jpeg({ quality: 80 })
-                    .toFile(thumbPath);
-                thumbnail = `/assets/images/${itemId}/thumb.jpg`;
+                if (isGif) {
+                    // GIF 缩略图：保持动画
+                    const thumbPath = path.join(itemDir, 'thumb.gif');
+                    await sharp(buffer, { animated: true })
+                        .resize(400, 225, { fit: 'cover', position: 'top' })
+                        .toFile(thumbPath);
+                    thumbnail = `/assets/images/${itemId}/thumb.gif`;
+                } else {
+                    // 其他格式：JPG 缩略图
+                    const thumbPath = path.join(itemDir, 'thumb.jpg');
+                    await sharp(buffer)
+                        .resize(400, 225, { fit: 'cover', position: 'top' })
+                        .jpeg({ quality: 80 })
+                        .toFile(thumbPath);
+                    thumbnail = `/assets/images/${itemId}/thumb.jpg`;
+                }
             }
         } catch (error) {
             console.error(`  处理图片失败: ${img}`, error.message);
