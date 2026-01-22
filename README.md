@@ -2,44 +2,7 @@
 
 ## 快速开始
 
-### 1. 创建项目结构
-
-```bash
-mkdir github-stars && cd github-stars
-
-# 创建目录结构
-mkdir -p docs/{assets/{css,js,images},data/items}
-mkdir -p admin/scripts/utils
-mkdir -p temp
-```
-
-### 2. 初始化项目
-
-```bash
-npm init -y
-npm install @octokit/rest cheerio express fuse.js inquirer multer nanoid node-fetch sharp
-npm install -D serve
-```
-
-### 3. 创建文件
-
-按照前面的 Artifact 内容，依次创建以下文件：
-
-| 文件路径 | 对应 Artifact |
-|---------|--------------|
-| `package.json` | package.json |
-| `docs/index.html` | docs/index.html |
-| `docs/detail.html` | docs/detail.html |
-| `admin/index.html` | admin/index.html |
-| `admin/server.js` | admin/server.js |
-| `admin/scripts/add.js` | admin/scripts/add.js |
-| `admin/scripts/batch-update.js` | admin/scripts/batch-update.js |
-| `admin/scripts/update.js` | update.js 部分 |
-| `admin/scripts/delete.js` | delete.js 部分 |
-| `admin/scripts/utils/github-api.js` | github-api.js |
-| `admin/scripts/utils/image-handler.js` | image-handler.js |
-
-### 4. 创建初始数据文件
+### 创建初始数据文件
 
 **docs/data/categories.json:**
 ```json
@@ -66,22 +29,6 @@ npm install -D serve
   "items": []
 }
 ```
-
-### 5. 配置 GitHub Token（可选但推荐）
-
-创建 `.env` 文件或直接设置环境变量：
-
-```bash
-# 方式1: 环境变量
-export GITHUB_TOKEN=your_github_personal_access_token
-
-# 方式2: 在 package.json scripts 中
-"admin": "GITHUB_TOKEN=xxx node admin/server.js"
-```
-
-获取 Token: GitHub → Settings → Developer settings → Personal access tokens
-
----
 
 ## 使用方式
 
