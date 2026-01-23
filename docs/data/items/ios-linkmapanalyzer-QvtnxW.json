@@ -1,0 +1,33 @@
+{
+  "id": "ios-linkmapanalyzer-QvtnxW",
+  "type": "repo",
+  "name": "iOS-LinkMapAnalyzer",
+  "nameEn": "iOS-LinkMapAnalyzer",
+  "url": "https://github.com/778477/iOS-LinkMapAnalyzer",
+  "summary": "解析iOS工程中的linkmap文件，方便分析各个模块占用的包大小\n\nhttps://778477.github.io/2016/09/01/2016-09-01-iOS%20%E5%8C%85%E7%98%A6%E8%BA%AB%E7%A0%94%E7%A9%B6/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/ios-linkmapanalyzer-QvtnxW/1.jpg"
+  ],
+  "thumbnail": "/assets/images/ios-linkmapanalyzer-QvtnxW/thumb.jpg",
+  "category": "iOS",
+  "tags": [],
+  "github": {
+    "stars": 125,
+    "forks": 19,
+    "language": "C++",
+    "license": null,
+    "lastUpdate": "2026-01-23",
+    "topics": [
+      "ios",
+      "linkmap",
+      "package-size"
+    ],
+    "createdAt": "2016-09-17"
+  },
+  "archived": false,
+  "createdAt": "2026-01-23",
+  "updatedAt": "2026-01-23",
+  "originalContent": "<div id=\"readme\" class=\"md\" data-path=\"README.md\"><article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">为什么要做包瘦身？</h2><a id=\"user-content-为什么要做包瘦身\" class=\"anchor\" aria-label=\"Permalink: 为什么要做包瘦身？\" href=\"#为什么要做包瘦身\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\"><a href=\"https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html\" rel=\"nofollow\">Submitting the App to App Review</a></p>\n<blockquote>\n<p dir=\"auto\">Your app’s total uncompressed size must be less than 4GB. Each Mach-O executable file (for example, &gt; app_name.app/app_name) must not exceed these limits:</p>\n</blockquote>\n<blockquote>\n<p dir=\"auto\">For apps whose MinimumOSVersion is less than 7.0: maximum of 80 MB for the total of all __TEXT sections in the binary.</p>\n</blockquote>\n<blockquote>\n<p dir=\"auto\">For apps whose MinimumOSVersion is 7.x through 8.x: maximum of 60 MB per slice for the __TEXT section of each architecture slice in the binary.</p>\n</blockquote>\n<blockquote>\n<p dir=\"auto\">For apps whose MinimumOSVersion is 9.0 or greater: maximum of 500 MB for the total of all __TEXT sections in the binary.</p>\n</blockquote>\n<p dir=\"auto\"><a href=\"http://778477.github.io/2016/09/01/2016-09-01-iOS%20%E5%8C%85%E7%98%A6%E8%BA%AB%E7%A0%94%E7%A9%B6/\" rel=\"nofollow\">iOS 包瘦身浅析</a></p>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">How to use</h2><a id=\"user-content-how-to-use\" class=\"anchor\" aria-label=\"Permalink: How to use\" href=\"#how-to-use\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">使用项目目录里<code>LinkMapAnalyzer</code>可执行文件，在命令行中运行。\n后面指明要分析的linkMap文件地址</p>\n<p dir=\"auto\"><code>./LinkMapAnalyzer ./GAG-LinkMap-normal-x86_64.txt</code></p>\n<p dir=\"auto\">也可以将输出重定向保存为其他文件 如：</p>\n<p dir=\"auto\"><code>./LinkMapAnalyzer ./GAG-LinkMap-normal-x86_64.txt &gt; out.txt</code></p>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Example output：</h2><a id=\"user-content-example-output\" class=\"anchor\" aria-label=\"Permalink: Example output：\" href=\"#example-output\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"libAFNetworking.a                                                       317.37KB\nlibSDWebImage.a                                                         198.61KB\nGAG                                                                      68.55KB\nlibSVPullToRefresh.a                                                     43.76KB\nlibarclite_iphonesimulator.a                                              7.38KB\nunknownModule                                                             2.18KB\nlibPods-GAG.a                                                             0.25KB\"><pre class=\"notranslate\"><code>libAFNetworking.a                                                       317.37KB\nlibSDWebImage.a                                                         198.61KB\nGAG                                                                      68.55KB\nlibSVPullToRefresh.a                                                     43.76KB\nlibarclite_iphonesimulator.a                                              7.38KB\nunknownModule                                                             2.18KB\nlibPods-GAG.a                                                             0.25KB\n</code></pre></div>\n</article></div>"
+}

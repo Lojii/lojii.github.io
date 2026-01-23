@@ -418,6 +418,38 @@
     {
       "id": "做饭",
       "name": "做饭"
+    },
+    {
+      "id": "图标",
+      "name": "图标"
+    },
+    {
+      "id": "运动",
+      "name": "运动"
+    },
+    {
+      "id": "windows",
+      "name": "windows"
+    },
+    {
+      "id": "cms",
+      "name": "cms"
+    },
+    {
+      "id": "后台管理系统",
+      "name": "后台管理系统"
+    },
+    {
+      "id": "serverless",
+      "name": "serverless"
+    },
+    {
+      "id": "bt",
+      "name": "bt"
+    },
+    {
+      "id": "debug",
+      "name": "debug"
     }
   ]
 }

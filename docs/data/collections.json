@@ -1,7 +1,431 @@
 {
-  "lastUpdated": "2026-01-23T04:49:27.799Z",
-  "total": 113,
+  "lastUpdated": "2026-01-23T07:01:48.560Z",
+  "total": 135,
   "items": [
+    {
+      "id": "-SbumHQ",
+      "type": "repo",
+      "name": "中文独立博客列表",
+      "nameEn": "chinese-independent-blogs",
+      "summary": "中文独立博客列表",
+      "url": "https://github.com/timqian/chinese-independent-blogs",
+      "thumbnail": "/assets/images/-SbumHQ/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "博客"
+      ],
+      "stars": 22642,
+      "forks": 2621,
+      "language": "Python",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "dokit-syfDSk",
+      "type": "repo",
+      "name": "DoKit",
+      "nameEn": "DoKit",
+      "summary": "一款面向泛前端产品研发全生命周期的效率平台。",
+      "url": "https://github.com/didi/DoKit",
+      "thumbnail": "/assets/images/dokit-syfDSk/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "debug"
+      ],
+      "stars": 20435,
+      "forks": 3191,
+      "language": "Java",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "ios-linkmapanalyzer-QvtnxW",
+      "type": "repo",
+      "name": "iOS-LinkMapAnalyzer",
+      "nameEn": "iOS-LinkMapAnalyzer",
+      "summary": "解析iOS工程中的linkmap文件，方便分析各个模块占用的包大小\n\nhttps://778477.github.io/2016/09/01/2016-09-01-iOS%20%E5%8C%85%E7%98%A6%E8%BA%AB%E7%A0%94%E7%A9%B6/",
+      "url": "https://github.com/778477/iOS-LinkMapAnalyzer",
+      "thumbnail": "/assets/images/ios-linkmapanalyzer-QvtnxW/thumb.jpg",
+      "category": "iOS",
+      "tags": [],
+      "stars": 125,
+      "forks": 19,
+      "language": "C++",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "trackerslist-l6ni8Z",
+      "type": "repo",
+      "name": "trackerslist",
+      "nameEn": "trackerslist",
+      "summary": "公共BitTorrent追踪器更新列表，加速 bt 下载\n\nhttps://ngosang.github.io/trackerslist/",
+      "url": "https://github.com/ngosang/trackerslist",
+      "thumbnail": "/assets/images/trackerslist-l6ni8Z/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "bt"
+      ],
+      "stars": 52671,
+      "forks": 6659,
+      "language": null,
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "texture-JryjKs",
+      "type": "repo",
+      "name": "Texture",
+      "nameEn": "Texture",
+      "summary": "为iOS应用打造流畅的异步用户界面。\n\nhttps://texturegroup.org/",
+      "url": "https://github.com/TextureGroup/Texture",
+      "thumbnail": "/assets/images/texture-JryjKs/thumb.jpg",
+      "category": "iOS",
+      "tags": [
+        "ui"
+      ],
+      "stars": 8163,
+      "forks": 1297,
+      "language": "Objective-C++",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "-lw7VxI",
+      "type": "repo",
+      "name": "文言文編程",
+      "nameEn": "wenyan",
+      "summary": "文言文編程語言 A programming language for the ancient Chinese.\n\nhttps://wy-lang.org/",
+      "url": "https://github.com/wenyan-lang/wenyan",
+      "thumbnail": "/assets/images/-lw7VxI/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "有意思"
+      ],
+      "stars": 20186,
+      "forks": 1101,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "midway-h3GazS",
+      "type": "repo",
+      "name": "midway",
+      "nameEn": "midway",
+      "summary": "Midway 是一个适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 Node.js 框架。\n\n\nhttps://www.midwayjs.org/",
+      "url": "https://github.com/midwayjs/midway",
+      "thumbnail": "/assets/images/midway-h3GazS/thumb.jpg",
+      "category": "backend",
+      "tags": [
+        "框架",
+        "serverless"
+      ],
+      "stars": 7697,
+      "forks": 589,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "vue-vben-admin-0HOgiK",
+      "type": "repo",
+      "name": "vue-vben-admin",
+      "nameEn": "vue-vben-admin",
+      "summary": "一个基于Vue3、Shadcn UI、Vite、TypeScript和Monorepo构建的现代化Vue后台管理系统。速度飞快！\n\n\n\nhttps://www.vben.pro/",
+      "url": "https://github.com/vbenjs/vue-vben-admin",
+      "thumbnail": "/assets/images/vue-vben-admin-0HOgiK/thumb.jpg",
+      "category": "frontend",
+      "tags": [
+        "框架",
+        "后台管理系统",
+        "vue"
+      ],
+      "stars": 31335,
+      "forks": 8522,
+      "language": "Vue",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "strapi-IxY1i0",
+      "type": "repo",
+      "name": "strapi",
+      "nameEn": "strapi",
+      "summary": "Strapi 是领先的开源无头 CMS。它 100% 基于 JavaScript/TypeScript\n\nhttps://strapi.io/",
+      "url": "https://github.com/strapi/strapi",
+      "thumbnail": "/assets/images/strapi-IxY1i0/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "cms"
+      ],
+      "stars": 71054,
+      "forks": 9384,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "nest-qxi0FW",
+      "type": "repo",
+      "name": "nest",
+      "nameEn": "nest",
+      "summary": "Nest是构建高效，可扩展的 Node.js Web 应用程序的框架。 它使用现代的 JavaScript 或 TypeScript（保留与纯 JavaScript 的兼容性），并结合 OOP（面向对象编程），FP（函数式编程）和FRP（函数响应式编程）的元素。\n\nhttps://nestjs.com/",
+      "url": "https://github.com/nestjs/nest",
+      "thumbnail": "/assets/images/nest-qxi0FW/thumb.png",
+      "category": "backend",
+      "tags": [
+        "框架"
+      ],
+      "stars": 74309,
+      "forks": 8170,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "trafficmonitor-bgjyVH",
+      "type": "repo",
+      "name": "TrafficMonitor",
+      "nameEn": "TrafficMonitor",
+      "summary": "这是一个用于显示当前网速、CPU及内存利用率的桌面悬浮窗软件，并支持任务栏显示，支持更换皮肤。",
+      "url": "https://github.com/zhongyang219/TrafficMonitor",
+      "thumbnail": "/assets/images/trafficmonitor-bgjyVH/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app",
+        "windows"
+      ],
+      "stars": 42843,
+      "forks": 3578,
+      "language": "C++",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "remotely-KP7vwz",
+      "type": "repo",
+      "name": "Remotely",
+      "nameEn": "Remotely",
+      "summary": "一个基于 .NET 8、Blazor 和 SignalR 构建的远程控制和远程脚本解决方案。\n",
+      "url": "https://github.com/immense/Remotely",
+      "thumbnail": "/assets/images/remotely-KP7vwz/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "远程控制"
+      ],
+      "stars": 5005,
+      "forks": 1637,
+      "language": "C#",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "locokit-GhAFJO",
+      "type": "repo",
+      "name": "LocoKit",
+      "nameEn": "LocoKit",
+      "summary": "一个基于机器学习的iOS位置记录和活动检测框架。\n\n对核心运动活动类型（静止、步行、跑步、骑自行车、驾车）的检测\n\n区分具体的交通工具类型（汽车、火车、公共汽车、摩托车、飞机、轮船）\n\n合并简化的核心定位和核心运动记录\n经过过滤、平滑和简化的位置和运动数据\n近实时静止/运动状态检测\n自动能源使用管理，支持全天记录\n自动停止和重新开始录制，避免浪费电池电量\nhttps://www.bigpaua.com/locokit/",
+      "url": "https://github.com/sobri909/LocoKit",
+      "thumbnail": "/assets/images/locokit-GhAFJO/thumb.jpg",
+      "category": "iOS",
+      "tags": [
+        "运动"
+      ],
+      "stars": 1540,
+      "forks": 106,
+      "language": "Swift",
+      "lastUpdate": "2026-01-10",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "scrcpy-9AL51D",
+      "type": "repo",
+      "name": "scrcpy",
+      "nameEn": "scrcpy",
+      "summary": "显示和控制安卓设备\n跨平台",
+      "url": "https://github.com/Genymobile/scrcpy",
+      "thumbnail": "/assets/images/scrcpy-9AL51D/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app",
+        "安卓"
+      ],
+      "stars": 134557,
+      "forks": 12555,
+      "language": "C",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "mos-gYU223",
+      "type": "repo",
+      "name": "Mos",
+      "nameEn": "Mos",
+      "summary": "一个用于在 macOS 上平滑你的鼠标滚动效果或单独设置滚动方向的小工具, 让你的滚轮爽如触控板 \n\nhttp://mos.caldis.me/",
+      "url": "https://github.com/Caldis/Mos",
+      "thumbnail": "/assets/images/mos-gYU223/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app",
+        "macos"
+      ],
+      "stars": 18505,
+      "forks": 586,
+      "language": "Swift",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "ntfstool-tQeDFS",
+      "type": "repo",
+      "name": "ntfstool",
+      "nameEn": "ntfstool",
+      "summary": "为苹果电脑提供NTFS读写支持的一款免费软件\n\nhttps://ntfstool.com/",
+      "url": "https://github.com/ntfstool/ntfstool",
+      "thumbnail": "/assets/images/ntfstool-tQeDFS/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app",
+        "macos"
+      ],
+      "stars": 3933,
+      "forks": 299,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "deskreen-4vhlMV",
+      "type": "repo",
+      "name": "deskreen",
+      "nameEn": "deskreen",
+      "summary": "Deskreen 可以将任何带有网络浏览器的设备变成电脑的第二块屏幕\n\n浏览器远程投屏\n\nhttps://deskreen.com/",
+      "url": "https://github.com/pavlobu/deskreen",
+      "thumbnail": "/assets/images/deskreen-4vhlMV/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app"
+      ],
+      "stars": 20128,
+      "forks": 1126,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "maccy-zIlrPg",
+      "type": "repo",
+      "name": "Maccy",
+      "nameEn": "Maccy",
+      "summary": "Maccy 是一款适用于 macOS 的轻量级剪贴板管理器。它会保留您的复制历史记录，并让您快速浏览、搜索和使用以前的剪贴板内容。\n\n\nhttps://maccy.app/",
+      "url": "https://github.com/p0deje/Maccy",
+      "thumbnail": "/assets/images/maccy-zIlrPg/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app",
+        "macos"
+      ],
+      "stars": 18341,
+      "forks": 831,
+      "language": "Swift",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "iconpark-Aa4jWK",
+      "type": "repo",
+      "name": "IconPark",
+      "nameEn": "IconPark",
+      "summary": "IconPark提供了超过2000个高质量图标，并且提供了一个界面来帮你定制图标。\n\nhttps://iconpark.oceanengine.com/home",
+      "url": "https://github.com/bytedance/IconPark",
+      "thumbnail": "/assets/images/iconpark-Aa4jWK/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "图标"
+      ],
+      "stars": 8944,
+      "forks": 534,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "ai-faceswap-9yDYDQ",
+      "type": "repo",
+      "name": "AI 换脸 - faceswap",
+      "nameEn": "faceswap",
+      "summary": "AI 换脸\n\nhttps://faceswap.dev//",
+      "url": "https://github.com/deepfakes/faceswap",
+      "thumbnail": "/assets/images/ai-faceswap-9yDYDQ/thumb.jpg",
+      "category": "ai",
+      "tags": [],
+      "stars": 54913,
+      "forks": 13432,
+      "language": "Python",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "stats-L2vlhW",
+      "type": "repo",
+      "name": "stats",
+      "nameEn": "stats",
+      "summary": "菜单栏中的 macOS 系统监视器\n\nhttps://mac-stats.com/",
+      "url": "https://github.com/exelban/stats",
+      "thumbnail": "/assets/images/stats-L2vlhW/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app",
+        "macos"
+      ],
+      "stars": 35956,
+      "forks": 1147,
+      "language": "Swift",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "selfcontrol-VEq-jj",
+      "type": "repo",
+      "name": "selfcontrol",
+      "nameEn": "selfcontrol",
+      "summary": "一款适用于 macOS 的免费开源应用程序，它可以阻止您访问令人分心的网站、邮件服务器或互联网上的任何其他内容。只需设置阻止时间，将网站添加到阻止列表，然后点击“开始阻止”即可。在阻止时间结束前，您将无法访问这些网站——即使您重启电脑或删除该应用程序也无法阻止。\n\nhttp://selfcontrolapp.com/",
+      "url": "https://github.com/SelfControlApp/selfcontrol",
+      "thumbnail": "/assets/images/selfcontrol-VEq-jj/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "app",
+        "macos"
+      ],
+      "stars": 4294,
+      "forks": 428,
+      "language": "Objective-C",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
     {
       "id": "flutter-responsive-admin-panel-fvVu2U",
       "type": "repo",
