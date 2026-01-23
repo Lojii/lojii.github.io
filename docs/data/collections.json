@@ -1,7 +1,256 @@
 {
-  "lastUpdated": "2026-01-23T03:33:04.906Z",
-  "total": 100,
+  "lastUpdated": "2026-01-23T04:49:27.799Z",
+  "total": 113,
   "items": [
+    {
+      "id": "flutter-responsive-admin-panel-fvVu2U",
+      "type": "repo",
+      "name": "Flutter-Responsive-Admin-Panel-or-Dashboard",
+      "nameEn": "Flutter-Responsive-Admin-Panel-or-Dashboard",
+      "summary": "一个基于 Flutter 的管理面板，通常也称为仪表盘 UI\n\n在线预览：https://abuanwar072.github.io/Flutter-Responsive-Admin-Panel-or-Dashboard/#/",
+      "url": "https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard",
+      "thumbnail": "/assets/images/flutter-responsive-admin-panel-fvVu2U/2.jpg",
+      "category": "flutter",
+      "tags": [
+        "ui"
+      ],
+      "stars": 7076,
+      "forks": 2002,
+      "language": "Dart",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "marktext-3MFtKH",
+      "type": "repo",
+      "name": "marktext",
+      "nameEn": "marktext",
+      "summary": "一款简洁优雅的Markdown编辑器，适用于Linux、macOS和Windows系统。\n\nhttps://www.marktext.me/",
+      "url": "https://github.com/marktext/marktext",
+      "thumbnail": "/assets/images/marktext-3MFtKH/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "markdown",
+        "笔记"
+      ],
+      "stars": 53396,
+      "forks": 3954,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "about-6pFhH0",
+      "type": "repo",
+      "name": "About 程序员在家做饭方法指南",
+      "nameEn": "HowToCook",
+      "summary": "程序员在家做饭方法指南。Programmer's guide about how to cook at home (Simplified Chinese only).\n\nhttps://cook.aiursoft.com/",
+      "url": "https://github.com/Anduin2017/HowToCook",
+      "thumbnail": "/assets/images/about-6pFhH0/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "做饭"
+      ],
+      "stars": 97289,
+      "forks": 10769,
+      "language": "Dockerfile",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "mattermost-XEOIPT",
+      "type": "repo",
+      "name": "mattermost",
+      "nameEn": "mattermost",
+      "summary": "Mattermost是一个开源平台，用于在整个软件开发生命周期中进行安全协作。\n\nhttps://mattermost.com/",
+      "url": "https://github.com/mattermost/mattermost",
+      "thumbnail": "/assets/images/mattermost-XEOIPT/thumb.jpg",
+      "category": "tools",
+      "tags": [],
+      "stars": 35000,
+      "forks": 8286,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "logseq-_QxTX8",
+      "type": "repo",
+      "name": "logseq",
+      "nameEn": "logseq",
+      "summary": "Logseq是一个知识管理和协作平台。它专注于隐私保护、数据长期保存和用户控制。Logseq提供一系列强大的工具，用于知识管理、协作、PDF注释和任务管理，支持多种文件格式，包括Markdown和Org-mode，并提供各种功能来组织和构建笔记。\n\nhttps://logseq.com/",
+      "url": "https://github.com/logseq/logseq",
+      "thumbnail": "/assets/images/logseq-_QxTX8/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "笔记",
+        "app"
+      ],
+      "stars": 40496,
+      "forks": 2431,
+      "language": "Clojure",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "foam-7r2WL_",
+      "type": "repo",
+      "name": "foam",
+      "nameEn": "foam",
+      "summary": "VSCode 的个人知识管理与分享系统\n\nhttps://foambubble.github.io/",
+      "url": "https://github.com/foambubble/foam",
+      "thumbnail": "/assets/images/foam-7r2WL_/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "笔记"
+      ],
+      "stars": 16757,
+      "forks": 750,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "surveyking-oCYgAL",
+      "type": "repo",
+      "name": "卷王 SurveyKing",
+      "nameEn": "SurveyKing",
+      "summary": "调查问卷系统\n【有收费版本】\nhttps://surveyking.cn/",
+      "url": "https://github.com/javahuang/SurveyKing",
+      "thumbnail": "/assets/images/surveyking-oCYgAL/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "问卷调查"
+      ],
+      "stars": 3897,
+      "forks": 581,
+      "language": "PLpgSQL",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "super-editor-fi2K-Y",
+      "type": "repo",
+      "name": "super_editor",
+      "nameEn": "super_editor",
+      "summary": "一个用于构建文档编辑器和阅读器的Flutter工具包\nhttps://pub.dev/packages/super_editor",
+      "url": "https://github.com/Flutter-Bounty-Hunters/super_editor",
+      "thumbnail": "/assets/images/super-editor-fi2K-Y/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "文本编辑器"
+      ],
+      "stars": 1908,
+      "forks": 293,
+      "language": "Dart",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "qzoneexport-pYN13p",
+      "type": "repo",
+      "name": "QZoneExport",
+      "nameEn": "QZoneExport",
+      "summary": "QQ空间导出助手，用于备份QQ空间的说说、日志、私密日记、相册、视频、留言板、QQ好友、收藏夹、分享、最近访客为文件，便于迁移与保存\nhttps://lvshuncai.com/qzone-export.html",
+      "url": "https://github.com/ShunCai/QZoneExport",
+      "thumbnail": "/assets/images/qzoneexport-pYN13p/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "qq"
+      ],
+      "stars": 1684,
+      "forks": 183,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "sec-tool-list-N3AKpW",
+      "type": "repo",
+      "name": "sec-tool-list",
+      "nameEn": "sec-tool-list",
+      "summary": "超过21,000个与安全相关的开源工具，按星标数量排序。提供Markdown和JSON两种格式。",
+      "url": "https://github.com/alphaSeclab/sec-tool-list",
+      "thumbnail": "/assets/images/sec-tool-list-N3AKpW/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "安全"
+      ],
+      "stars": 609,
+      "forks": 208,
+      "language": null,
+      "lastUpdate": "2026-01-14",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "filetype-JpXJ1B",
+      "type": "repo",
+      "name": "filetype",
+      "nameEn": "filetype",
+      "summary": "快速、无依赖的 Go 包，用于根据二进制头部推断二进制文件类型",
+      "url": "https://github.com/h2non/filetype",
+      "thumbnail": "/assets/images/filetype-JpXJ1B/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "go"
+      ],
+      "stars": 2268,
+      "forks": 187,
+      "language": "Go",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "ipashare-oaZyJt",
+      "type": "repo",
+      "name": "ipashare",
+      "nameEn": "ipashare",
+      "summary": "🚤 苹果 IPA 应用签名内测分发系统，一键上传 .ipa 文件，生成下载链接和二维码\n对于 iOS 开发者来说， Apple 的个人开发者账号几乎是必备的， 而 Apple 公司允许我们添加 100 台设备绑定到账号上，这 100 台设备可以自由安装由该账号签名且使用 Ad Hoc 方式打包出的 .ipa\n\n本项目就是利用这个官方的规则，来简化 iOS APP 的分享流程。当你开发一款 APP 的过程中，想要给身边的小伙伴体验一下，只需要部署本项目，然后上传你的个人开发者账号和 .ipa 就可以生成一个二维码，扫一扫即可全程自动绑定设备并签名安装 APP",
+      "url": "https://github.com/togettoyou/ipashare",
+      "thumbnail": "/assets/images/ipashare-oaZyJt/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "ipa"
+      ],
+      "stars": 603,
+      "forks": 201,
+      "language": "Go",
+      "lastUpdate": "2026-01-18",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "solo-hmjof2",
+      "type": "repo",
+      "name": "Solo",
+      "nameEn": "solo",
+      "summary": "🎸 B3log 分布式社区的 Java 博客端节点系统，欢迎加入下一代社区网络。\nhttps://b3log.org/solo",
+      "url": "https://github.com/88250/solo",
+      "thumbnail": "/assets/images/solo-hmjof2/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "博客",
+        "分布式",
+        "建站"
+      ],
+      "stars": 1732,
+      "forks": 452,
+      "language": "Java",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
     {
       "id": "appsmith-eNyVUo",
       "type": "repo",

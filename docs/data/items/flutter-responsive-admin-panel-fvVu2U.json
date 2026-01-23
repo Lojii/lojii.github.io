@@ -1,0 +1,39 @@
+{
+  "id": "flutter-responsive-admin-panel-fvVu2U",
+  "type": "repo",
+  "name": "Flutter-Responsive-Admin-Panel-or-Dashboard",
+  "nameEn": "Flutter-Responsive-Admin-Panel-or-Dashboard",
+  "url": "https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard",
+  "homepage": "https://youtu.be/_uOgXpEHNbc",
+  "summary": "一个基于 Flutter 的管理面板，通常也称为仪表盘 UI\n\n在线预览：https://abuanwar072.github.io/Flutter-Responsive-Admin-Panel-or-Dashboard/#/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/flutter-responsive-admin-panel-fvVu2U/2.jpg",
+    "/assets/images/flutter-responsive-admin-panel-fvVu2U/gif.gif"
+  ],
+  "thumbnail": null,
+  "category": "flutter",
+  "tags": [
+    "ui"
+  ],
+  "github": {
+    "stars": 7076,
+    "forks": 2002,
+    "language": "Dart",
+    "license": "MIT",
+    "lastUpdate": "2026-01-22",
+    "topics": [
+      "app",
+      "dashboard",
+      "dashboard-templates",
+      "flutter",
+      "web"
+    ],
+    "createdAt": "2021-05-03"
+  },
+  "archived": false,
+  "createdAt": "2026-01-23",
+  "updatedAt": "2026-01-23",
+  "originalContent": "<div id=\"readme\" class=\"md\" data-path=\"README.md\"><article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><div class=\"markdown-heading\" dir=\"auto\"><h1 class=\"heading-element\" dir=\"auto\">Flutter Responsive Admin/Dashboard Template</h1><a id=\"user-content-flutter-responsive-admindashboard-template\" class=\"anchor\" aria-label=\"Permalink: Flutter Responsive Admin/Dashboard Template\" href=\"#flutter-responsive-admindashboard-template\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\"><a href=\"https://abuanwar072.github.io/Flutter-Responsive-Admin-Panel-or-Dashboard/#/\" rel=\"nofollow\">Live Preview</a></h2><a id=\"user-content-live-preview\" class=\"anchor\" aria-label=\"Permalink: Live Preview\" href=\"#live-preview\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">I've created a step-by-step video tutorial to guide you through the process of building this responsive admin panel. <strong><a href=\"https://youtu.be/_uOgXpEHNbc\" rel=\"nofollow\">Watch it on YouTube</a></strong></p>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">Checkout <a href=\"https://cutt.ly/Per1Z7ri\" rel=\"nofollow\">Serverpod.dev</a> - The Flutter Backend</h3><a id=\"user-content-checkout-serverpoddev---the-flutter-backend\" class=\"anchor\" aria-label=\"Permalink: Checkout Serverpod.dev - The Flutter Backend\" href=\"#checkout-serverpoddev---the-flutter-backend\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Flutter V2.* has officially introduced web support on its stable branch. Today, I'm excited to present a Flutter-based Admin panel, often referred to as a dashboard UI. This Flutter dashboard template, which you can find on GitHub, is a comprehensive solution for your app's backend needs. It comes with a wide array of features including charts, tables, and neatly designed info cards.</p>\n<p dir=\"auto\">This flutter dashboard library is versatile; it's tailored to work seamlessly on the Web, macOS app, tablets, and both Android and iOS phones. The principle 'code once, run everywhere' truly comes to life with this.</p>\n<p dir=\"auto\"><strong>Packages we are using:</strong></p>\n<ul dir=\"auto\">\n<li>flutter_svg: <a href=\"https://pub.dev/packages/flutter_svg\" rel=\"nofollow\">link</a></li>\n<li>google_fonts: <a href=\"https://pub.dev/packages/google_fonts\" rel=\"nofollow\">link</a></li>\n<li>provider: <a href=\"https://pub.dev/packages/provider\" rel=\"nofollow\">link</a></li>\n</ul>\n<p dir=\"auto\"><strong>Fonts</strong></p>\n<ul dir=\"auto\">\n<li>Poppins <a href=\"https://fonts.google.com/specimen/Poppins\" rel=\"nofollow\">link</a></li>\n</ul>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">Responsive Admin Panel or Dashboard Final UI Preview</h3><a id=\"user-content-responsive-admin-panel-or-dashboard-final-ui-preview\" class=\"anchor\" aria-label=\"Permalink: Responsive Admin Panel or Dashboard Final UI Preview\" href=\"#responsive-admin-panel-or-dashboard-final-ui-preview\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard/blob/HEAD//gif.gif\"><img src=\"https://raw.githubusercontent.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard/HEAD//gif.gif\" alt=\"Preview\" data-animated-image=\"\" style=\"max-width: 100%;\"></a></p>\n<p dir=\"auto\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard/blob/HEAD//ui.png\"><img src=\"https://raw.githubusercontent.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard/HEAD//ui.png\" alt=\"App UI\" style=\"max-width: 100%;\"></a></p>\n</article></div>"
+}
