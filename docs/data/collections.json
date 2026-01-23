@@ -1,7 +1,371 @@
 {
-  "lastUpdated": "2026-01-23T02:38:03.428Z",
-  "total": 81,
+  "lastUpdated": "2026-01-23T03:33:04.906Z",
+  "total": 100,
   "items": [
+    {
+      "id": "appsmith-eNyVUo",
+      "type": "repo",
+      "name": "appsmith",
+      "nameEn": "appsmith",
+      "summary": "Appsmith 是一个开源的低代码平台，可简化定制应用程序的开发、部署和维护\n【有收费版本】\nhttps://www.appsmith.com/",
+      "url": "https://github.com/appsmithorg/appsmith",
+      "thumbnail": "/assets/images/appsmith-eNyVUo/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "低代码"
+      ],
+      "stars": 38968,
+      "forks": 4428,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "logto-1ufzac",
+      "type": "repo",
+      "name": "logto",
+      "nameEn": "logto",
+      "summary": "基于 OIDC 和 OAuth 2.1 构建的 SaaS 和 AI 应用身份验证和授权基础架构，支持多租户、SSO 和 RBAC。\n\nhttps://logto.io/",
+      "url": "https://github.com/logto-io/logto",
+      "thumbnail": "/assets/images/logto-1ufzac/thumb.jpg",
+      "category": "backend",
+      "tags": [
+        "框架"
+      ],
+      "stars": 11469,
+      "forks": 691,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "flutter-ui-0ZOd3I",
+      "type": "repo",
+      "name": "最佳 Flutter UI 模板",
+      "nameEn": "Best-Flutter-UI-Templates",
+      "summary": "确实好看",
+      "url": "https://github.com/mitesh77/Best-Flutter-UI-Templates",
+      "thumbnail": "/assets/images/flutter-ui-0ZOd3I/thumb.gif",
+      "category": "flutter",
+      "tags": [],
+      "stars": 22457,
+      "forks": 4824,
+      "language": "Dart",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "fair-w32St5",
+      "type": "repo",
+      "name": "Fair",
+      "nameEn": "Fair",
+      "summary": "Fair提供一整套Flutter动态化解决方案\n\nhttps://fair.58.com/",
+      "url": "https://github.com/wuba/Fair",
+      "thumbnail": "/assets/images/fair-w32St5/thumb.jpg",
+      "category": "flutter",
+      "tags": [],
+      "stars": 2746,
+      "forks": 320,
+      "language": "Dart",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "forem-VRkMyE",
+      "type": "repo",
+      "name": "forem",
+      "nameEn": "forem",
+      "summary": "Forem 是一款用于构建社区的开源软件。它可以帮助你构建面向同行、客户、粉丝、家人、朋友以及任何需要人们聚集在一起的场合的社区\nhttps://forem.com/",
+      "url": "https://github.com/forem/forem",
+      "thumbnail": "/assets/images/forem-VRkMyE/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "社区",
+        "建站"
+      ],
+      "stars": 22580,
+      "forks": 4154,
+      "language": "Ruby",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "markdown-preview-enhanced-bGobKB",
+      "type": "repo",
+      "name": "markdown-preview-enhanced",
+      "nameEn": "markdown-preview-enhanced",
+      "summary": "Markdown Preview Enhanced 是一款为 Visual Studio Code 编辑器编写的超级强大的 Markdown 插件。 这款插件意在让你拥有飘逸的 Markdown 写作体验。\nhttps://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/",
+      "url": "https://github.com/shd101wyy/markdown-preview-enhanced",
+      "thumbnail": "/assets/images/markdown-preview-enhanced-bGobKB/thumb.jpg",
+      "category": "frontend",
+      "tags": [
+        "markdown"
+      ],
+      "stars": 4318,
+      "forks": 526,
+      "language": "HTML",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "flutter-examples-ukK1Wt",
+      "type": "repo",
+      "name": "flutter-examples",
+      "nameEn": "flutter-examples",
+      "summary": "该仓库包含 Syncfusion Flutter UI 组件的示例及其使用指南。\n几年过去了，居然还在更新，不错了",
+      "url": "https://github.com/syncfusion/flutter-examples",
+      "thumbnail": "/assets/images/flutter-examples-ukK1Wt/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "教程"
+      ],
+      "stars": 2065,
+      "forks": 775,
+      "language": "Dart",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "timeline-sankey-6EDkVl",
+      "type": "repo",
+      "name": "timeline-sankey",
+      "nameEn": "timeline-sankey",
+      "summary": "一个利用桑基图可视化时间序列数据的项目。\n时间轴组件，可以用来显示各种时间轴\nhttps://timeline-sankey.vercel.app/",
+      "url": "https://github.com/geekplux/timeline-sankey",
+      "thumbnail": "/assets/images/timeline-sankey-6EDkVl/thumb.jpg",
+      "category": "frontend",
+      "tags": [
+        "ui"
+      ],
+      "stars": 95,
+      "forks": 3,
+      "language": "TypeScript",
+      "lastUpdate": "2025-11-16",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "wordpress-theme-puock-ke5E4R",
+      "type": "repo",
+      "name": "wordpress-theme-puock",
+      "nameEn": "wordpress-theme-puock",
+      "summary": "一款基于WordPress开发的高颜值的自适应主题，支持白天与黑夜模式/无刷新加载/第三方登录等众多功能 | A high-value adaptive theme based on WordPress, supports light and dark modes, no refresh loading, etc.\nhttps://docs.puock.com/",
+      "url": "https://github.com/Licoy/wordpress-theme-puock",
+      "thumbnail": "/assets/images/wordpress-theme-puock-ke5E4R/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "wordpress",
+        "建站"
+      ],
+      "stars": 2861,
+      "forks": 470,
+      "language": "PHP",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "pulse-DwcLlI",
+      "type": "repo",
+      "name": "Pulse",
+      "nameEn": "Pulse",
+      "summary": "Apple 平台日志系统。原生支持，使用 SwiftUI 构建。",
+      "url": "https://github.com/kean/Pulse",
+      "thumbnail": "/assets/images/pulse-DwcLlI/thumb.jpg",
+      "category": "iOS",
+      "tags": [
+        "日志"
+      ],
+      "stars": 6817,
+      "forks": 357,
+      "language": "Swift",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "lemon-cleaner-k1-Fs6",
+      "type": "repo",
+      "name": "lemon-cleaner",
+      "nameEn": "lemon-cleaner",
+      "summary": "腾讯柠檬清理是针对macOS系统专属制定的清理工具。主要功能包括重复文件和相似照片的识别、软件的定制化垃圾扫描、可视化的全盘空间分析、内存释放、浏览器隐私清理以及设备实时状态的监控等。重点聚焦清理功能，对上百款软件提供定制化的清理方案，提供专业的清理建议，帮助用户轻松完成一键式清理。",
+      "url": "https://github.com/Tencent/lemon-cleaner",
+      "thumbnail": "/assets/images/lemon-cleaner-k1-Fs6/thumb.jpg",
+      "category": "iOS",
+      "tags": [
+        "app",
+        "腾讯"
+      ],
+      "stars": 6070,
+      "forks": 784,
+      "language": "Objective-C",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "bedrock-BU714V",
+      "type": "repo",
+      "name": "Bedrock",
+      "nameEn": "Bedrock",
+      "summary": "一款基于MVVM+Provider的快速开发框架。\n\nhttps://juejin.im/post/5edc91edf265da76c76b18a5",
+      "url": "https://github.com/bladeofgod/Bedrock",
+      "thumbnail": "/assets/images/bedrock-BU714V/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "框架"
+      ],
+      "stars": 347,
+      "forks": 73,
+      "language": "Dart",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "picgo-W45PIR",
+      "type": "repo",
+      "name": "PicGo",
+      "nameEn": "PicGo",
+      "summary": "PicGo 致力于将图片上传无缝集成到你的创作工作流中。\n无论你是写博客、做笔记还是编写开发文档，PicGo 都能帮你一键上传图片并自动复制链接，让你专注于内容创作本身，而不是繁琐的上传步骤。\nhttps://picgo.app/\n",
+      "url": "https://github.com/Molunerfinn/PicGo?tab=readme-ov-file",
+      "thumbnail": "/assets/images/picgo-W45PIR/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "图床"
+      ],
+      "stars": 26232,
+      "forks": 2335,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "gitup-w8qOZm",
+      "type": "repo",
+      "name": "GitUp",
+      "nameEn": "GitUp",
+      "summary": "你一生都在寻找的Git界面终于来了。\n\nhttps://gitup.co/",
+      "url": "https://github.com/git-up/GitUp",
+      "thumbnail": "/assets/images/gitup-w8qOZm/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "git"
+      ],
+      "stars": 11851,
+      "forks": 1444,
+      "language": "Objective-C",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "gitgeist-poc-cl85dc",
+      "type": "repo",
+      "name": "gitgeist-poc",
+      "nameEn": "gitgeist-poc",
+      "summary": "基于 Git 的社交网络概念验证",
+      "url": "https://github.com/opersys/gitgeist-poc",
+      "thumbnail": "/assets/images/gitgeist-poc-cl85dc/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "git",
+        "有意思"
+      ],
+      "stars": 127,
+      "forks": 12,
+      "language": "JavaScript",
+      "lastUpdate": "2025-12-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "trilium-RXCqXk",
+      "type": "repo",
+      "name": "Trilium",
+      "nameEn": "Trilium",
+      "summary": "Trilium Notes是一款免费且开源、跨平台的阶层式笔记应用程序，着眼于建立大型个人知识库。\n\nhttps://triliumnotes.org/",
+      "url": "https://github.com/TriliumNext/Trilium",
+      "thumbnail": "/assets/images/trilium-RXCqXk/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "笔记",
+        "app"
+      ],
+      "stars": 34271,
+      "forks": 2270,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "joplin-NOLSIh",
+      "type": "repo",
+      "name": "Joplin",
+      "nameEn": "joplin",
+      "summary": "Joplin - 一款注重隐私的笔记应用，支持在Windows、macOS、Linux、Android和iOS设备间同步。\n\nhttps://joplinapp.org/",
+      "url": "https://github.com/laurent22/joplin",
+      "thumbnail": "/assets/images/joplin-NOLSIh/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "笔记",
+        "app"
+      ],
+      "stars": 53084,
+      "forks": 5688,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "flutter-GZE228",
+      "type": "repo",
+      "name": "Flutter 创建的示例应用程序",
+      "nameEn": "flutter_samples",
+      "summary": "挺好看的，如果要入门 flutter，可以看看，不过代码版本有点老了",
+      "url": "https://github.com/moisessc/flutter_samples",
+      "thumbnail": "/assets/images/flutter-GZE228/thumb.gif",
+      "category": "flutter",
+      "tags": [
+        "教程"
+      ],
+      "stars": 32,
+      "forks": 16,
+      "language": "Dart",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "-eNqsPy",
+      "type": "repo",
+      "name": "思源笔记",
+      "nameEn": "siyuan",
+      "summary": "思源笔记是一款隐私优先的个人知识管理系统，支持细粒度块级引用和 Markdown 所见即所得。\nhttps://b3log.org/siyuan/\n【有收费版本】",
+      "url": "https://github.com/siyuan-note/siyuan",
+      "thumbnail": "/assets/images/-eNqsPy/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "笔记",
+        "建站"
+      ],
+      "stars": 40799,
+      "forks": 2529,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
     {
       "id": "-COHMXF",
       "type": "repo",
