@@ -1,7 +1,592 @@
 {
-  "lastUpdated": "2026-01-22T09:45:19.041Z",
-  "total": 51,
+  "lastUpdated": "2026-01-23T02:38:03.428Z",
+  "total": 81,
   "items": [
+    {
+      "id": "-COHMXF",
+      "type": "repo",
+      "name": "冰激凌内容管理系统",
+      "nameEn": "IceCMS",
+      "summary": "🌈冰激凌内容管理系统🍦,实现MacWK资源站，社区图片视频圈子CMS，支持网页端移动端小程序🌟适合做 资讯商城，社区论坛，聊天交友 社区，博客，圈子，论坛，图片，视频，社交。\nhttps://www.icecms.cn/",
+      "url": "https://github.com/Thecosy/IceCMS",
+      "thumbnail": "/assets/images/-COHMXF/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "建站"
+      ],
+      "stars": 1900,
+      "forks": 281,
+      "language": "Vue",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "astro-KEVCj1",
+      "type": "repo",
+      "name": "Astro",
+      "nameEn": "astro",
+      "summary": "Astro 是最适合构建像博客、营销网站、电子商务网站这样的以内容驱动的网站的 Web 框架。Astro 以开创了一种新的前端架构而闻名，与其他框架相比它减少了 JavaScript 的开销和复杂性。如果你需要一个加载速度快、具有良好 SEO 的网站，那么 Astro 就是你的选择。",
+      "url": "https://github.com/withastro/astro",
+      "thumbnail": "/assets/images/astro-KEVCj1/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "博客",
+        "建站"
+      ],
+      "stars": 56142,
+      "forks": 3090,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "mastodon-dwhcni",
+      "type": "repo",
+      "name": "mastodon",
+      "nameEn": "mastodon",
+      "summary": "您自托管的全球互联微博社区\n\nhttps://joinmastodon.org/",
+      "url": "https://github.com/mastodon/mastodon",
+      "thumbnail": "/assets/images/mastodon-dwhcni/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "社区"
+      ],
+      "stars": 49531,
+      "forks": 7393,
+      "language": "Ruby",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "-CNolNf",
+      "type": "repo",
+      "name": "程序员延寿指南",
+      "nameEn": "HowToLiveLonger",
+      "summary": "程序员延寿指南 | A programmer's guide to live longer",
+      "url": "https://github.com/geekan/HowToLiveLonger",
+      "thumbnail": "/assets/images/-CNolNf/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "程序员"
+      ],
+      "stars": 34721,
+      "forks": 2375,
+      "language": null,
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "halo-sC-OnM",
+      "type": "repo",
+      "name": "halo",
+      "nameEn": "halo",
+      "summary": "强大易用的开源建站工具。\nhttps://www.halo.run/",
+      "url": "https://github.com/halo-dev/halo",
+      "thumbnail": "/assets/images/halo-sC-OnM/thumb.jpg",
+      "category": "frontend",
+      "tags": [
+        "建站",
+        "博客"
+      ],
+      "stars": 37865,
+      "forks": 10193,
+      "language": "Java",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "ip2region-eLUVlS",
+      "type": "repo",
+      "name": "ip2region",
+      "nameEn": "ip2region",
+      "summary": "离线IP地址定位库和IP定位数据管理框架，同时支持IPv4和IPv6，10微秒级别的查询效率，提供了众多主流编程语言的 xdb 数据生成和查询客户端实现\nhttps://ip2region.net/",
+      "url": "https://github.com/lionsoul2014/ip2region",
+      "thumbnail": "/assets/images/ip2region-eLUVlS/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "ip"
+      ],
+      "stars": 18629,
+      "forks": 2954,
+      "language": "Java",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "flutter-kGqImA",
+      "type": "repo",
+      "name": "Flutter实战·第二版",
+      "nameEn": "flutter_in_action_2nd",
+      "summary": "《Flutter实战 第二版》 书稿\nhttps://book.flutterchina.club/",
+      "url": "https://github.com/flutterchina/flutter_in_action_2nd",
+      "thumbnail": "/assets/images/flutter-kGqImA/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "flutter"
+      ],
+      "stars": 2567,
+      "forks": 390,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "decap-cms-zh_Vag",
+      "type": "repo",
+      "name": "decap-cms",
+      "nameEn": "decap-cms",
+      "summary": "一款适用于静态网站生成器的内容管理系统。它为用户提供了一种简单的方式，可以编辑和添加任何使用静态网站生成器创建的网站的内容。",
+      "url": "https://github.com/decaporg/decap-cms",
+      "thumbnail": "/assets/images/decap-cms-zh_Vag/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "静态博客"
+      ],
+      "stars": 18851,
+      "forks": 3107,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "excalidraw-qt4qnW",
+      "type": "repo",
+      "name": "excalidraw",
+      "nameEn": "excalidraw",
+      "summary": "用于绘制类似手绘图表的虚拟白板\nhttps://excalidraw.com/",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "thumbnail": "/assets/images/excalidraw-qt4qnW/thumb.jpg",
+      "category": "frontend",
+      "tags": [
+        "绘图"
+      ],
+      "stars": 115057,
+      "forks": 12247,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "milkdown-BAawS1",
+      "type": "repo",
+      "name": "Milkdown",
+      "nameEn": "Milkdown",
+      "summary": "一个受Typora启发、基于prosemirror和remark构建的插件驱动的 WYSIWYG markdown 编辑器。\n\nhttps://milkdown.dev/",
+      "url": "https://github.com/Milkdown/milkdown",
+      "thumbnail": "/assets/images/milkdown-BAawS1/thumb.jpg",
+      "category": "frontend",
+      "tags": [
+        "markdown"
+      ],
+      "stars": 0,
+      "forks": 0,
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "blocknote-X597K7",
+      "type": "repo",
+      "name": "BlockNote",
+      "nameEn": "BlockNote",
+      "summary": "一款基于块（类似Notion风格）且可扩展的React富文本编辑器。基于Prosemirror和Tiptap构建。\n\nhttps://www.blocknotejs.org/",
+      "url": "https://github.com/TypeCellOS/BlockNote",
+      "thumbnail": "/assets/images/blocknote-X597K7/2.gif",
+      "category": "frontend",
+      "tags": [
+        "文本编辑器"
+      ],
+      "stars": 8984,
+      "forks": 674,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "bruno-1PBYvl",
+      "type": "repo",
+      "name": "Bruno",
+      "nameEn": "bruno",
+      "summary": "Bruno 是基于一整套设计体系的 Flutter 组件库。\n\nhttps://bruno.ke.com/",
+      "url": "https://github.com/LianjiaTech/bruno",
+      "thumbnail": "/assets/images/bruno-1PBYvl/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "ui"
+      ],
+      "stars": 3442,
+      "forks": 518,
+      "language": "Dart",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "flutterunit-UQmNYz",
+      "type": "repo",
+      "name": "FlutterUnit",
+      "nameEn": "FlutterUnit",
+      "summary": "全平台体验应用，你可以在这里尽情体验 Flutter 带来的创造力。\n可以当 flutter 文档来使用",
+      "url": "https://github.com/toly1994328/FlutterUnit",
+      "thumbnail": "/assets/images/flutterunit-UQmNYz/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "dart",
+        "flutter"
+      ],
+      "stars": 8788,
+      "forks": 1400,
+      "language": "Dart",
+      "lastUpdate": "2026-01-19",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "-XMXTdr",
+      "type": "repo",
+      "name": "软件著作权申请教程 & 模板文件",
+      "nameEn": "China-software-copyright",
+      "summary": "软件著作权申请教程 & 模板文件",
+      "url": "https://github.com/AlexanderZhou01/China-software-copyright",
+      "thumbnail": "/assets/images/-XMXTdr/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "软著"
+      ],
+      "stars": 4096,
+      "forks": 561,
+      "language": null,
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "afloatx-ftdFMy",
+      "type": "repo",
+      "name": "AfloatX",
+      "nameEn": "AfloatX",
+      "summary": "可以让窗口置顶的小工具，macOS 专用",
+      "url": "https://github.com/jslegendre/AfloatX",
+      "thumbnail": "/assets/images/afloatx-ftdFMy/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "macos"
+      ],
+      "stars": 417,
+      "forks": 13,
+      "language": "Objective-C",
+      "lastUpdate": "2026-01-21",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "libretranslate-ARP_3h",
+      "type": "repo",
+      "name": "LibreTranslate",
+      "nameEn": "LibreTranslate",
+      "summary": "免费开源的机器翻译API。支持自托管、离线使用，且易于设置。",
+      "url": "https://github.com/LibreTranslate/LibreTranslate",
+      "thumbnail": "/assets/images/libretranslate-ARP_3h/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "翻译"
+      ],
+      "stars": 13585,
+      "forks": 1410,
+      "language": "Python",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "stt-UWjkmz",
+      "type": "repo",
+      "name": "stt",
+      "nameEn": "stt",
+      "summary": "Voice Recognition to Text Tool / 一个离线运行的本地音视频转字幕工具，输出json、srt字幕、纯文字格式",
+      "url": "https://github.com/jianchang512/stt",
+      "thumbnail": "/assets/images/stt-UWjkmz/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "语音识别"
+      ],
+      "stars": 4214,
+      "forks": 464,
+      "language": "Python",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "pyvideotrans-h1lq1S",
+      "type": "repo",
+      "name": "pyvideotrans",
+      "nameEn": "pyvideotrans",
+      "summary": "一款功能强大的开源视频翻译/语音转录/语音合成软件，致力于将视频从一种语言，无缝转换到包含另一种语言配音和字幕的视频。\n\nhttps://pyvideotrans.com/",
+      "url": "https://github.com/jianchang512/pyvideotrans",
+      "thumbnail": "/assets/images/pyvideotrans-h1lq1S/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "翻译",
+        "自动化"
+      ],
+      "stars": 15891,
+      "forks": 1866,
+      "language": "Python",
+      "lastUpdate": "2026-01-23",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "editor-js-nWr9Fa",
+      "type": "repo",
+      "name": "editor.js",
+      "nameEn": "editor.js",
+      "summary": "类似于飞书文档、Notion... 那样的文档编辑器，每行都是一个 block\n\nA block-style editor with clean JSON output\n\nhttps://editorjs.io/",
+      "url": "https://github.com/codex-team/editor.js",
+      "thumbnail": "/assets/images/editor-js-nWr9Fa/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "文本编辑器"
+      ],
+      "stars": 31422,
+      "forks": 2229,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "tesseract-js-o8YFQX",
+      "type": "repo",
+      "name": "Tesseract.js",
+      "nameEn": "tesseract.js",
+      "summary": "浏览器端运行的 OCR 库\n\nPure Javascript OCR for more than 100 Languages 📖🎉🖥\n\nhttps://tesseract.projectnaptha.com/",
+      "url": "https://github.com/naptha/tesseract.js",
+      "thumbnail": "/assets/images/tesseract-js-o8YFQX/thumb.gif",
+      "category": "tools",
+      "tags": [
+        "ocr",
+        "js"
+      ],
+      "stars": 37781,
+      "forks": 2360,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "koishi-HwLsrt",
+      "type": "repo",
+      "name": "Koishi",
+      "nameEn": "koishi",
+      "summary": "跨平台、可扩展、高性能的聊天机器人框架\n搭建自己的聊天机器人\nhttps://koishi.chat/",
+      "url": "https://github.com/koishijs/koishi",
+      "thumbnail": "/assets/images/koishi-HwLsrt/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "聊天机器人"
+      ],
+      "stars": 5418,
+      "forks": 292,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "-n70zfx",
+      "type": "repo",
+      "name": "若依快速开发平台",
+      "nameEn": "RuoYi-Vue",
+      "summary": ":tada: (RuoYi)官方仓库 基于SpringBoot，Spring Security，JWT，Vue & Element 的前后端分离权限管理系统，同时提供了 Vue3 的版本\n\nhttp://ruoyi.vip/",
+      "url": "https://github.com/yangzongzhuan/RuoYi-Vue",
+      "thumbnail": "/assets/images/-n70zfx/thumb.jpg",
+      "category": "vue",
+      "tags": [
+        "框架",
+        "java"
+      ],
+      "stars": 2904,
+      "forks": 1540,
+      "language": "Java",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "-Ip17Li",
+      "type": "repo",
+      "name": "技术派",
+      "nameEn": "paicoding",
+      "summary": "⭐️一款好用又强大的开源社区，基于 Spring Boot、MyBatis-Plus、MySQL、Redis、ElasticSearch、MongoDB、Docker、RabbitMQ 等主流技术栈，附详细教程，包括Java、Spring、MySQL、Redis、微服务&分布式、消息队列等核心知识点。学编程，就上技术派😁。\n\nhttps://paicoding.com/",
+      "url": "https://github.com/itwanger/paicoding",
+      "thumbnail": "/assets/images/-Ip17Li/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "java",
+        "社区"
+      ],
+      "stars": 2970,
+      "forks": 588,
+      "language": "Java",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "java-rsx6sQ",
+      "type": "repo",
+      "name": "成为一名更好的 Java 程序员",
+      "nameEn": "toBeBetterJavaer",
+      "summary": "一份通俗易懂、风趣幽默的Java学习指南，内容涵盖Java基础、Java并发编程、Java虚拟机、Java企业级开发、Java面试等核心知识点。学Java，就认准二哥的Java进阶之路😄",
+      "url": "https://github.com/itwanger/toBeBetterJavaer",
+      "thumbnail": "/assets/images/java-rsx6sQ/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "java",
+        "教程"
+      ],
+      "stars": 16614,
+      "forks": 2249,
+      "language": null,
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "tvbox-j8sdft",
+      "type": "repo",
+      "name": "TVBox",
+      "nameEn": "tvbox",
+      "summary": "OK影视、tvbox配置文件\nhttps://tvbox.wpcoder.cn/download.html",
+      "url": "https://github.com/qist/tvbox",
+      "thumbnail": "/assets/images/tvbox-j8sdft/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "电视"
+      ],
+      "stars": 7618,
+      "forks": 2861,
+      "language": "JavaScript",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "wukongim-IjUKN4",
+      "type": "repo",
+      "name": "WuKongIM",
+      "nameEn": "WuKongIM",
+      "summary": "More than just IM 不只是即时通讯( IM )\nhttps://githubim.com/",
+      "url": "https://github.com/WuKongIM/WuKongIM",
+      "thumbnail": "/assets/images/wukongim-IjUKN4/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "im",
+        "即时聊天",
+        "go",
+        "vue"
+      ],
+      "stars": 4724,
+      "forks": 635,
+      "language": "Go",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "-eAC7in",
+      "type": "repo",
+      "name": "唐僧叨叨",
+      "nameEn": "TangSengDaoDaoServer",
+      "summary": "高颜值 IM 即时通讯,聊天\n\n",
+      "url": "https://github.com/TangSengDaoDao/TangSengDaoDaoServer",
+      "thumbnail": "/assets/images/-eAC7in/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "im",
+        "即时聊天",
+        "go"
+      ],
+      "stars": 3358,
+      "forks": 534,
+      "language": "Go",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "fabritor-web-152MYe",
+      "type": "repo",
+      "name": "fabritor-web",
+      "nameEn": "fabritor-web",
+      "summary": "👻 A creative editor based on fabricjs. 一款基于 fabricjs 的开源创意图片编辑器，旨在让开发者快速构建属于自己的图片编辑器。可应用于海报设计、小红书公众号封面设计、banner 设计等场景。\n\nhttps://fabritor.surge.sh/\n",
+      "url": "https://github.com/sleepy-zone/fabritor-web",
+      "thumbnail": "/assets/images/fabritor-web-152MYe/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "图片编辑器",
+        "设计"
+      ],
+      "stars": 1160,
+      "forks": 168,
+      "language": "TypeScript",
+      "lastUpdate": "2026-01-19",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "omniparse-7LaAwv",
+      "type": "repo",
+      "name": "omniparse",
+      "nameEn": "omniparse",
+      "summary": "一个数据摄取/解析平台，您可以在此摄取各类数据，如文档、图像、音频、视频和网络内容，并获得最适合生成式人工智能（大语言模型）使用的结构化、可操作输出。",
+      "url": "https://github.com/adithya-s-k/omniparse",
+      "thumbnail": "/assets/images/omniparse-7LaAwv/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "格式转换",
+        "自动化"
+      ],
+      "stars": 6781,
+      "forks": 538,
+      "language": "Python",
+      "lastUpdate": "2026-01-20",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
+    {
+      "id": "ai-WG-6ob",
+      "type": "repo",
+      "name": "AI副业赚钱大集合",
+      "nameEn": "aimoneyhunter",
+      "summary": "ai副业赚钱大集合，教你如何利用ai做一些副业项目，赚取更多额外收益。\n这个仓库已经不更新了，可以作为 AI 发展史初期的资料参考\n\n原始作者：https://x.com/Yangyixxxx?screen_name=yangyixxxx",
+      "url": "https://github.com/bleedline/aimoneyhunter",
+      "thumbnail": "/assets/images/ai-WG-6ob/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "ai"
+      ],
+      "stars": 15827,
+      "forks": 1467,
+      "language": null,
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-23"
+    },
     {
       "id": "codeformer-VcETN9",
       "type": "repo",
