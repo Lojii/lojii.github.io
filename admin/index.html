@@ -365,6 +365,7 @@
             cursor: pointer;
             transition: all 0.3s;
             background: var(--card);
+            user-select: none;
         }
 
         .upload-zone:hover,
@@ -373,20 +374,14 @@
             background: rgba(233, 69, 96, 0.1);
         }
 
-        .upload-zone input[type="file"] {
-            display: none !important;
-        }
-
         .upload-zone p {
             color: var(--text-dim);
             margin-bottom: 8px;
-            pointer-events: none;
         }
 
         .upload-zone .hint {
             font-size: 12px;
             color: var(--text-dim);
-            pointer-events: none;
         }
 
         .upload-preview {
@@ -490,11 +485,14 @@
                         placeholder="https://..."></textarea></div>
                 <div class="form-group">
                     <label>上传图片 (支持多选、拖拽)</label>
-                    <label class="upload-zone" id="uploadZone">
-                        <input type="file" id="addFiles" multiple accept="image/*" onchange="handleFileSelect(event)">
+                    <div class="upload-zone" id="uploadZone" onclick="document.getElementById('addFiles').click()"
+                        ondragover="event.preventDefault(); this.classList.add('dragover')"
+                        ondragleave="this.classList.remove('dragover')" ondrop="handleDrop(event)">
                         <p>📁 点击选择图片 或 拖拽图片到此处</p>
                         <span class="hint">支持 JPG、PNG、GIF、WebP，可多选</span>
-                    </label>
+                    </div>
+                    <input type="file" id="addFiles" multiple accept="image/*" style="display:none"
+                        onchange="onFilesSelected(this)">
                     <div class="upload-preview" id="uploadPreview"></div>
                 </div>
                 <div class="form-group"><label>个人备注</label><textarea id="addNotes" rows="2"></textarea></div>
@@ -518,7 +516,12 @@
             <div class="card">
                 <div class="card-header">
                     <span class="card-title">收藏列表 (<span id="totalCount">0</span>)</span>
-                    <input type="text" id="listSearch" placeholder="搜索..." style="width:200px;padding:8px">
+                    <div style="display:flex;gap:12px;align-items:center">
+                        <label style="font-size:13px;display:flex;align-items:center;gap:6px">
+                            <input type="checkbox" id="showArchived" onchange="renderList()"> 显示归档
+                        </label>
+                        <input type="text" id="listSearch" placeholder="搜索..." style="width:200px;padding:8px">
+                    </div>
                 </div>
                 <div id="listItems"></div>
             </div>
@@ -545,6 +548,29 @@
     <script>
         let collections = { items: [] }, categories = { categories: [], tags: [] }, parsedData = null, editMode = false, editingItem = null, selectedFiles = [];
 
+        // 文件选择回调
+        function onFilesSelected(input) {
+            const files = Array.from(input.files).filter(f => f.type.startsWith('image/'));
+            if (files.length) {
+                selectedFiles = [...selectedFiles, ...files];
+                renderUploadPreview();
+            }
+            input.value = '';
+        }
+
+        // 拖拽放下回调
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            document.getElementById('uploadZone').classList.remove('dragover');
+
+            const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+            if (files.length) {
+                selectedFiles = [...selectedFiles, ...files];
+                renderUploadPreview();
+            }
+        }
+
         async function init() {
             [collections, categories] = await Promise.all([
                 fetch('/api/collections').then(r => r.json()),
@@ -552,51 +578,64 @@
             ]);
             renderCategories();
             renderList();
-            initUploadZone();
         }
 
         // 处理文件选择
-        function handleFileSelect(e) {
-            const files = Array.from(e.target.files);
-            if (files.length) {
-                addFiles(files);
+        function handleFileSelect(files) {
+            const imageFiles = Array.from(files).filter(f => f.type.startsWith('image/'));
+            if (imageFiles.length) {
+                addFiles(imageFiles);
             }
-            e.target.value = ''; // 清空以便再次选择相同文件
         }
 
-        // 初始化上传区域（只处理拖拽）
+        // 初始化上传区域
         function initUploadZone() {
             const zone = document.getElementById('uploadZone');
+            const input = document.getElementById('addFiles');
 
-            // 阻止默认拖拽行为
-            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-                zone.addEventListener(eventName, (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                });
-            });
+            // 点击上传
+            zone.onclick = function () {
+                input.click();
+            };
 
-            // 拖拽进入/悬停
-            ['dragenter', 'dragover'].forEach(eventName => {
-                zone.addEventListener(eventName, () => {
-                    zone.classList.add('dragover');
-                });
-            });
+            // 文件选择后
+            input.onchange = function () {
+                handleFileSelect(this.files);
+                this.value = '';
+            };
 
-            // 拖拽离开
-            ['dragleave', 'drop'].forEach(eventName => {
-                zone.addEventListener(eventName, () => {
-                    zone.classList.remove('dragover');
-                });
-            });
+            // 拖拽 - 进入
+            zone.ondragenter = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.add('dragover');
+            };
 
-            // 拖拽放下
-            zone.addEventListener('drop', (e) => {
-                const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
-                if (files.length) {
-                    addFiles(files);
+            // 拖拽 - 悬停
+            zone.ondragover = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.add('dragover');
+            };
+
+            // 拖拽 - 离开
+            zone.ondragleave = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.remove('dragover');
+            };
+
+            // 拖拽 - 放下
+            zone.ondrop = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.remove('dragover');
+
+                const files = e.dataTransfer.files;
+                if (files && files.length) {
+                    handleFileSelect(files);
                 }
-            });
+            };
         }
 
         // 添加文件到列表
@@ -647,10 +686,20 @@
 
         function renderList() {
             const search = document.getElementById('listSearch').value.toLowerCase();
-            const items = collections.items.filter(i => !search || i.name.toLowerCase().includes(search) || i.tags?.some(t => t.includes(search)));
-            document.getElementById('totalCount').textContent = collections.items.length;
+            const showArchived = document.getElementById('showArchived')?.checked || false;
+
+            // 过滤：先按归档状态，再按搜索关键字
+            let items = collections.items || [];
+            if (!showArchived) {
+                items = items.filter(i => !i.archived);
+            }
+            if (search) {
+                items = items.filter(i => i.name.toLowerCase().includes(search) || i.tags?.some(t => t.includes(search)));
+            }
+
+            document.getElementById('totalCount').textContent = items.length;
             document.getElementById('listItems').innerHTML = items.length ? items.map(i => `
-        <div class="list-item">
+        <div class="list-item" style="${i.archived ? 'opacity:0.6' : ''}">
           <div class="list-item-info">
             <div class="list-item-name">${i.name} ${i.archived ? '<span class="badge archived">已归档</span>' : ''}</div>
             <div class="list-item-meta">⭐${i.stars || 0} · ${i.category} · ${i.tags?.slice(0, 3).join(', ') || '无标签'}</div>
@@ -809,19 +858,41 @@
         }
 
         async function toggleArchive(id, archived) {
-            await fetch(`/api/items/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ archived }) });
-            collections = await fetch('/api/collections').then(r => r.json());
-            renderList();
-            showToast(archived ? '已归档' : '已取消归档');
+            try {
+                const res = await fetch(`/api/items/${id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ archived })
+                });
+                const result = await res.json();
+                if (result.error) throw new Error(result.error);
+
+                // 重新获取数据
+                collections = await fetch('/api/collections').then(r => r.json());
+                renderList();
+                showToast(archived ? '已归档' : '已取消归档');
+            } catch (e) {
+                showToast('操作失败: ' + e.message, true);
+            }
         }
 
         async function deleteItem(id) {
             if (!confirm('确定要删除吗？此操作不可恢复！')) return;
-            await fetch(`/api/items/${id}`, { method: 'DELETE' });
-            collections = await fetch('/api/collections').then(r => r.json());
-            renderList();
-            showToast('已删除');
-            if (editMode && editingItem?.id === id) clearForm();
+            try {
+                const res = await fetch(`/api/items/${id}`, { method: 'DELETE' });
+                const result = await res.json();
+                if (result.error) throw new Error(result.error);
+
+                // 重新获取数据
+                collections = await fetch('/api/collections').then(r => r.json());
+                renderList();
+                showToast('已删除');
+
+                // 如果正在编辑这个项目，清空表单
+                if (editMode && editingItem?.id === id) clearForm();
+            } catch (e) {
+                showToast('删除失败: ' + e.message, true);
+            }
         }
 
         async function batchUpdate() {
@@ -871,6 +942,7 @@
             };
         });
         document.getElementById('listSearch').oninput = renderList;
+        document.getElementById('showArchived').onchange = renderList;
         init();
     </script>
 </body>
