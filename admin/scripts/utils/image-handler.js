@@ -29,7 +29,7 @@ function getExtensionFromPath(pathOrUrl) {
  */
 async function detectImageFormat(buffer) {
     try {
-        const metadata = await sharp(buffer).metadata();
+        const metadata = await sharp(buffer, { limitInputPixels: false }).metadata();
         const formatMap = {
             'jpeg': '.jpg',
             'png': '.png',
@@ -117,7 +117,7 @@ async function isAnimatedImage(buffer, ext) {
     if (ext === '.gif') return true;
     if (ext === '.webp') {
         try {
-            const metadata = await sharp(buffer).metadata();
+            const metadata = await sharp(buffer, { limitInputPixels: false }).metadata();
             return metadata.pages && metadata.pages > 1;
         } catch {
             return false;
@@ -182,16 +182,22 @@ export async function processImages(images, itemId) {
             if (isAnimated) {
                 // 动图：保持原格式，保留动画
                 console.log(`  检测到动图，保持 ${ext} 格式`);
-                await sharp(buffer, { animated: true })
-                    .resize(1200, 800, { fit: 'inside', withoutEnlargement: true })
-                    .toFile(filepath);
+                try {
+                    await sharp(buffer, { animated: true, limitInputPixels: false })
+                        .resize(1200, 800, { fit: 'inside', withoutEnlargement: true })
+                        .toFile(filepath);
+                } catch (err) {
+                    // 如果处理失败（如超大 GIF），直接保存原文件，不改变格式
+                    console.log(`  动图处理失败，保存原文件: ${err.message}`);
+                    await fs.writeFile(filepath, buffer);
+                }
             } else if (ext === '.svg') {
                 // SVG：直接保存
                 console.log(`  检测到 SVG，保持原格式`);
                 await fs.writeFile(filepath, buffer);
             } else {
                 // 静态图：压缩并转换为 JPG
-                await sharp(buffer)
+                await sharp(buffer, { limitInputPixels: false })
                     .resize(1200, 800, { fit: 'inside', withoutEnlargement: true })
                     .jpeg({ quality: 85 })
                     .toFile(filepath);
@@ -203,16 +209,22 @@ export async function processImages(images, itemId) {
             // 第一张图作为缩略图
             if (i === 0) {
                 if (isAnimated) {
-                    // 动图缩略图：保持动画
+                    // 动图缩略图：保持动画格式，不取首帧
                     const thumbPath = path.join(itemDir, `thumb${ext}`);
-                    await sharp(buffer, { animated: true })
-                        .resize(400, 225, { fit: 'cover', position: 'top' })
-                        .toFile(thumbPath);
+                    try {
+                        await sharp(buffer, { animated: true, limitInputPixels: false })
+                            .resize(400, 225, { fit: 'cover', position: 'top' })
+                            .toFile(thumbPath);
+                    } catch (err) {
+                        // 处理失败直接复制原图作为缩略图，保持动图格式
+                        console.log(`  动图缩略图处理失败，使用原图: ${err.message}`);
+                        await fs.writeFile(thumbPath, buffer);
+                    }
                     thumbnail = `/assets/images/${itemId}/thumb${ext}`;
                 } else if (ext === '.svg') {
                     // SVG 缩略图：转为 PNG
                     const thumbPath = path.join(itemDir, 'thumb.png');
-                    await sharp(buffer)
+                    await sharp(buffer, { limitInputPixels: false })
                         .resize(400, 225, { fit: 'cover', position: 'top' })
                         .png()
                         .toFile(thumbPath);
@@ -220,7 +232,7 @@ export async function processImages(images, itemId) {
                 } else {
                     // 静态图缩略图：JPG
                     const thumbPath = path.join(itemDir, 'thumb.jpg');
-                    await sharp(buffer)
+                    await sharp(buffer, { limitInputPixels: false })
                         .resize(400, 225, { fit: 'cover', position: 'top' })
                         .jpeg({ quality: 80 })
                         .toFile(thumbPath);

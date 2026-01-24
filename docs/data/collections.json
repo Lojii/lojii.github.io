@@ -1,7 +1,66 @@
 {
-  "lastUpdated": "2026-01-24T03:08:50.931Z",
-  "total": 221,
+  "lastUpdated": "2026-01-24T08:22:17.117Z",
+  "total": 223,
   "items": [
+    {
+      "id": "stack-board-RdQ6Ln",
+      "type": "repo",
+      "name": "Stack Board",
+      "nameEn": "stack_board",
+      "summary": "层叠控件摆放，效果比较简单\n\n预览地址：https://xsilencex.github.io/stack_board_demo/",
+      "url": "https://github.com/fluttercandies/stack_board",
+      "thumbnail": "/assets/images/stack-board-RdQ6Ln/thumb.gif",
+      "category": "flutter",
+      "tags": [
+        "画板",
+        "绘图"
+      ],
+      "stars": 91,
+      "forks": 31,
+      "language": "Dart",
+      "lastUpdate": "2025-10-25",
+      "archived": false,
+      "createdAt": "2026-01-24T08:22:17.117Z"
+    },
+    {
+      "id": "flutter-drawing-board-puRHfd",
+      "type": "repo",
+      "name": "Flutter Drawing Board",
+      "nameEn": "flutter_drawing_board",
+      "summary": "功能强大且高度可定制的 Flutter 绘图板插件，提供丰富的绘图功能和高级特性。\n\nDemo：https://xsilencex.github.io/flutter_drawing_board_demo/",
+      "url": "https://github.com/fluttercandies/flutter_drawing_board",
+      "thumbnail": "/assets/images/flutter-drawing-board-puRHfd/thumb.gif",
+      "category": "flutter",
+      "tags": [
+        "绘图",
+        "画板"
+      ],
+      "stars": 234,
+      "forks": 97,
+      "language": "Dart",
+      "lastUpdate": "2026-01-22",
+      "archived": false,
+      "createdAt": "2026-01-24T06:39:04.979Z"
+    },
+    {
+      "id": "before-after-compare-slider-DxT2sP",
+      "type": "repo",
+      "name": "before_after、compare_slider",
+      "nameEn": "before_after",
+      "summary": "一个用于比较两个 Widget 的 Slider。\n在线预览：https://linxunfeng.github.io/flutter_compare_slider/\nhttps://pub.dev/packages/compare_slider\n",
+      "url": "https://github.com/LinXunFeng/flutter_compare_slider",
+      "thumbnail": "/assets/images/before-after-compare-slider-DxT2sP/1.gif",
+      "category": "flutter",
+      "tags": [
+        "ui"
+      ],
+      "stars": 1025,
+      "forks": 109,
+      "language": "Dart",
+      "lastUpdate": "2026-01-16",
+      "archived": false,
+      "createdAt": "2026-01-24T13:08:50.931000+00:00"
+    },
     {
       "id": "extended-nested-scroll-view-Wm55jt",
       "type": "repo",
@@ -101,26 +160,6 @@
       "lastUpdate": "2026-01-22",
       "archived": false,
       "createdAt": "2026-01-24T03:06:50.931000+00:00"
-    },
-    {
-      "id": "flutter-drawing-board-TVzMlv",
-      "type": "repo",
-      "name": "flutter_drawing_board",
-      "nameEn": "flutter_drawing_board",
-      "summary": "功能强大且高度可定制的 Flutter 绘图板插件，提供丰富的绘图功能和高级特性。\n预览地址：https://xsilencex.github.io/flutter_drawing_board_demo/",
-      "url": "https://github.com/fluttercandies/flutter_drawing_board",
-      "thumbnail": "/assets/images/flutter-drawing-board-TVzMlv/1.jpg",
-      "category": "flutter",
-      "tags": [
-        "绘图",
-        "画板"
-      ],
-      "stars": 233,
-      "forks": 97,
-      "language": "Dart",
-      "lastUpdate": "2026-01-20",
-      "archived": false,
-      "createdAt": "2026-01-24T03:06:20.931000+00:00"
     },
     {
       "id": "waterfall-flow-ZxIIpq",

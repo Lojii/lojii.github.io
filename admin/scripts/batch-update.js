@@ -53,7 +53,7 @@ async function main() {
             try {
                 const itemData = JSON.parse(await fs.readFile(itemFile, 'utf-8'));
                 itemData.github = { ...itemData.github, ...stats };
-                itemData.updatedAt = new Date().toISOString().split('T')[0];
+                itemData.updatedAt = new Date().toISOString();
                 await fs.writeFile(itemFile, JSON.stringify(itemData, null, 2));
             } catch { }
 

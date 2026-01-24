@@ -484,9 +484,23 @@
             const id = params.get('id');
             if (!id) { showError('未指定项目ID'); return; }
             try {
-                const res = await fetch(`data/items/${id}.json`);
+                // 添加时间戳防止缓存
+                const res = await fetch(`data/items/${id}.json?t=${Date.now()}`);
                 if (!res.ok) throw new Error('项目不存在');
                 const item = await res.json();
+
+                // 检查是否已归档
+                if (item.archived) {
+                    document.getElementById('content').innerHTML = `
+            <div class="error">
+              <h2>📦 该项目已归档</h2>
+              <p>此项目已被归档，不再公开展示</p>
+              <p><a href="index.html" style="color:var(--accent)">返回首页</a></p>
+            </div>
+          `;
+                    return;
+                }
+
                 document.title = `${item.name} - GitHub Stars`;
                 renderDetail(item);
             } catch (e) { showError(e.message); }
@@ -542,8 +556,8 @@
         <section class="section">
           <h3>ℹ️ 收藏信息</h3>
           <div class="section-content">
-            <p><strong>收藏时间：</strong>${item.createdAt || '未知'}</p>
-            <p><strong>最后更新：</strong>${item.updatedAt || '未知'}</p>
+            <p><strong>收藏时间：</strong>${formatTime(item.createdAt)}</p>
+            <p><strong>最后更新：</strong>${formatTime(item.updatedAt)}</p>
             <p><strong>类型：</strong>${item.type === 'repo' ? 'GitHub仓库' : '技术文章'}</p>
           </div>
         </section>
@@ -587,6 +601,15 @@
 
         function formatDescription(desc) { return desc.split('\n').map(p => p.trim() ? `<p>${p}</p>` : '').join(''); }
         function formatNumber(n) { return n >= 1000 ? (n / 1000).toFixed(1) + 'k' : (n || 0); }
+        function formatTime(isoStr) {
+            if (!isoStr) return '未知';
+            try {
+                const date = new Date(isoStr);
+                return date.toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            } catch {
+                return isoStr;
+            }
+        }
         function openLightbox(index) { currentIndex = index; document.getElementById('lightboxImg').src = currentImages[index]; document.getElementById('lightbox').classList.add('active'); }
         function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
         function navImage(dir) { currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length; document.getElementById('lightboxImg').src = currentImages[currentIndex]; }

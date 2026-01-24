@@ -352,17 +352,25 @@
 
         async function init() {
             try {
+                // 添加时间戳防止缓存
+                const timestamp = Date.now();
                 const [colRes, catRes] = await Promise.all([
-                    fetch('data/collections.json'), fetch('data/categories.json')
+                    fetch(`data/collections.json?t=${timestamp}`),
+                    fetch(`data/categories.json?t=${timestamp}`)
                 ]);
-                collections = (await colRes.json()).items.filter(i => !i.archived);
+                const colData = await colRes.json();
+                // 过滤掉已归档的项目
+                collections = (colData.items || []).filter(i => !i.archived);
                 const catData = await catRes.json();
                 categories = catData.categories;
                 fuse = new Fuse(collections, { keys: ['name', 'nameEn', 'summary', 'tags'], threshold: 0.3 });
                 renderFilters(catData);
                 renderContent();
                 bindEvents();
-            } catch (e) { document.getElementById('content').innerHTML = '<div class="empty-state">加载失败，请确保数据文件存在</div>'; }
+            } catch (e) {
+                console.error('加载失败:', e);
+                document.getElementById('content').innerHTML = '<div class="empty-state">加载失败，请确保数据文件存在</div>';
+            }
         }
 
         function renderFilters({ categories, tags }) {
@@ -381,8 +389,12 @@
 
             // 如果选择"全部"，直接按时间展示，不分组
             if (activeCategory === 'all') {
-                // 按创建时间倒序排列
-                items.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+                // 按创建时间倒序排列（使用 Date 对象比较，确保排序正确）
+                items.sort((a, b) => {
+                    const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+                    const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+                    return timeB - timeA;
+                });
                 html = `<section class="category-section">
           <div class="category-header">
             <h2 class="category-title">📋 全部收藏</h2>

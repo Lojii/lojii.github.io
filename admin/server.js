@@ -133,15 +133,29 @@ app.post('/api/items', upload.array('files'), async (req, res) => {
             }
         }
 
-        const now = new Date().toISOString().split('T')[0];
+        // 时间戳精确到秒（完整 ISO 格式）
+        const now = new Date().toISOString();
         const tags = (data.tags || []).map(t => t.toLowerCase().trim()).filter(Boolean);
 
         const itemData = {
-            id: itemId, type: data.type || 'repo', name: data.name, nameEn: data.nameEn || data.name,
-            url: data.url, homepage: data.homepage, summary: data.summary, description: data.description,
-            notes: data.notes, images, thumbnail, category: data.category, tags,
-            github: data.github, archived: false, createdAt: now, updatedAt: now,
-            originalContent // 存储抓取的原文内容
+            id: itemId,
+            type: data.type || 'repo',
+            name: data.name,
+            nameEn: data.nameEn || data.name,
+            url: data.url,
+            homepage: data.homepage,
+            summary: data.summary,
+            description: data.description,
+            notes: data.notes,
+            images,
+            thumbnail,
+            category: data.category,
+            tags,
+            github: data.github,
+            archived: false,
+            createdAt: now,
+            updatedAt: now,
+            originalContent
         };
 
         await fs.mkdir(ITEMS_DIR, { recursive: true });
@@ -153,14 +167,24 @@ app.post('/api/items', upload.array('files'), async (req, res) => {
         catch { collections = { items: [], total: 0 }; }
 
         collections.items.unshift({
-            id: itemId, type: itemData.type, name: itemData.name, nameEn: itemData.nameEn,
-            summary: itemData.summary, url: itemData.url, thumbnail, category: itemData.category,
-            tags, stars: data.github?.stars || 0, forks: data.github?.forks || 0,
-            language: data.github?.language, lastUpdate: data.github?.lastUpdate || now,
-            archived: false, createdAt: now
+            id: itemId,
+            type: itemData.type,
+            name: itemData.name,
+            nameEn: itemData.nameEn,
+            summary: itemData.summary,
+            url: itemData.url,
+            thumbnail,
+            category: itemData.category,
+            tags,
+            stars: data.github?.stars || 0,
+            forks: data.github?.forks || 0,
+            language: data.github?.language,
+            lastUpdate: data.github?.lastUpdate || now,
+            archived: false,
+            createdAt: now
         });
         collections.total = collections.items.length;
-        collections.lastUpdated = new Date().toISOString();
+        collections.lastUpdated = now;
         await fs.writeFile(COLLECTIONS_FILE, JSON.stringify(collections, null, 2));
 
         // 更新 categories.json 的 tags
@@ -170,34 +194,21 @@ app.post('/api/items', upload.array('files'), async (req, res) => {
     } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// await fs.mkdir(ITEMS_DIR, { recursive: true });
-// await fs.writeFile(path.join(ITEMS_DIR, `${itemId}.json`), JSON.stringify(itemData, null, 2));
-
-// // 更新索引
-// let collections;
-// try { collections = JSON.parse(await fs.readFile(COLLECTIONS_FILE, 'utf-8')); }
-// catch { collections = { items: [], total: 0 }; }
-
-// collections.items.unshift({
-//     id: itemId, type: itemData.type, name: itemData.name, nameEn: itemData.nameEn,
-//     summary: itemData.summary, url: itemData.url, thumbnail, category: itemData.category,
-//     tags: itemData.tags, stars: data.github?.stars || 0, forks: data.github?.forks || 0,
-//     language: data.github?.language, lastUpdate: data.github?.lastUpdate || now,
-//     archived: false, createdAt: now
-// });
-// collections.total = collections.items.length;
-// collections.lastUpdated = new Date().toISOString();
-// await fs.writeFile(COLLECTIONS_FILE, JSON.stringify(collections, null, 2));
-
-// res.json({ success: true, id: itemId });
-//   } catch (e) { res.status(500).json({ error: e.message }); }
-// });
-
 // 更新收藏
 app.put('/api/items/:id', upload.array('files'), async (req, res) => {
     try {
         const { id } = req.params;
-        const updates = req.body.data ? JSON.parse(req.body.data) : req.body;
+        let updates;
+
+        // 处理两种请求格式：FormData 和 JSON
+        if (req.body.data) {
+            updates = JSON.parse(req.body.data);
+        } else {
+            updates = req.body;
+        }
+
+        console.log(`更新收藏: ${id}`, updates);
+
         const itemFile = path.join(ITEMS_DIR, `${id}.json`);
         const item = JSON.parse(await fs.readFile(itemFile, 'utf-8'));
 
@@ -232,18 +243,24 @@ app.put('/api/items/:id', upload.array('files'), async (req, res) => {
         delete updates.imageUrls;
         delete updates.refetchContent;
 
-        const updated = { ...item, ...updates, updatedAt: new Date().toISOString().split('T')[0] };
+        const now = new Date().toISOString();
+        const updated = { ...item, ...updates, updatedAt: now };
         await fs.writeFile(itemFile, JSON.stringify(updated, null, 2));
+        console.log(`  详情文件已更新: ${itemFile}`);
 
         // 同步索引
         const collections = JSON.parse(await fs.readFile(COLLECTIONS_FILE, 'utf-8'));
         const idx = collections.items.findIndex(i => i.id === id);
         if (idx !== -1) {
             ['name', 'nameEn', 'summary', 'category', 'tags', 'archived', 'thumbnail'].forEach(f => {
-                if (f in updates) collections.items[idx][f] = updates[f];
+                if (f in updates) {
+                    console.log(`  更新字段 ${f}: ${collections.items[idx][f]} -> ${updates[f]}`);
+                    collections.items[idx][f] = updates[f];
+                }
             });
-            collections.lastUpdated = new Date().toISOString();
+            collections.lastUpdated = now;
             await fs.writeFile(COLLECTIONS_FILE, JSON.stringify(collections, null, 2));
+            console.log(`  索引已更新`);
         }
 
         // 更新 categories.json 的 tags
@@ -259,16 +276,31 @@ app.put('/api/items/:id', upload.array('files'), async (req, res) => {
 app.delete('/api/items/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        await fs.rm(path.join(ITEMS_DIR, `${id}.json`), { force: true });
-        await deleteImages(id);
+        console.log(`删除收藏: ${id}`);
 
+        // 删除详情文件
+        const itemFile = path.join(ITEMS_DIR, `${id}.json`);
+        await fs.rm(itemFile, { force: true });
+        console.log(`  已删除文件: ${itemFile}`);
+
+        // 删除图片
+        await deleteImages(id);
+        console.log(`  已删除图片`);
+
+        // 从索引中移除
         const collections = JSON.parse(await fs.readFile(COLLECTIONS_FILE, 'utf-8'));
+        const beforeCount = collections.items.length;
         collections.items = collections.items.filter(i => i.id !== id);
         collections.total = collections.items.length;
+        collections.lastUpdated = new Date().toISOString();
         await fs.writeFile(COLLECTIONS_FILE, JSON.stringify(collections, null, 2));
+        console.log(`  已从索引移除: ${beforeCount} -> ${collections.items.length}`);
 
         res.json({ success: true });
-    } catch (e) { res.status(500).json({ error: e.message }); }
+    } catch (e) {
+        console.error('删除失败:', e);
+        res.status(500).json({ error: e.message });
+    }
 });
 
 // 批量更新

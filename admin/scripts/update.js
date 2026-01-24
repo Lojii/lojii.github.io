@@ -98,7 +98,7 @@ async function main() {
     }
 
     // 更新详情文件
-    const updatedItem = { ...item, ...updates, updatedAt: new Date().toISOString().split('T')[0] };
+    const updatedItem = { ...item, ...updates, updatedAt: new Date().toISOString() };
     await fs.writeFile(itemFile, JSON.stringify(updatedItem, null, 2));
 
     // 更新索引
