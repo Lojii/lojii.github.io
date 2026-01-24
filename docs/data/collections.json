@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-24T08:22:17.117Z",
+  "lastUpdated": "2026-01-24T08:41:52.780Z",
   "total": 223,
   "items": [
     {
@@ -20,7 +20,8 @@
       "language": "Dart",
       "lastUpdate": "2025-10-25",
       "archived": false,
-      "createdAt": "2026-01-24T08:22:17.117Z"
+      "createdAt": "2026-01-24T08:22:17.117Z",
+      "license": "MIT"
     },
     {
       "id": "flutter-drawing-board-puRHfd",
@@ -40,7 +41,8 @@
       "language": "Dart",
       "lastUpdate": "2026-01-22",
       "archived": false,
-      "createdAt": "2026-01-24T06:39:04.979Z"
+      "createdAt": "2026-01-24T06:39:04.979Z",
+      "license": "MIT"
     },
     {
       "id": "before-after-compare-slider-DxT2sP",
@@ -54,12 +56,13 @@
       "tags": [
         "ui"
       ],
-      "stars": 1025,
-      "forks": 109,
+      "stars": 5,
+      "forks": 1,
       "language": "Dart",
-      "lastUpdate": "2026-01-16",
+      "lastUpdate": "2025-12-08",
       "archived": false,
-      "createdAt": "2026-01-24T05:08:50.931000+00:00"
+      "createdAt": "2026-01-24T05:08:50.931000+00:00",
+      "license": "Apache-2.0"
     },
     {
       "id": "extended-nested-scroll-view-Wm55jt",
@@ -80,7 +83,8 @@
       "language": "Dart",
       "lastUpdate": "2026-01-20",
       "archived": false,
-      "createdAt": "2026-01-24T03:08:50.931000+00:00"
+      "createdAt": "2026-01-24T03:08:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "extended-text-IGSLgu",
@@ -100,7 +104,8 @@
       "language": "Dart",
       "lastUpdate": "2026-01-13",
       "archived": false,
-      "createdAt": "2026-01-24T03:08:20.931000+00:00"
+      "createdAt": "2026-01-24T03:08:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "extended-image-IlSE93",
@@ -116,12 +121,13 @@
         "图片编辑器",
         "图片缓存"
       ],
-      "stars": 2038,
+      "stars": 2040,
       "forks": 521,
       "language": "Dart",
-      "lastUpdate": "2026-01-20",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T03:07:50.931000+00:00"
+      "createdAt": "2026-01-24T03:07:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "flutter-wechat-assets-picker-MdJ9W2",
@@ -135,12 +141,13 @@
       "tags": [
         "照片选择器"
       ],
-      "stars": 1636,
-      "forks": 513,
+      "stars": 1635,
+      "forks": 511,
       "language": "Dart",
-      "lastUpdate": "2026-01-21",
+      "lastUpdate": "2026-01-23",
       "archived": false,
-      "createdAt": "2026-01-24T03:07:20.931000+00:00"
+      "createdAt": "2026-01-24T03:07:20.931000+00:00",
+      "license": "Apache-2.0"
     },
     {
       "id": "flutter-smart-dialog-jYVvi8",
@@ -154,12 +161,13 @@
       "tags": [
         "弹窗"
       ],
-      "stars": 1237,
-      "forks": 147,
+      "stars": 1236,
+      "forks": 146,
       "language": "Dart",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-23",
       "archived": false,
-      "createdAt": "2026-01-24T03:06:50.931000+00:00"
+      "createdAt": "2026-01-24T03:06:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "waterfall-flow-ZxIIpq",
@@ -178,7 +186,8 @@
       "language": "Dart",
       "lastUpdate": "2026-01-16",
       "archived": false,
-      "createdAt": "2026-01-24T03:05:50.931000+00:00"
+      "createdAt": "2026-01-24T03:05:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "flutter-pulltorefresh-cpGt52",
@@ -195,7 +204,8 @@
       "language": "Dart",
       "lastUpdate": "2026-01-12",
       "archived": false,
-      "createdAt": "2026-01-24T03:05:20.931000+00:00"
+      "createdAt": "2026-01-24T03:05:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "flutter-easy-refresh-MGrO8h",
@@ -209,12 +219,13 @@
       "tags": [
         "下拉刷新"
       ],
-      "stars": 4048,
-      "forks": 667,
+      "stars": 4049,
+      "forks": 666,
       "language": "Dart",
-      "lastUpdate": "2026-01-19",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T03:04:50.931000+00:00"
+      "createdAt": "2026-01-24T03:04:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "aitu-bBR6qy",
@@ -228,12 +239,13 @@
       "tags": [
         "ai"
       ],
-      "stars": 57,
-      "forks": 15,
+      "stars": 166,
+      "forks": 38,
       "language": "TypeScript",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-23",
       "archived": false,
-      "createdAt": "2026-01-24T03:04:20.931000+00:00"
+      "createdAt": "2026-01-24T03:04:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "ads-kit-tTaNkZ",
@@ -252,7 +264,8 @@
       "language": "C#",
       "lastUpdate": "2026-01-22",
       "archived": false,
-      "createdAt": "2026-01-24T03:03:50.931000+00:00"
+      "createdAt": "2026-01-24T03:03:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "billd-desk-oc0mAi",
@@ -266,12 +279,13 @@
       "tags": [
         "远程控制"
       ],
-      "stars": 4796,
-      "forks": 607,
+      "stars": 4802,
+      "forks": 608,
       "language": "TypeScript",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T03:03:20.931000+00:00"
+      "createdAt": "2026-01-24T03:03:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "wepush-H3lo9d",
@@ -285,12 +299,13 @@
       "tags": [
         "推送"
       ],
-      "stars": 4639,
+      "stars": 4637,
       "forks": 1015,
       "language": "Java",
-      "lastUpdate": "2026-01-20",
+      "lastUpdate": "2026-01-23",
       "archived": false,
-      "createdAt": "2026-01-24T03:02:50.931000+00:00"
+      "createdAt": "2026-01-24T03:02:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "remote-working-gHlRFN",
@@ -304,12 +319,13 @@
       "tags": [
         "工作"
       ],
-      "stars": 11370,
+      "stars": 11374,
       "forks": 881,
       "language": "Ruby",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T03:02:20.931000+00:00"
+      "createdAt": "2026-01-24T03:02:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "gkd-D3bCpF",
@@ -325,12 +341,13 @@
         "apk",
         "自动化"
       ],
-      "stars": 35293,
-      "forks": 1714,
+      "stars": 35345,
+      "forks": 1716,
       "language": "Kotlin",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T03:01:50.931000+00:00"
+      "createdAt": "2026-01-24T03:01:50.931000+00:00",
+      "license": "GPL-3.0"
     },
     {
       "id": "flameshot-LqmVhp",
@@ -345,12 +362,13 @@
         "pc",
         "app"
       ],
-      "stars": 28682,
-      "forks": 1833,
+      "stars": 28699,
+      "forks": 1835,
       "language": "C++",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T03:01:20.931000+00:00"
+      "createdAt": "2026-01-24T03:01:20.931000+00:00",
+      "license": "GPL-3.0"
     },
     {
       "id": "1000userguide-PQvMHt",
@@ -365,12 +383,13 @@
         "独立开发",
         "推广"
       ],
-      "stars": 3542,
-      "forks": 317,
+      "stars": 3543,
+      "forks": 318,
       "language": "HTML",
       "lastUpdate": "2026-01-22",
       "archived": false,
-      "createdAt": "2026-01-24T03:00:50.931000+00:00"
+      "createdAt": "2026-01-24T03:00:50.931000+00:00",
+      "license": null
     },
     {
       "id": "githubdaily-kbxYia",
@@ -384,12 +403,13 @@
       "tags": [
         "github"
       ],
-      "stars": 44694,
-      "forks": 4508,
+      "stars": 44763,
+      "forks": 4513,
       "language": null,
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T03:00:20.931000+00:00"
+      "createdAt": "2026-01-24T03:00:20.931000+00:00",
+      "license": null
     },
     {
       "id": "-blXght",
@@ -405,12 +425,13 @@
         "分析",
         "舆情"
       ],
-      "stars": 34811,
-      "forks": 6710,
+      "stars": 34892,
+      "forks": 6721,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:59:50.931000+00:00"
+      "createdAt": "2026-01-24T02:59:50.931000+00:00",
+      "license": "GPL-2.0"
     },
     {
       "id": "video-materials-autogen-workst-gLaT_b",
@@ -425,12 +446,13 @@
         "视频",
         "自动化"
       ],
-      "stars": 1266,
+      "stars": 1269,
       "forks": 248,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-23",
       "archived": false,
-      "createdAt": "2026-01-24T02:59:20.931000+00:00"
+      "createdAt": "2026-01-24T02:59:20.931000+00:00",
+      "license": null
     },
     {
       "id": "-MsnRSc",
@@ -445,12 +467,13 @@
         "提示词",
         "图片生成"
       ],
-      "stars": 2062,
+      "stars": 2069,
       "forks": 160,
       "language": "JavaScript",
-      "lastUpdate": "2026-01-21",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:58:50.931000+00:00"
+      "createdAt": "2026-01-24T02:58:50.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "ai-KtG4Am",
@@ -464,12 +487,13 @@
       "tags": [
         "小说"
       ],
-      "stars": 1318,
-      "forks": 269,
+      "stars": 1329,
+      "forks": 275,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:58:20.931000+00:00"
+      "createdAt": "2026-01-24T02:58:20.931000+00:00",
+      "license": "GPL-3.0"
     },
     {
       "id": "awesome-telegram-ZHIGJt",
@@ -483,12 +507,13 @@
       "tags": [
         "telegram"
       ],
-      "stars": 4182,
-      "forks": 374,
+      "stars": 4192,
+      "forks": 376,
       "language": null,
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:57:50.931000+00:00"
+      "createdAt": "2026-01-24T02:57:50.931000+00:00",
+      "license": null
     },
     {
       "id": "youdub-webui-KkFxwm",
@@ -503,12 +528,13 @@
         "视频",
         "自动化"
       ],
-      "stars": 3693,
-      "forks": 385,
+      "stars": 3718,
+      "forks": 387,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:57:20.931000+00:00"
+      "createdAt": "2026-01-24T02:57:20.931000+00:00",
+      "license": null
     },
     {
       "id": "mangayomi-ujfwqB",
@@ -526,12 +552,13 @@
         "flutter",
         "apk"
       ],
-      "stars": 2920,
-      "forks": 63,
+      "stars": 2926,
+      "forks": 66,
       "language": "Dart",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:56:50.931000+00:00"
+      "createdAt": "2026-01-24T02:56:50.931000+00:00",
+      "license": "Apache-2.0"
     },
     {
       "id": "pixelle-video-Oq6i3N",
@@ -546,12 +573,13 @@
         "视频",
         "自动化"
       ],
-      "stars": 1895,
-      "forks": 308,
+      "stars": 1940,
+      "forks": 322,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:56:20.931000+00:00"
+      "createdAt": "2026-01-24T02:56:20.931000+00:00",
+      "license": "Apache-2.0"
     },
     {
       "id": "awesome-ios-animation-leaKrh",
@@ -570,7 +598,8 @@
       "language": null,
       "lastUpdate": "2026-01-22",
       "archived": false,
-      "createdAt": "2026-01-24T02:55:50.931000+00:00"
+      "createdAt": "2026-01-24T02:55:50.931000+00:00",
+      "license": null
     },
     {
       "id": "app-privacy-manifest-fixer-09CpNV",
@@ -585,12 +614,13 @@
         "appstore",
         "上架"
       ],
-      "stars": 226,
+      "stars": 227,
       "forks": 22,
       "language": "Shell",
-      "lastUpdate": "2026-01-20",
+      "lastUpdate": "2026-01-23",
       "archived": false,
-      "createdAt": "2026-01-24T02:55:20.931000+00:00"
+      "createdAt": "2026-01-24T02:55:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "-N_NOtB",
@@ -605,12 +635,13 @@
         "短剧",
         "自动化"
       ],
-      "stars": 5385,
-      "forks": 914,
+      "stars": 5791,
+      "forks": 1009,
       "language": "Vue",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:54:50.931000+00:00"
+      "createdAt": "2026-01-24T02:54:50.931000+00:00",
+      "license": "NOASSERTION"
     },
     {
       "id": "ai-9g5Xya",
@@ -622,12 +653,13 @@
       "thumbnail": "/assets/images/ai-9g5Xya/thumb.jpg",
       "category": "ai",
       "tags": [],
-      "stars": 749,
-      "forks": 175,
+      "stars": 761,
+      "forks": 181,
       "language": "Dart",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:54:20.931000+00:00"
+      "createdAt": "2026-01-24T02:54:20.931000+00:00",
+      "license": null
     },
     {
       "id": "assetripper-QJgXMo",
@@ -641,12 +673,13 @@
       "tags": [
         "逆向"
       ],
-      "stars": 6779,
-      "forks": 808,
+      "stars": 6786,
+      "forks": 806,
       "language": "C#",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:53:50.931000+00:00"
+      "createdAt": "2026-01-24T02:53:50.931000+00:00",
+      "license": "GPL-3.0"
     },
     {
       "id": "-WZr906",
@@ -662,12 +695,13 @@
         "自动化",
         "字幕"
       ],
-      "stars": 3468,
+      "stars": 3474,
       "forks": 237,
       "language": "TypeScript",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:53:20.931000+00:00"
+      "createdAt": "2026-01-24T02:53:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "cobalt-ify5N5",
@@ -681,12 +715,13 @@
       "tags": [
         "视频下载"
       ],
-      "stars": 38223,
-      "forks": 3158,
+      "stars": 38252,
+      "forks": 3161,
       "language": "Svelte",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:52:50.931000+00:00"
+      "createdAt": "2026-01-24T02:52:50.931000+00:00",
+      "license": "AGPL-3.0"
     },
     {
       "id": "funasr-PQA3Jr",
@@ -700,12 +735,13 @@
       "tags": [
         "语音识别"
       ],
-      "stars": 14600,
-      "forks": 1527,
+      "stars": 14631,
+      "forks": 1531,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:52:20.931000+00:00"
+      "createdAt": "2026-01-24T02:52:20.931000+00:00",
+      "license": "MIT"
     },
     {
       "id": "proxypin-ZQ7Thr",
@@ -720,12 +756,13 @@
         "抓包",
         "flutter"
       ],
-      "stars": 11441,
-      "forks": 998,
+      "stars": 11459,
+      "forks": 999,
       "language": "Dart",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:51:50.931000+00:00"
+      "createdAt": "2026-01-24T02:51:50.931000+00:00",
+      "license": "Apache-2.0"
     },
     {
       "id": "-ZNrOGb",
@@ -739,12 +776,13 @@
       "tags": [
         "爬虫"
       ],
-      "stars": 43060,
-      "forks": 9507,
+      "stars": 43142,
+      "forks": 9525,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:51:20.931000+00:00"
+      "createdAt": "2026-01-24T02:51:20.931000+00:00",
+      "license": "NOASSERTION"
     },
     {
       "id": "fish-speech-vxWzet",
@@ -758,12 +796,13 @@
       "tags": [
         "声音克隆"
       ],
-      "stars": 24674,
-      "forks": 2045,
+      "stars": 24692,
+      "forks": 2047,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:50:50.931000+00:00"
+      "createdAt": "2026-01-24T02:50:50.931000+00:00",
+      "license": "Apache-2.0"
     },
     {
       "id": "videolingo-YlzHAA",
@@ -780,12 +819,13 @@
         "字幕",
         "翻译"
       ],
-      "stars": 15729,
-      "forks": 1621,
+      "stars": 15739,
+      "forks": 1622,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:50:20.931000+00:00"
+      "createdAt": "2026-01-24T02:50:20.931000+00:00",
+      "license": "Apache-2.0"
     },
     {
       "id": "-7bGXn6",
@@ -801,12 +841,13 @@
         "自动化",
         "翻译"
       ],
-      "stars": 12880,
-      "forks": 1032,
+      "stars": 12903,
+      "forks": 1031,
       "language": "Python",
-      "lastUpdate": "2026-01-22",
+      "lastUpdate": "2026-01-24",
       "archived": false,
-      "createdAt": "2026-01-24T02:49:50.931000+00:00"
+      "createdAt": "2026-01-24T02:49:50.931000+00:00",
+      "license": "GPL-3.0"
     },
     {
       "id": "newsnow-QwKyAb",

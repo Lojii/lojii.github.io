@@ -303,8 +303,8 @@ app.delete('/api/items/:id', async (req, res) => {
     }
 });
 
-// 批量更新
-app.post('/api/batch-update', async (req, res) => {
+// 批量更新（使用 GET，因为前端用 EventSource）
+app.get('/api/batch-update', async (req, res) => {
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
 
