@@ -88,7 +88,7 @@ async function main() {
     console.log(`✅ 已处理 ${images.length} 张图片`);
 
     // 6. 构建数据
-    const now = new Date().toISOString().split('T')[0];
+    const now = new Date().toISOString();
     const tags = answers.tags.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
 
     const itemData = {
