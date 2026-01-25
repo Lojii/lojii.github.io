@@ -138,15 +138,16 @@ export async function processImages(images, itemId) {
     }
 
     const itemDir = path.join(IMAGES_DIR, itemId);
-    await ensureDir(itemDir);
 
-    const processedImages = [];
-    let thumbnail = null;
+    try {
+        await ensureDir(itemDir);
 
-    for (let i = 0; i < images.length; i++) {
-        const img = images[i];
+        const processedImages = [];
+        let thumbnail = null;
 
-        try {
+        for (let i = 0; i < images.length; i++) {
+            const img = images[i];
+
             let buffer;
 
             // 判断是URL还是本地文件
@@ -239,12 +240,19 @@ export async function processImages(images, itemId) {
                     thumbnail = `/assets/images/${itemId}/thumb.jpg`;
                 }
             }
-        } catch (error) {
-            console.error(`  处理图片失败: ${img}`, error.message);
         }
-    }
 
-    return { images: processedImages, thumbnail };
+        return { images: processedImages, thumbnail };
+    } catch (error) {
+        // 发生错误时，删除已创建的文件夹
+        console.error(`  清理错误文件夹: ${itemDir}`);
+        try {
+            await fs.rm(itemDir, { recursive: true, force: true });
+        } catch (cleanupError) {
+            console.error(`  清理文件夹失败: ${cleanupError.message}`);
+        }
+        throw error;
+    }
 }
 
 /**

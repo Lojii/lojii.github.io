@@ -1,7 +1,115 @@
 {
-  "lastUpdated": "2026-01-24T08:41:52.780Z",
-  "total": 223,
+  "lastUpdated": "2026-01-25T10:36:10.313Z",
+  "total": 228,
   "items": [
+    {
+      "id": "flutter-JsJ-eX",
+      "type": "repo",
+      "name": "精选的优质开源Flutter应用列表",
+      "nameEn": "awesome-open-source-flutter-apps",
+      "summary": "A curated list of awesome open source Flutter apps",
+      "url": "https://github.com/fluttergems/awesome-open-source-flutter-apps",
+      "thumbnail": "/assets/images/flutter-JsJ-eX/thumb.jpg",
+      "category": "article",
+      "tags": [
+        "flutter"
+      ],
+      "stars": 2331,
+      "forks": 358,
+      "language": "Dart",
+      "lastUpdate": "2026-01-25",
+      "archived": false,
+      "createdAt": "2026-01-25T10:36:10.313Z"
+    },
+    {
+      "id": "appflowy-IL1Mxy",
+      "type": "repo",
+      "name": "AppFlowy",
+      "nameEn": "AppFlowy",
+      "summary": "利用人工智能将项目、维基和团队连接起来。AppFlowy 是一个人工智能协作工作空间，让您在不失去数据控制权的前提下，实现更多目标。它是领先的开源 Notion 替代方案。\n\nhttps://appflowy.com/",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "thumbnail": "/assets/images/appflowy-IL1Mxy/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "笔记",
+        "notion",
+        "app",
+        "跨平台",
+        "flutter",
+        "dart"
+      ],
+      "stars": 67720,
+      "forks": 4861,
+      "language": "Dart",
+      "lastUpdate": "2026-01-25",
+      "archived": false,
+      "createdAt": "2026-01-25T10:29:12.875Z"
+    },
+    {
+      "id": "bloomeetunes-nljFtS",
+      "type": "repo",
+      "name": "BloomeeTunes",
+      "nameEn": "BloomeeTunes",
+      "summary": "🌸Bloomee是一款跨平台音乐应用，旨在为您提供来自不同来源的无广告音乐。🌼🎵",
+      "url": "https://github.com/HemantKArya/BloomeeTunes",
+      "thumbnail": "/assets/images/bloomeetunes-nljFtS/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "音乐",
+        "flutter",
+        "app",
+        "跨平台"
+      ],
+      "stars": 1613,
+      "forks": 155,
+      "language": "Dart",
+      "lastUpdate": "2026-01-24",
+      "archived": false,
+      "createdAt": "2026-01-25T10:19:58.699Z"
+    },
+    {
+      "id": "api-dash-SszUnz",
+      "type": "repo",
+      "name": "API Dash",
+      "nameEn": "apidash",
+      "summary": "API Dash 是一款美观的开源跨平台（桌面和移动端）API 客户端，它基于 Flutter 构建，并由人工智能驱动。它可以帮助您轻松创建和自定义 HTTP 和 GraphQL API 请求，直观地查看响应，并生成 API 集成代码。它是 Postman/Insomnia 的轻量级替代方案。\n\nhttps://apidash.dev/",
+      "url": "https://github.com/foss42/apidash",
+      "thumbnail": "/assets/images/api-dash-SszUnz/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "flutter",
+        "dart",
+        "网络",
+        "app",
+        "跨平台"
+      ],
+      "stars": 2632,
+      "forks": 665,
+      "language": "Dart",
+      "lastUpdate": "2026-01-25",
+      "archived": false,
+      "createdAt": "2026-01-25T10:02:44.021Z"
+    },
+    {
+      "id": "aidea-By1A3t",
+      "type": "repo",
+      "name": "AIdea",
+      "nameEn": "aidea",
+      "summary": "AIdea 是一款支持 GPT  以及国产大语言模型通义千问、文心一言等，支持 Stable Diffusion 文生图、图生图、 SDXL1.0、超分辨率、图片上色的全能型 APP。\nhttps://app.aicode.cc/",
+      "url": "https://github.com/mylxsw/aidea",
+      "thumbnail": "/assets/images/aidea-By1A3t/thumb.jpg",
+      "category": "flutter",
+      "tags": [
+        "app",
+        "跨平台"
+      ],
+      "stars": 6928,
+      "forks": 1051,
+      "language": "Dart",
+      "lastUpdate": "2026-01-24",
+      "archived": false,
+      "createdAt": "2026-01-25T09:56:37.250Z"
+    },
     {
       "id": "stack-board-RdQ6Ln",
       "type": "repo",
