@@ -79,6 +79,81 @@
       "createdAt": "2026-01-27T11:34:00.787Z"
     },
     {
+      "id": "sam-audio-guzxsj",
+      "type": "repo",
+      "name": "SAM-Audio ",
+      "nameEn": "sam-audio",
+      "summary": "利用文本、视觉或时间提示来分离音频中的任何声音。它可以根据自然语言描述、视频中的视觉线索或时间跨度，从复杂的音频混合中分离出特定的声音。",
+      "url": "https://github.com/facebookresearch/sam-audio",
+      "thumbnail": "/assets/images/sam-audio-guzxsj/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "音频"
+      ],
+      "stars": 3217,
+      "forks": 267,
+      "language": "Python",
+      "lastUpdate": "2026-01-28",
+      "archived": false,
+      "createdAt": "2026-01-28T05:34:15.720Z"
+    },
+    {
+      "id": "langchat-2KU1-J",
+      "type": "repo",
+      "name": "LangChat",
+      "nameEn": "langchat",
+      "summary": "LangChat是Java生态下企业级AIGC项目解决方案，集成RBAC和AIGC大模型能力，帮助企业快速定制AI知识库、企业AI机器人。\n\n支持的AI大模型： DeepSeek / Gitee AI / 阿里通义 / 百度千帆 / 抖音豆包 / 智谱清言 / 零一万物 / 讯飞星火 / OpenAI / Gemini / Ollama / Azure / Claude 等大模型。",
+      "url": "https://github.com/LangChat/langchat",
+      "thumbnail": "/assets/images/langchat-2KU1-J/thumb.jpg",
+      "category": "ai",
+      "tags": [],
+      "stars": 1221,
+      "forks": 242,
+      "language": "Java",
+      "lastUpdate": "2026-01-27",
+      "archived": false,
+      "createdAt": "2026-01-27T04:31:02.567Z"
+    },
+    {
+      "id": "langchat-slides-9DhA56",
+      "type": "repo",
+      "name": "LangChat Slides",
+      "nameEn": "langchat-slides",
+      "summary": "LangChat Slides 是一款基于生成式 AI 的智能幻灯片生成工具，基于 Spring Boot 3 + LangChain4j + Vue3 + VueFlow 开发的全栈 AI 应用系统。\n\nLangChat Slides 是 LangChat Pro 的旗舰产品之一，利用 LangChat 的强大模型能力与 @antv/infographic 的可视化引擎，用户只需输入自然语言描述，即可实时生成结构清晰、设计精美的信息图幻灯片。",
+      "url": "https://github.com/langchat/langchat-slides",
+      "thumbnail": "/assets/images/langchat-slides-9DhA56/thumb.gif",
+      "category": "ai",
+      "tags": [
+        "ppt"
+      ],
+      "stars": 145,
+      "forks": 12,
+      "language": "Vue",
+      "lastUpdate": "2026-01-27",
+      "archived": false,
+      "createdAt": "2026-01-27T04:27:57.294Z"
+    },
+    {
+      "id": "video2x-ejwWDK",
+      "type": "repo",
+      "name": "Video2x",
+      "nameEn": "video2x",
+      "summary": "视频高清化\n基于机器学习的视频超分辨率与帧插值框架。创立于2018年Hack the Valley II黑客马拉松。\n\nhttps://docs.video2x.org/",
+      "url": "https://github.com/k4yt3x/video2x",
+      "thumbnail": "/assets/images/video2x-ejwWDK/thumb.jpg",
+      "category": "ai",
+      "tags": [
+        "视频",
+        "自动化"
+      ],
+      "stars": 17824,
+      "forks": 1592,
+      "language": "C++",
+      "lastUpdate": "2026-01-26",
+      "archived": false,
+      "createdAt": "2026-01-26T09:06:28.851Z"
+    },
+    {
       "id": "flutter-JsJ-eX",
       "type": "repo",
       "name": "精选的优质开源Flutter应用列表",
