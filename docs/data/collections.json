@@ -1,7 +1,26 @@
 {
-  "lastUpdated": "2026-01-27T12:23:23.464Z",
-  "total": 232,
+  "lastUpdated": "2026-02-02T13:03:38.556Z",
+  "total": 237,
   "items": [
+    {
+      "id": "anx-reader-Idk7n0",
+      "type": "repo",
+      "name": "anx-reader",
+      "nameEn": "anx-reader",
+      "summary": "Anx Reader，一款为热爱阅读的你精心打造的电子书阅读器。集成多种 AI 能力，支持丰富的电子书格式，让阅读更智能、更专注。现代化界面设计，只为提供纯粹的阅读体验。\n\n",
+      "url": "https://github.com/Anxcye/anx-reader",
+      "thumbnail": "/assets/images/anx-reader-Idk7n0/thumb.jpg",
+      "category": "tools",
+      "tags": [
+        "电子书"
+      ],
+      "stars": 7439,
+      "forks": 484,
+      "language": "Dart",
+      "lastUpdate": "2026-02-02",
+      "archived": false,
+      "createdAt": "2026-02-02T13:03:38.556Z"
+    },
     {
       "id": "cook-UFKm79",
       "type": "repo",
