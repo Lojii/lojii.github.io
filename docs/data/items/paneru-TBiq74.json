@@ -1,0 +1,33 @@
+{
+  "id": "paneru-TBiq74",
+  "type": "repo",
+  "name": "Paneru",
+  "nameEn": "paneru",
+  "url": "https://github.com/karinushka/paneru",
+  "homepage": "/",
+  "summary": "一款 macOS 窗口管理器，它将窗口排列在一个无限延伸的条带上，并向右扩展。其核心原则是，打开新窗口 绝不会导致现有窗口调整大小，从而保持布局的稳定性。",
+  "description": "可以左右滑动窗口，让窗口无限延长",
+  "notes": "",
+  "images": [
+    "/assets/images/paneru-TBiq74/1.jpg"
+  ],
+  "thumbnail": "/assets/images/paneru-TBiq74/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "macos",
+    "app",
+    "窗口管理"
+  ],
+  "github": {
+    "stars": 811,
+    "forks": 28,
+    "language": null,
+    "license": "MIT license",
+    "lastUpdate": "2026-02-07",
+    "topics": [],
+    "createdAt": "2026-02-07"
+  },
+  "archived": false,
+  "createdAt": "2026-02-10T07:35:00.235Z",
+  "updatedAt": "2026-02-10T07:35:00.235Z"
+}

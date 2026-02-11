@@ -1,0 +1,37 @@
+{
+  "id": "quickpiperaudiobook-W1u6IT",
+  "type": "repo",
+  "name": "QuickPiperAudiobook",
+  "nameEn": "QuickPiperAudiobook",
+  "url": "https://github.com/C-Loftus/QuickPiperAudiobook",
+  "homepage": "/",
+  "summary": "只需一条命令即可为任何文本内容生成自然语音的有声读物。\n\n支持转换 PDF、EPUB、TXT、MOBI、DJVU、HTML、DOCX 等多种格式\n所有转换都在本地完成，保证数据隐私\n基于 Piper 模型；支持多种语言 在此处听取示例音频",
+  "description": "很多时候手里有 PDF 或 Epub 电子书，想在通勤或做家务时听，却找不到现成的有声版本，市面上的朗读工具要么收费，要么声音机械。\n\n刚好在 GitHub 发现 QuickPiperAudiobook 这个开源工具，一行命令就能把任意文本内容生成自然的有声书。\n\n支持 PDF、ePub、Mobi、TXT 甚至 HTML 等多种格式，核心是调用了高质量的 Piper 语音模型，生成的语音非常自然且支持多语言。\n\nGitHub：http://github.com/C-Loftus/QuickPiperAudiobook\n\n最大的特点是完全离线运行，隐私安全，配合 ffmpeg 还能自动生成带章节的 MP3 文件，体验很接近原生有声书。\n\n只要配置好对应的语言模型（支持中文），就能帮我们把本地的文档库变成专属的“听书馆”，非常适合喜欢听书的朋友。",
+  "notes": "",
+  "images": [
+    "/assets/images/quickpiperaudiobook-W1u6IT/1.jpg"
+  ],
+  "thumbnail": "/assets/images/quickpiperaudiobook-W1u6IT/thumb.jpg",
+  "category": "ai",
+  "tags": [
+    "有声书",
+    "电子书"
+  ],
+  "github": {
+    "stars": 953,
+    "forks": 72,
+    "language": null,
+    "license": "AGPL-3.0 license",
+    "lastUpdate": "2025-11-07",
+    "topics": [
+      "productivity",
+      "tts",
+      "audiobooks",
+      "piper"
+    ],
+    "createdAt": "2025-11-07"
+  },
+  "archived": false,
+  "createdAt": "2026-02-10T07:13:04.240Z",
+  "updatedAt": "2026-02-10T07:13:04.240Z"
+}

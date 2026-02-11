@@ -475,7 +475,7 @@
                 <div class="form-group"><label>详细描述</label><textarea id="addDescription" rows="4"></textarea></div>
                 <div class="form-row">
                     <div class="form-group"><label>分类 *</label><select id="addCategory"></select></div>
-                    <div class="form-group"><label>标签 (逗号分隔)</label><input type="text" id="addTags"></div>
+                    <div class="form-group"><label>标签 (中英文逗号分隔)</label><input type="text" id="addTags"></div>
                 </div>
                 <div class="form-group">
                     <label>当前图片</label>
@@ -546,7 +546,7 @@
     <div class="toast" id="toast"></div>
 
     <script>
-        let collections = { items: [] }, categories = { categories: [], tags: [] }, parsedData = null, editMode = false, editingItem = null, selectedFiles = [];
+        let collections = { items: [] }, categories = { categories: [], tags: [] }, parsedData = null, editMode = false, editingItem = null, selectedFiles = [], allItemIds = [];
 
         // 文件选择回调
         function onFilesSelected(input) {
@@ -569,79 +569,6 @@
                 selectedFiles = [...selectedFiles, ...files];
                 renderUploadPreview();
             }
-        }
-
-        async function init() {
-            [collections, categories] = await Promise.all([
-                fetch('/api/collections').then(r => r.json()),
-                fetch('/api/categories').then(r => r.json())
-            ]);
-            renderCategories();
-            renderList();
-        }
-
-        // 处理文件选择
-        function handleFileSelect(files) {
-            const imageFiles = Array.from(files).filter(f => f.type.startsWith('image/'));
-            if (imageFiles.length) {
-                addFiles(imageFiles);
-            }
-        }
-
-        // 初始化上传区域
-        function initUploadZone() {
-            const zone = document.getElementById('uploadZone');
-            const input = document.getElementById('addFiles');
-
-            // 点击上传
-            zone.onclick = function () {
-                input.click();
-            };
-
-            // 文件选择后
-            input.onchange = function () {
-                handleFileSelect(this.files);
-                this.value = '';
-            };
-
-            // 拖拽 - 进入
-            zone.ondragenter = function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.classList.add('dragover');
-            };
-
-            // 拖拽 - 悬停
-            zone.ondragover = function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.classList.add('dragover');
-            };
-
-            // 拖拽 - 离开
-            zone.ondragleave = function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.classList.remove('dragover');
-            };
-
-            // 拖拽 - 放下
-            zone.ondrop = function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.classList.remove('dragover');
-
-                const files = e.dataTransfer.files;
-                if (files && files.length) {
-                    handleFileSelect(files);
-                }
-            };
-        }
-
-        // 添加文件到列表
-        function addFiles(files) {
-            selectedFiles = [...selectedFiles, ...files];
-            renderUploadPreview();
         }
 
         // 移除文件
@@ -671,12 +598,43 @@
         }
 
         async function init() {
-            [collections, categories] = await Promise.all([
+            // 加载 ID 数组和分类
+            [allItemIds, categories] = await Promise.all([
                 fetch('/api/collections').then(r => r.json()),
                 fetch('/api/categories').then(r => r.json())
             ]);
+
+            // 并行加载所有项目详情（包括归档的）
+            const items = await Promise.all(
+                allItemIds.map(id =>
+                    fetch(`/api/items/${id}`)
+                        .then(r => r.json())
+                        .catch(() => null)
+                )
+            );
+
+            // 构建 collections 对象
+            collections = {
+                items: items.filter(i => i && !i.error)
+            };
+
             renderCategories();
             renderList();
+        }
+
+        async function reloadCollections() {
+            // 重新加载所有项目数据
+            allItemIds = await fetch('/api/collections').then(r => r.json());
+            const items = await Promise.all(
+                allItemIds.map(id =>
+                    fetch(`/api/items/${id}`)
+                        .then(r => r.json())
+                        .catch(() => null)
+                )
+            );
+            collections = {
+                items: items.filter(i => i && !i.error)
+            };
         }
 
         function renderCategories() {
@@ -702,7 +660,7 @@
         <div class="list-item" style="${i.archived ? 'opacity:0.6' : ''}">
           <div class="list-item-info">
             <div class="list-item-name">${i.name} ${i.archived ? '<span class="badge archived">已归档</span>' : ''}</div>
-            <div class="list-item-meta">⭐${i.stars || 0} · ${i.category} · ${i.tags?.slice(0, 3).join(', ') || '无标签'}</div>
+            <div class="list-item-meta">⭐${i.github?.stars || 0} · ${i.category} · ${i.tags?.slice(0, 3).join(', ') || '无标签'}</div>
           </div>
           <div class="list-item-actions">
             <button class="btn btn-success btn-sm" onclick="editItem('${i.id}')">编辑</button>
@@ -792,7 +750,7 @@
                 summary: document.getElementById('addSummary').value,
                 description: document.getElementById('addDescription').value,
                 category: document.getElementById('addCategory').value,
-                tags: document.getElementById('addTags').value.split(',').map(t => t.trim().toLowerCase()).filter(Boolean),
+                tags: document.getElementById('addTags').value.split(/[,，]/).map(t => t.trim().toLowerCase()).filter(Boolean),
                 imageUrls: document.getElementById('addImages').value.split('\n').map(s => s.trim()).filter(Boolean),
                 notes: document.getElementById('addNotes').value,
                 archived: document.getElementById('addArchived').checked,
@@ -820,7 +778,7 @@
                 const imgMsg = (fileCount + urlCount) > 0 ? `，已处理 ${fileCount + urlCount} 张图片` : '';
                 showToast((editMode ? '保存成功！' : '添加成功！') + imgMsg);
                 clearForm();
-                collections = await fetch('/api/collections').then(r => r.json());
+                await reloadCollections();
                 renderList();
             } catch (e) { showToast(e.message, true); }
         }
@@ -868,7 +826,7 @@
                 if (result.error) throw new Error(result.error);
 
                 // 重新获取数据
-                collections = await fetch('/api/collections').then(r => r.json());
+                await reloadCollections();
                 renderList();
                 showToast(archived ? '已归档' : '已取消归档');
             } catch (e) {
@@ -884,7 +842,7 @@
                 if (result.error) throw new Error(result.error);
 
                 // 重新获取数据
-                collections = await fetch('/api/collections').then(r => r.json());
+                await reloadCollections();
                 renderList();
                 showToast('已删除');
 

@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { getRepoStats, checkRateLimit, parseGitHubUrl } from './utils/github-api.js';
+import { readItem, saveItem } from './utils/item-storage.js';
 
 const DATA_DIR = 'docs/data';
 const COLLECTIONS_FILE = path.join(DATA_DIR, 'collections.json');
@@ -20,8 +21,20 @@ async function main() {
     }
 
     // 读取收藏列表
-    const collections = JSON.parse(await fs.readFile(COLLECTIONS_FILE, 'utf-8'));
-    const repos = collections.items.filter(item => item.type === 'repo' && parseGitHubUrl(item.url));
+    const itemIds = JSON.parse(await fs.readFile(COLLECTIONS_FILE, 'utf-8'));
+
+    // 从 itemIds 加载所有详情文件，筛选出 repo 类型
+    const repos = [];
+    for (const id of itemIds) {
+        try {
+            const item = await readItem(id, false);
+            if (item.type === 'repo' && parseGitHubUrl(item.url)) {
+                repos.push(item);
+            }
+        } catch (err) {
+            console.error(`⚠️  无法读取 ${id}:`, err.message);
+        }
+    }
 
     console.log(`📦 共 ${repos.length} 个 GitHub 仓库需要更新\n`);
 
@@ -39,23 +52,15 @@ async function main() {
                 continue;
             }
 
-            // 更新索引数据
-            const idx = collections.items.findIndex(it => it.id === item.id);
-            if (idx !== -1) {
-                collections.items[idx].stars = stats.stars;
-                collections.items[idx].forks = stats.forks;
-                collections.items[idx].language = stats.language;
-                collections.items[idx].lastUpdate = stats.lastUpdate;
-            }
-
-            // 更新详情数据
-            const itemFile = path.join(ITEMS_DIR, `${item.id}.json`);
+            // 更新详情数据（双文件：轻量版 + 完整版）
             try {
-                const itemData = JSON.parse(await fs.readFile(itemFile, 'utf-8'));
+                const itemData = await readItem(item.id, true);
                 itemData.github = { ...itemData.github, ...stats };
                 itemData.updatedAt = new Date().toISOString();
-                await fs.writeFile(itemFile, JSON.stringify(itemData, null, 2));
-            } catch { }
+                await saveItem(item.id, itemData);
+            } catch (err) {
+                console.log(`⚠️  更新详情文件失败: ${err.message}`);
+            }
 
             console.log(`✅ ⭐${formatNum(stats.stars)} 🍴${formatNum(stats.forks)}`);
             updated++;
@@ -67,10 +72,6 @@ async function main() {
             failed++;
         }
     }
-
-    // 保存更新后的索引
-    collections.lastUpdated = new Date().toISOString();
-    await fs.writeFile(COLLECTIONS_FILE, JSON.stringify(collections, null, 2));
 
     console.log(`\n✅ 更新完成: 成功 ${updated}, 失败 ${failed}`);
 }

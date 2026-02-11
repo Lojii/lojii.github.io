@@ -3,6 +3,7 @@ import path from 'path';
 import inquirer from 'inquirer';
 import { getRepoInfo, getArticleInfo, parseGitHubUrl } from './utils/github-api.js';
 import { processImages, generateItemId } from './utils/image-handler.js';
+import { saveItem } from './utils/item-storage.js';
 
 const DATA_DIR = 'docs/data';
 const COLLECTIONS_FILE = path.join(DATA_DIR, 'collections.json');
@@ -14,7 +15,7 @@ async function ensureDataDir() {
     try {
         await fs.access(COLLECTIONS_FILE);
     } catch {
-        await fs.writeFile(COLLECTIONS_FILE, JSON.stringify({ lastUpdated: new Date().toISOString(), total: 0, items: [] }, null, 2));
+        await fs.writeFile(COLLECTIONS_FILE, JSON.stringify([], null, 2));
     }
 }
 
@@ -72,8 +73,8 @@ async function main() {
         { type: 'input', name: 'summary', message: '简介:', default: info.summary },
         { type: 'editor', name: 'description', message: '详细描述 (可选，按回车打开编辑器):' },
         { type: 'list', name: 'category', message: '选择分类:', choices: categories.categories.map(c => ({ name: `${c.icon} ${c.name}`, value: c.id })) },
-        { type: 'input', name: 'tags', message: '标签 (逗号分隔):', default: (info.github?.topics || []).join(', ') },
-        { type: 'input', name: 'images', message: '预览图片 (URL或本地路径，逗号分隔):' },
+        { type: 'input', name: 'tags', message: '标签 (中英文逗号分隔):', default: (info.github?.topics || []).join(', ') },
+        { type: 'input', name: 'images', message: '预览图片 (URL或本地路径，中英文逗号分隔):' },
         { type: 'input', name: 'notes', message: '个人备注 (可选):' }
     ]);
 
@@ -82,14 +83,14 @@ async function main() {
     console.log(`\n📝 ID: ${itemId}`);
 
     // 5. 处理图片
-    const imageList = answers.images ? answers.images.split(',').map(s => s.trim()).filter(Boolean) : [];
+    const imageList = answers.images ? answers.images.split(/[,，]/).map(s => s.trim()).filter(Boolean) : [];
     console.log('\n🖼️ 处理图片...');
     const { images, thumbnail } = await processImages(imageList, itemId);
     console.log(`✅ 已处理 ${images.length} 张图片`);
 
     // 6. 构建数据
     const now = new Date().toISOString();
-    const tags = answers.tags.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
+    const tags = answers.tags.split(/[,，]/).map(t => t.trim().toLowerCase()).filter(Boolean);
 
     const itemData = {
         id: itemId,
@@ -108,45 +109,28 @@ async function main() {
         github: info.github || null,
         archived: false,
         createdAt: now,
-        updatedAt: now
+        updatedAt: now,
+        originalContent: null  // 初始为 null，后续可通过 update 添加
     };
 
-    const indexData = {
-        id: itemId,
-        type: info.type,
-        name: answers.name,
-        nameEn: answers.nameEn,
-        summary: answers.summary,
-        url: info.url || url,
-        thumbnail,
-        category: answers.category,
-        tags,
-        stars: info.github?.stars || 0,
-        forks: info.github?.forks || 0,
-        language: info.github?.language || null,
-        lastUpdate: info.github?.lastUpdate || now,
-        archived: false,
-        createdAt: now
-    };
-
-    // 7. 保存数据
-    await fs.writeFile(path.join(ITEMS_DIR, `${itemId}.json`), JSON.stringify(itemData, null, 2));
+    // 7. 保存数据（双文件：轻量版 + 完整版）
+    await saveItem(itemId, itemData);
 
     const collections = JSON.parse(await fs.readFile(COLLECTIONS_FILE, 'utf-8'));
-    collections.items.unshift(indexData);
-    collections.total = collections.items.length;
-    collections.lastUpdated = new Date().toISOString();
-    await fs.writeFile(COLLECTIONS_FILE, JSON.stringify(collections, null, 2));
+    const itemIds = Array.isArray(collections) ? collections : [];
+    itemIds.unshift(itemId);
+    await fs.writeFile(COLLECTIONS_FILE, JSON.stringify(itemIds, null, 2));
 
     // 8. 更新标签（tag 是独立的，不关联 category）
-    const newTags = tags.filter(t => !categories.tags.some(ct => ct.id === t));
+    const newTags = tags.filter(t => !categories.tags.includes(t));
     if (newTags.length) {
-        newTags.forEach(t => categories.tags.push({ id: t, name: t }));
+        categories.tags.push(...newTags);
         await fs.writeFile(path.join(DATA_DIR, 'categories.json'), JSON.stringify(categories, null, 2));
     }
 
     console.log('\n✅ 添加成功！');
-    console.log(`   详情页: docs/data/items/${itemId}.json`);
+    console.log(`   轻量版: docs/data/items/${itemId}.json`);
+    console.log(`   完整版: docs/data/items/${itemId}.full.json`);
     console.log(`   图片: docs/assets/images/${itemId}/`);
 }
 

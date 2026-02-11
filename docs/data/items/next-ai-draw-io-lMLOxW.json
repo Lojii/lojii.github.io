@@ -1,0 +1,40 @@
+{
+  "id": "next-ai-draw-io-lMLOxW",
+  "type": "repo",
+  "name": "next-ai-draw-io",
+  "nameEn": "next-ai-draw-io",
+  "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+  "homepage": "https://next-ai-drawio.jiang.jp/",
+  "summary": "一个集成了AI功能的Next.js网页应用，与draw.io图表无缝结合。通过自然语言命令和AI辅助可视化来创建、修改和增强图表。\nhttps://next-ai-drawio.jiang.jp/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/next-ai-draw-io-lMLOxW/1.svg",
+    "/assets/images/next-ai-draw-io-lMLOxW/2.svg",
+    "/assets/images/next-ai-draw-io-lMLOxW/3.svg",
+    "/assets/images/next-ai-draw-io-lMLOxW/4.svg",
+    "/assets/images/next-ai-draw-io-lMLOxW/5.svg"
+  ],
+  "thumbnail": "/assets/images/next-ai-draw-io-lMLOxW/thumb.png",
+  "category": "ai",
+  "tags": [
+    "图表",
+    "ai"
+  ],
+  "github": {
+    "stars": 21054,
+    "forks": 2231,
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "lastUpdate": "2026-02-10",
+    "topics": [
+      "ai",
+      "diagrams",
+      "productivity"
+    ],
+    "createdAt": "2025-03-23"
+  },
+  "archived": false,
+  "createdAt": "2026-02-10T05:57:42.854Z",
+  "updatedAt": "2026-02-10T06:59:38.355Z"
+}

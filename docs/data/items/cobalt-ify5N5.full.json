@@ -1,0 +1,51 @@
+{
+  "id": "cobalt-ify5N5",
+  "type": "repo",
+  "name": "cobalt",
+  "nameEn": "cobalt",
+  "url": "https://github.com/imputnet/cobalt",
+  "homepage": "https://cobalt.tools",
+  "summary": "视频下载器\nhttps://cobalt.tools/\n",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/cobalt-ify5N5/1.jpg"
+  ],
+  "thumbnail": "/assets/images/cobalt-ify5N5/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "视频下载"
+  ],
+  "github": {
+    "stars": 38494,
+    "forks": 3182,
+    "language": "Svelte",
+    "license": "AGPL-3.0",
+    "lastUpdate": "2026-02-10",
+    "topics": [
+      "collaboration",
+      "downloader",
+      "instagram",
+      "javascript",
+      "music",
+      "reddit",
+      "social-media",
+      "soundcloud",
+      "svelte",
+      "tiktok",
+      "twitter",
+      "typescript",
+      "video",
+      "vimeo",
+      "vk",
+      "webapp",
+      "youtube",
+      "youtube-downloader"
+    ],
+    "createdAt": "2022-07-08"
+  },
+  "archived": false,
+  "createdAt": "2026-01-22",
+  "updatedAt": "2026-02-10T07:00:04.583Z",
+  "originalContent": "<div id=\"readme\" class=\"md\" data-path=\"README.md\"><article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><div align=\"center\" dir=\"auto\">\n    <br>\n    <p dir=\"auto\">\n        <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/imputnet/cobalt/blob/HEAD/web/static/favicon.png\"><img src=\"https://raw.githubusercontent.com/imputnet/cobalt/HEAD/web/static/favicon.png\" title=\"cobalt\" alt=\"cobalt logo\" width=\"100\" style=\"max-width: 100%;\"></a>\n    </p>\n    <p dir=\"auto\">\n        best way to save what you love\n        <br>\n        <a href=\"https://cobalt.tools\" rel=\"nofollow\">\n            cobalt.tools\n        </a>\n    </p>\n    <p dir=\"auto\">\n        <a href=\"https://discord.gg/pQPt8HBUPu\" rel=\"nofollow\">\n            💬 community discord server\n        </a>\n        <br>\n        <a href=\"https://x.com/justusecobalt\" rel=\"nofollow\">\n            🐦 twitter\n        </a>\n        <a href=\"https://bsky.app/profile/cobalt.tools\" rel=\"nofollow\">\n            🦋 bluesky\n        </a>\n    </p>\n    <br>\n</div>\n<p dir=\"auto\">cobalt is a media downloader that doesn't piss you off. it's friendly, efficient, and doesn't have ads, trackers, paywalls or other nonsense.</p>\n<p dir=\"auto\">paste the link, get the file, move on. that simple, just how it should be.</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">cobalt monorepo</h3><a id=\"user-content-cobalt-monorepo\" class=\"anchor\" aria-label=\"Permalink: cobalt monorepo\" href=\"#cobalt-monorepo\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">this monorepo includes source code for api, frontend, and related packages:</p>\n<ul dir=\"auto\">\n<li><a href=\"https://github.com/imputnet/cobalt/blob/HEAD//api/\">api tree &amp; readme</a></li>\n<li><a href=\"https://github.com/imputnet/cobalt/blob/HEAD//web/\">web tree &amp; readme</a></li>\n<li><a href=\"https://github.com/imputnet/cobalt/blob/HEAD//packages/\">packages tree</a></li>\n</ul>\n<p dir=\"auto\">it also includes documentation in the <a href=\"https://github.com/imputnet/cobalt/blob/HEAD//docs/\">docs tree</a>:</p>\n<ul dir=\"auto\">\n<li><a href=\"https://github.com/imputnet/cobalt/blob/HEAD//docs/run-an-instance.md\">how to run a cobalt instance</a></li>\n<li><a href=\"https://github.com/imputnet/cobalt/blob/HEAD//docs/protect-an-instance.md\">how to protect a cobalt instance</a></li>\n<li><a href=\"https://github.com/imputnet/cobalt/blob/HEAD//docs/api-env-variables.md\">cobalt api instance environment variables</a></li>\n<li><a href=\"https://github.com/imputnet/cobalt/blob/HEAD//docs/api.md\">cobalt api documentation</a></li>\n</ul>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">ethics</h3><a id=\"user-content-ethics\" class=\"anchor\" aria-label=\"Permalink: ethics\" href=\"#ethics\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">cobalt is a tool that makes downloading public content easier. it takes <strong>zero liability</strong>.\nthe end user is responsible for what they download, how they use and distribute that content.\ncobalt never caches any content, it <a href=\"https://github.com/imputnet/cobalt/blob/HEAD//api/src/stream/\">works like a fancy proxy</a>.</p>\n<p dir=\"auto\">cobalt is in no way a piracy tool and cannot be used as such.\nit can only download free &amp; publicly accessible content.\nsame content can be downloaded via dev tools of any modern web browser.</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">contributing</h3><a id=\"user-content-contributing\" class=\"anchor\" aria-label=\"Permalink: contributing\" href=\"#contributing\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">if you're considering contributing to cobalt, first of all, thank you! check the <a href=\"https://github.com/imputnet/cobalt/blob/HEAD//CONTRIBUTING.md\">contribution guidelines here</a> before getting started, they'll help you do your best right away.</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">thank you</h3><a id=\"user-content-thank-you\" class=\"anchor\" aria-label=\"Permalink: thank you\" href=\"#thank-you\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">cobalt is sponsored by <a href=\"https://royalehosting.net/?partner=cobalt\" rel=\"nofollow\">royalehosting.net</a>. a part of our infrastructure is hosted on their network. we really appreciate their kindness and support!</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">licenses</h3><a id=\"user-content-licenses\" class=\"anchor\" aria-label=\"Permalink: licenses\" href=\"#licenses\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">for relevant licensing information, see the <a href=\"https://github.com/imputnet/cobalt/blob/HEAD/api/README.md\">api</a> and <a href=\"https://github.com/imputnet/cobalt/blob/HEAD/web/README.md\">web</a> READMEs.\nunless specified otherwise, the remainder of this repository is licensed under <a href=\"https://github.com/imputnet/cobalt/blob/HEAD/LICENSE\">AGPL-3.0</a>.</p>\n</article></div>"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "flutter-ui-0ZOd3I",
+  "type": "repo",
+  "name": "最佳 Flutter UI 模板",
+  "nameEn": "Best-Flutter-UI-Templates",
+  "url": "https://github.com/mitesh77/Best-Flutter-UI-Templates",
+  "summary": "确实好看",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/flutter-ui-0ZOd3I/1.gif",
+    "/assets/images/flutter-ui-0ZOd3I/2.jpg",
+    "/assets/images/flutter-ui-0ZOd3I/3.jpg",
+    "/assets/images/flutter-ui-0ZOd3I/4.jpg",
+    "/assets/images/flutter-ui-0ZOd3I/5.jpg"
+  ],
+  "thumbnail": "/assets/images/flutter-ui-0ZOd3I/thumb.gif",
+  "category": "flutter",
+  "tags": [],
+  "github": {
+    "stars": 22457,
+    "forks": 4824,
+    "language": "Dart",
+    "license": "NOASSERTION",
+    "lastUpdate": "2026-01-23",
+    "topics": [
+      "cross-platform",
+      "flutter",
+      "flutter-app",
+      "flutter-apps",
+      "flutter-demo",
+      "flutter-examples",
+      "flutter-material",
+      "flutter-ui",
+      "flutter-widget"
+    ],
+    "createdAt": "2019-09-02"
+  },
+  "archived": false,
+  "createdAt": "2026-01-23",
+  "updatedAt": "2026-01-23",
+  "originalContent": "<div id=\"readme\" class=\"md\" data-path=\"README.md\"><article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><div class=\"markdown-heading\" dir=\"auto\"><h1 class=\"heading-element\" dir=\"auto\">Best-Flutter-UI-Templates</h1><a id=\"user-content-best-flutter-ui-templates\" class=\"anchor\" aria-label=\"Permalink: Best-Flutter-UI-Templates\" href=\"#best-flutter-ui-templates\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">completely free for everyone. Its build-in Flutter Dart.</p>\n<p dir=\"auto\"><a href=\"https://www.buymeacoffee.com/mitesh\" rel=\"nofollow\"><img src=\"https://camo.githubusercontent.com/0cf29a542375e1a46e84d8bf5805a4e5c0a6ee98b6547ccdc0c55eed49d99c69/68747470733a2f2f63646e2e6275796d6561636f666665652e636f6d2f627574746f6e732f76322f64656661756c742d79656c6c6f772e706e67\" height=\"60\" data-canonical-src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" style=\"max-width: 100%; height: auto; max-height: 60px;\"></a></p>\n<p dir=\"auto\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/best_flutter_ui_templates/assets/introduction_animation/introduction_animation.png\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/best_flutter_ui_templates/assets/introduction_animation/introduction_animation.png\" alt=\"Image\" style=\"max-width: 100%;\"></a>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/best_flutter_ui_templates/assets/hotel/hotel_booking.png\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/best_flutter_ui_templates/assets/hotel/hotel_booking.png\" alt=\"Image\" style=\"max-width: 100%;\"></a>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/best_flutter_ui_templates/assets/fitness_app/fitness_app.png\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/best_flutter_ui_templates/assets/fitness_app/fitness_app.png\" alt=\"Image\" style=\"max-width: 100%;\"></a>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/assets/custom_drawer.png\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/assets/custom_drawer.png\" alt=\"Image\" style=\"max-width: 100%;\"></a>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/best_flutter_ui_templates/assets/design_course/design_course.png\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/best_flutter_ui_templates/assets/design_course/design_course.png\" alt=\"Image\" style=\"max-width: 100%;\"></a></p>\n<div class=\"markdown-heading\" dir=\"auto\"><h3 class=\"heading-element\" dir=\"auto\">Some Screenshots</h3><a id=\"user-content-some-screenshots\" class=\"anchor\" aria-label=\"Permalink: Some Screenshots\" href=\"#some-screenshots\"><svg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/assets/introduction_animation.gif\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/assets/introduction_animation.gif\" height=\"300em\" data-animated-image=\"\" style=\"max-width: 100%;\"></a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/assets/hotel_booking.gif\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/assets/hotel_booking.gif\" height=\"300em\" data-animated-image=\"\" style=\"max-width: 100%;\"></a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/assets/custom_drawer.gif\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/assets/custom_drawer.gif\" height=\"300em\" data-animated-image=\"\" style=\"max-width: 100%;\"></a><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/assets/fitness_app.gif\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/assets/fitness_app.gif\" height=\"300em\" data-animated-image=\"\" style=\"max-width: 100%;\"></a> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/mitesh77/Best-Flutter-UI-Templates/blob/HEAD/assets/design_course.gif\"><img src=\"https://raw.githubusercontent.com/mitesh77/Best-Flutter-UI-Templates/HEAD/assets/design_course.gif\" height=\"300em\" data-animated-image=\"\" style=\"max-width: 100%;\"></a></p>\n</article></div>"
+}

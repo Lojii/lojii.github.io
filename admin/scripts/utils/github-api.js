@@ -17,6 +17,77 @@ export function parseGitHubUrl(url) {
 }
 
 /**
+ * 从 HTML 页面抓取 GitHub 仓库信息（降级方案）
+ */
+async function getRepoInfoFromHTML(owner, repo) {
+    try {
+        const url = `https://github.com/${owner}/${repo}`;
+        const res = await fetch(url, {
+            headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
+        });
+        const html = await res.text();
+        const $ = cheerio.load(html);
+
+        // 提取仓库信息
+        const name = repo;
+        const description = $('meta[property="og:description"]').attr('content') ||
+                          $('p.f4.my-3').first().text().trim() || '暂无描述';
+
+        // 提取 stars 数量
+        const starsText = $('#repo-stars-counter-star').attr('title')?.replace(/,/g, '') ||
+                         $('#repo-stars-counter-star').text().trim().replace(/k/i, '000').replace(/\./g, '') || '0';
+        const stars = parseInt(starsText) || 0;
+
+        // 提取 forks 数量
+        const forksText = $('#repo-network-counter').attr('title')?.replace(/,/g, '') ||
+                         $('#repo-network-counter').text().trim().replace(/k/i, '000').replace(/\./g, '') || '0';
+        const forks = parseInt(forksText) || 0;
+
+        // 提取主要语言
+        const language = $('[itemprop="programmingLanguage"]').first().text().trim() || null;
+
+        // 提取 license
+        const license = $('a[href*="/blob/"][href*="LICENSE"]').first().text().trim() || null;
+
+        // 提取 topics
+        const topics = [];
+        $('a.topic-tag').each((_, el) => {
+            topics.push($(el).text().trim());
+        });
+
+        // 提取最后更新时间
+        const lastUpdateEl = $('relative-time').first();
+        const lastUpdate = lastUpdateEl.attr('datetime')?.split('T')[0] || new Date().toISOString().split('T')[0];
+
+        // 提取 homepage（如果有）
+        const homepage = $('a[data-analytics-event*="homepage"]').attr('href') || null;
+
+        console.log(`✓ 通过 HTML 抓取获取了 ${owner}/${repo} 的信息`);
+
+        return {
+            id: `${owner}-${repo}`.toLowerCase(),
+            name: name,
+            nameEn: name,
+            url: `https://github.com/${owner}/${repo}`,
+            homepage: homepage,
+            summary: description,
+            github: {
+                stars: stars,
+                forks: forks,
+                language: language,
+                license: license,
+                lastUpdate: lastUpdate,
+                topics: topics,
+                createdAt: lastUpdate // HTML 页面较难获取创建时间，使用最后更新时间
+            }
+        };
+    } catch (error) {
+        console.error('HTML 抓取失败:', error.message);
+        throw new Error('无法获取仓库信息（API 和 HTML 抓取均失败）');
+    }
+}
+
+/**
  * 获取 GitHub 仓库信息
  */
 export async function getRepoInfo(url) {
@@ -47,8 +118,56 @@ export async function getRepoInfo(url) {
         };
     } catch (error) {
         if (error.status === 404) throw new Error('仓库不存在');
-        if (error.status === 403) throw new Error('API 限额已用完，请设置 GITHUB_TOKEN');
+        if (error.status === 403) {
+            console.warn('⚠ API 限额已用完，切换到 HTML 抓取模式...');
+            return await getRepoInfoFromHTML(owner, repo);
+        }
         throw error;
+    }
+}
+
+/**
+ * 从 HTML 页面抓取仓库统计信息（降级方案）
+ */
+async function getRepoStatsFromHTML(owner, repo) {
+    try {
+        const url = `https://github.com/${owner}/${repo}`;
+        const res = await fetch(url, {
+            headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
+        });
+        const html = await res.text();
+        const $ = cheerio.load(html);
+
+        // 提取 stars 数量
+        const starsText = $('#repo-stars-counter-star').attr('title')?.replace(/,/g, '') ||
+                         $('#repo-stars-counter-star').text().trim().replace(/k/i, '000').replace(/\./g, '') || '0';
+        const stars = parseInt(starsText) || 0;
+
+        // 提取 forks 数量
+        const forksText = $('#repo-network-counter').attr('title')?.replace(/,/g, '') ||
+                         $('#repo-network-counter').text().trim().replace(/k/i, '000').replace(/\./g, '') || '0';
+        const forks = parseInt(forksText) || 0;
+
+        // 提取主要语言
+        const language = $('[itemprop="programmingLanguage"]').first().text().trim() || null;
+
+        // 提取 license
+        const license = $('a[href*="/blob/"][href*="LICENSE"]').first().text().trim() || null;
+
+        // 提取最后更新时间
+        const lastUpdateEl = $('relative-time').first();
+        const lastUpdate = lastUpdateEl.attr('datetime')?.split('T')[0] || new Date().toISOString().split('T')[0];
+
+        return {
+            stars: stars,
+            forks: forks,
+            language: language,
+            lastUpdate: lastUpdate,
+            license: license
+        };
+    } catch (error) {
+        console.error(`HTML 抓取统计信息失败 (${owner}/${repo}):`, error.message);
+        return null;
     }
 }
 
@@ -71,7 +190,11 @@ export async function getRepoStats(url) {
             lastUpdate: data.updated_at.split('T')[0],
             license: data.license?.spdx_id || null
         };
-    } catch {
+    } catch (error) {
+        if (error.status === 403) {
+            console.warn(`⚠ API 限额已用完，切换到 HTML 抓取模式 (${parsed.owner}/${parsed.repo})...`);
+            return await getRepoStatsFromHTML(parsed.owner, parsed.repo);
+        }
         return null;
     }
 }
@@ -149,6 +272,54 @@ export async function checkRateLimit() {
 }
 
 /**
+ * 从 HTML 页面抓取 README 内容（降级方案）
+ */
+async function getRepoReadmeFromHTML(owner, repo) {
+    try {
+        const url = `https://github.com/${owner}/${repo}`;
+        const res = await fetch(url, {
+            headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
+        });
+        const html = await res.text();
+        const $ = cheerio.load(html);
+
+        // GitHub 的 README 通常在 article 标签内，且包含 markdown-body 类
+        let readmeHtml = $('article.markdown-body').html() ||
+                        $('.markdown-body').first().html() ||
+                        $('[data-target="readme-toc.content"]').html();
+
+        if (!readmeHtml) {
+            console.warn(`未找到 README 内容: ${owner}/${repo}`);
+            return null;
+        }
+
+        // 处理相对路径的图片和链接，转换为绝对路径
+        const $readme = cheerio.load(readmeHtml);
+        const baseUrl = `https://raw.githubusercontent.com/${owner}/${repo}/HEAD/`;
+
+        $readme('img').each((_, el) => {
+            const src = $readme(el).attr('src');
+            if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                $readme(el).attr('src', baseUrl + src.replace(/^\.?\//, ''));
+            }
+        });
+
+        $readme('a').each((_, el) => {
+            const href = $readme(el).attr('href');
+            if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:')) {
+                $readme(el).attr('href', `https://github.com/${owner}/${repo}/blob/HEAD/${href.replace(/^\.?\//, '')}`);
+            }
+        });
+
+        console.log(`✓ 通过 HTML 抓取获取了 ${owner}/${repo} 的 README`);
+        return $readme.html();
+    } catch (error) {
+        console.error(`HTML 抓取 README 失败 (${owner}/${repo}):`, error.message);
+        return null;
+    }
+}
+
+/**
  * 获取 GitHub 仓库的 README 内容
  */
 export async function getRepoReadme(url) {
@@ -168,6 +339,10 @@ export async function getRepoReadme(url) {
         html = html.replace(/href="(?!http|#)([^"]+)"/g, `href="https://github.com/${parsed.owner}/${parsed.repo}/blob/HEAD/$1"`);
         return html;
     } catch (error) {
+        if (error.status === 403) {
+            console.warn(`⚠ API 限额已用完，切换到 HTML 抓取模式 (${parsed.owner}/${parsed.repo})...`);
+            return await getRepoReadmeFromHTML(parsed.owner, parsed.repo);
+        }
         console.error('获取 README 失败:', error.message);
         return null;
     }

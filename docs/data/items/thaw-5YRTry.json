@@ -1,0 +1,44 @@
+{
+  "id": "thaw-5YRTry",
+  "type": "repo",
+  "name": "Thaw",
+  "nameEn": "Thaw",
+  "url": "https://github.com/stonerl/Thaw",
+  "summary": "一款功能强大的菜单栏管理工具。虽然它的主要功能是隐藏和显示菜单栏项目，但它还旨在涵盖各种各样的附加功能，使其成为目前功能最全面的菜单栏工具之一。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/thaw-5YRTry/1.jpg",
+    "/assets/images/thaw-5YRTry/2.jpg"
+  ],
+  "thumbnail": "/assets/images/thaw-5YRTry/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "macos",
+    "app",
+    "菜单栏"
+  ],
+  "github": {
+    "stars": 1011,
+    "forks": 17,
+    "language": "Swift",
+    "license": "GPL-3.0",
+    "lastUpdate": "2026-02-10",
+    "topics": [
+      "macos",
+      "macos-app",
+      "menu-bar",
+      "menubar",
+      "menubar-app",
+      "status-bar",
+      "statusbar",
+      "swift",
+      "swiftui",
+      "utility"
+    ],
+    "createdAt": "2026-01-29"
+  },
+  "archived": false,
+  "createdAt": "2026-02-10T06:12:41.684Z",
+  "updatedAt": "2026-02-10T06:59:37.284Z"
+}

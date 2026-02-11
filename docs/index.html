@@ -79,22 +79,76 @@
 
         .filters {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 24px;
             margin-bottom: 24px;
-            flex-wrap: wrap;
         }
 
         .filter-group {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            align-items: center;
+            align-items: flex-start;
+            width: 100%;
         }
 
         .filter-group label {
             font-size: 14px;
             color: var(--text-secondary);
             margin-right: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            min-width: fit-content;
+        }
+
+        .filter-group:first-child {
+            margin-bottom: 8px;
+        }
+
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        #tagFilters {
+            position: relative;
+        }
+
+        #tagFilters .filter-btn.hidden {
+            display: none;
+        }
+
+        #tagFilters.expanded {
+            max-height: 500px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 8px;
+        }
+
+        #tagFilters.expanded::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #tagFilters.expanded::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #tagFilters.expanded::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+
+        #tagFilters.expanded::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        #tagFilters.expanded .filter-btn.hidden {
+            display: inline-flex;
         }
 
         .filter-btn {
@@ -117,6 +171,29 @@
             background: var(--accent);
             color: #fff;
             border-color: var(--accent);
+        }
+
+        .toggle-btn {
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px dashed var(--border);
+            background: transparent;
+            color: var(--accent);
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .toggle-btn:hover {
+            border-color: var(--accent);
+            background: rgba(88, 166, 255, 0.1);
+            border-style: solid;
+        }
+
+        #tagFilters.expanded .toggle-btn {
+            margin-top: 8px;
         }
 
         .category-section {
@@ -262,6 +339,28 @@
             color: var(--text-secondary);
         }
 
+        .load-more-btn {
+            padding: 12px 32px;
+            background: #238636;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+
+        .load-more-btn:hover {
+            background: #2ea043;
+        }
+
+        .load-more-btn:disabled {
+            background: #6e7681;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
         .loading {
             display: flex;
             justify-content: center;
@@ -328,11 +427,11 @@
         <div class="filters">
             <div class="filter-group">
                 <label>分类：</label>
-                <div id="categoryFilters"></div>
+                <div class="filter-buttons" id="categoryFilters"></div>
             </div>
             <div class="filter-group">
-                <label>标签：</label>
-                <div id="tagFilters"></div>
+                <label>标签<span style="color: var(--text-secondary); font-size: 12px;" id="tagCount"></span>：</label>
+                <div class="filter-buttons" id="tagFilters"></div>
             </div>
         </div>
         <main id="content">
@@ -352,24 +451,65 @@
 
         async function init() {
             try {
-                // 添加时间戳防止缓存
                 const timestamp = Date.now();
-                const [colRes, catRes] = await Promise.all([
-                    fetch(`data/collections.json?t=${timestamp}`),
-                    fetch(`data/categories.json?t=${timestamp}`)
+
+                // 第1步：加载 ID 数组和分类配置
+                const [itemIds, catData] = await Promise.all([
+                    fetch(`data/collections.json?t=${timestamp}`).then(r => r.json()),
+                    fetch(`data/categories.json?t=${timestamp}`).then(r => r.json())
                 ]);
-                const colData = await colRes.json();
-                // 过滤掉已归档的项目
-                collections = (colData.items || []).filter(i => !i.archived);
-                const catData = await catRes.json();
+
+                // 第2步：并行加载所有项目详情
+                console.log(`开始加载 ${itemIds.length} 个项目...`);
+                const allItems = await Promise.all(
+                    itemIds.map(id =>
+                        fetch(`data/items/${id}.json?t=${timestamp}`)
+                            .then(r => r.json())
+                            .catch(err => {
+                                console.warn(`加载 ${id} 失败:`, err);
+                                return null;
+                            })
+                    )
+                );
+
+                // 第3步：提取索引字段并过滤
+                collections = allItems
+                    .filter(item => item && !item.archived)
+                    .map(item => ({
+                        id: item.id,
+                        type: item.type,
+                        name: item.name,
+                        nameEn: item.nameEn,
+                        summary: item.summary,
+                        url: item.url,
+                        thumbnail: item.thumbnail,
+                        images: item.images,
+                        category: item.category,
+                        tags: item.tags,
+                        stars: item.github?.stars || 0,
+                        forks: item.github?.forks || 0,
+                        language: item.github?.language || null,
+                        lastUpdate: item.github?.lastUpdate || item.createdAt,
+                        createdAt: item.createdAt
+                    }));
+
+                console.log(`已加载 ${collections.length} 个有效项目`);
+
                 categories = catData.categories;
-                fuse = new Fuse(collections, { keys: ['name', 'nameEn', 'summary', 'tags'], threshold: 0.3 });
+
+                // 初始化搜索
+                fuse = new Fuse(collections, {
+                    keys: ['name', 'nameEn', 'summary', 'tags'],
+                    threshold: 0.3
+                });
+
                 renderFilters(catData);
                 renderContent();
                 bindEvents();
             } catch (e) {
                 console.error('加载失败:', e);
-                document.getElementById('content').innerHTML = '<div class="empty-state">加载失败，请确保数据文件存在</div>';
+                document.getElementById('content').innerHTML =
+                    '<div class="empty-state">加载失败，请确保数据文件存在</div>';
             }
         }
 
@@ -377,8 +517,21 @@
             const catHtml = `<button class="filter-btn active" data-cat="all">全部</button>` +
                 categories.map(c => `<button class="filter-btn" data-cat="${c.id}">${c.icon} ${c.name}</button>`).join('');
             document.getElementById('categoryFilters').innerHTML = catHtml;
-            const tagHtml = tags.map(t => `<button class="filter-btn" data-tag="${t.id}">${t.name}</button>`).join('');
-            document.getElementById('tagFilters').innerHTML = tagHtml;
+
+            // 默认显示前10个标签，其余隐藏
+            const visibleCount = 10;
+            const tagHtml = tags.map((t, index) => {
+                const hiddenClass = index >= visibleCount ? ' hidden' : '';
+                return `<button class="filter-btn${hiddenClass}" data-tag="${t}">${t}</button>`;
+            }).join('');
+
+            // 只有标签数量超过 visibleCount 时才显示"展开更多"按钮
+            const toggleBtn = tags.length > visibleCount
+                ? `<button class="toggle-btn" id="tagToggleBtn" onclick="toggleTags()">展开更多 (${tags.length - visibleCount}) ▼</button>`
+                : '';
+
+            document.getElementById('tagFilters').innerHTML = tagHtml + toggleBtn;
+            document.getElementById('tagCount').textContent = `(${tags.length})`;
         }
 
         function renderContent() {
@@ -411,6 +564,12 @@
                 });
                 for (const cat of categories) {
                     if (!grouped[cat.id]) continue;
+                    // 对每个分类内的项目按创建时间倒序排列
+                    grouped[cat.id].sort((a, b) => {
+                        const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+                        const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+                        return timeB - timeA;
+                    });
                     html += `<section class="category-section">
             <div class="category-header">
               <h2 class="category-title">${cat.icon} ${cat.name}</h2>
@@ -473,6 +632,31 @@
                 clearTimeout(debounce);
                 debounce = setTimeout(renderContent, 300);
             });
+        }
+
+        function toggleTags() {
+            const tagFilters = document.getElementById('tagFilters');
+            const toggleBtn = document.getElementById('tagToggleBtn');
+            const isExpanded = tagFilters.classList.contains('expanded');
+
+            if (isExpanded) {
+                // 收起：添加 hidden class 到后面的标签
+                const buttons = tagFilters.querySelectorAll('.filter-btn');
+                buttons.forEach((btn, index) => {
+                    if (index >= 10) {
+                        btn.classList.add('hidden');
+                    }
+                });
+                tagFilters.classList.remove('expanded');
+                const hiddenCount = buttons.length - 10;
+                toggleBtn.textContent = `展开更多 (${hiddenCount}) ▼`;
+            } else {
+                // 展开：移除所有 hidden class
+                const buttons = tagFilters.querySelectorAll('.filter-btn.hidden');
+                buttons.forEach(btn => btn.classList.remove('hidden'));
+                tagFilters.classList.add('expanded');
+                toggleBtn.textContent = '收起 ▲';
+            }
         }
 
         function formatNumber(n) { return n >= 1000 ? (n / 1000).toFixed(1) + 'k' : (n || 0); }

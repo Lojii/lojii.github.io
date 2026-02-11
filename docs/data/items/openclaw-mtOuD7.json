@@ -1,0 +1,40 @@
+{
+  "id": "openclaw-mtOuD7",
+  "type": "repo",
+  "name": "OpenClaw",
+  "nameEn": "OpenClaw",
+  "url": "https://github.com/openclaw/openclaw",
+  "homepage": "https://openclaw.ai",
+  "summary": "一款运行在您自己的设备上的个人 AI 助手。它可以通过您常用的渠道（WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、Microsoft Teams、WebChat）以及 BlueBubbles、Matrix、Zalo 和 Zalo Personal 等扩展渠道为您提供帮助。它支持 macOS/iOS/Android 系统，并可渲染由您控制的实时 Canvas 界面。网关只是控制平台，产品本身才是真正的助手。\nhttps://openclaw.ai/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/openclaw-mtOuD7/1.jpg"
+  ],
+  "thumbnail": "/assets/images/openclaw-mtOuD7/thumb.jpg",
+  "category": "ai",
+  "tags": [
+    "ai",
+    "助手"
+  ],
+  "github": {
+    "stars": 180644,
+    "forks": 30014,
+    "language": "TypeScript",
+    "license": "MIT",
+    "lastUpdate": "2026-02-10",
+    "topics": [
+      "ai",
+      "assistant",
+      "crustacean",
+      "molty",
+      "openclaw",
+      "own-your-data",
+      "personal"
+    ],
+    "createdAt": "2025-11-24"
+  },
+  "archived": false,
+  "createdAt": "2026-02-10T06:04:30.324Z",
+  "updatedAt": "2026-02-10T06:59:37.863Z"
+}

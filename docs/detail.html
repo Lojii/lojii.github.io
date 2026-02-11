@@ -484,8 +484,9 @@
             const id = params.get('id');
             if (!id) { showError('未指定项目ID'); return; }
             try {
+                // 加载完整版（含 originalContent）
                 // 添加时间戳防止缓存
-                const res = await fetch(`data/items/${id}.json?t=${Date.now()}`);
+                const res = await fetch(`data/items/${id}.full.json?t=${Date.now()}`);
                 if (!res.ok) throw new Error('项目不存在');
                 const item = await res.json();
 

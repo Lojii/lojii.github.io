@@ -1,0 +1,39 @@
+{
+  "id": "shannon-F32T2y",
+  "type": "repo",
+  "name": "Shannon",
+  "nameEn": "shannon",
+  "url": "https://github.com/KeygraphHQ/shannon",
+  "homepage": "/",
+  "summary": " AI 渗透测试员，他提供的不仅仅是警报，而是实际的漏洞利用程序。\n\nShannon 的目标是在其他人之前攻破你的 Web 应用。它会自动搜索代码中的攻击向量，然后使用其内置浏览器执行真实的攻击，例如注入攻击和身份验证绕过，以证明该漏洞确实可被利用。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/shannon-F32T2y/1.jpg",
+    "/assets/images/shannon-F32T2y/2.gif"
+  ],
+  "thumbnail": "/assets/images/shannon-F32T2y/thumb.jpg",
+  "category": "ai",
+  "tags": [
+    "安全",
+    "黑客"
+  ],
+  "github": {
+    "stars": 18135,
+    "forks": 1888,
+    "language": null,
+    "license": "AGPL-3.0 license",
+    "lastUpdate": "2026-02-10",
+    "topics": [
+      "security-audit",
+      "penetration-testing",
+      "pentesting",
+      "security-automation",
+      "security-tools"
+    ],
+    "createdAt": "2026-02-10"
+  },
+  "archived": false,
+  "createdAt": "2026-02-10T07:18:00.244Z",
+  "updatedAt": "2026-02-10T07:18:00.244Z"
+}

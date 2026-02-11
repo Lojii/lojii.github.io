@@ -1,0 +1,38 @@
+{
+  "id": "nano-banana-pro-2MiSkW",
+  "type": "repo",
+  "name": "Nano Banana Pro 提示推荐技巧",
+  "nameEn": "Nano Banana Pro Prompts Recommend Skill",
+  "url": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+  "homepage": "/",
+  "summary": "7000+ Nano Banana Pro 图片提示词，教你怎么写提示词最好",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/nano-banana-pro-2MiSkW/1.jpg"
+  ],
+  "thumbnail": "/assets/images/nano-banana-pro-2MiSkW/thumb.jpg",
+  "category": "ai",
+  "tags": [
+    "提示词",
+    "图片"
+  ],
+  "github": {
+    "stars": 701,
+    "forks": 79,
+    "language": null,
+    "license": null,
+    "lastUpdate": "2026-02-10",
+    "topics": [
+      "agent",
+      "claude",
+      "claudeskills",
+      "nanobananapro",
+      "agentskills"
+    ],
+    "createdAt": "2026-02-10"
+  },
+  "archived": false,
+  "createdAt": "2026-02-10T07:26:23.883Z",
+  "updatedAt": "2026-02-10T07:26:23.883Z"
+}
