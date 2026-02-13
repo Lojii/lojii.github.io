@@ -1,0 +1,39 @@
+{
+  "id": "filesync-yYkWiA",
+  "type": "repo",
+  "name": "FileSync",
+  "nameEn": "FileSync",
+  "url": "https://github.com/polius/FileSync",
+  "homepage": "https://filesync.app",
+  "summary": "实时将文件从一台设备发送到多台设备。\nhttps://filesync.app/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/filesync-yYkWiA/1.jpg"
+  ],
+  "thumbnail": "/assets/images/filesync-yYkWiA/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "app",
+    "文件传输"
+  ],
+  "github": {
+    "stars": 1039,
+    "forks": 92,
+    "language": "JavaScript",
+    "license": "MIT",
+    "lastUpdate": "2026-02-12",
+    "topics": [
+      "docker",
+      "fastapi",
+      "fileshare",
+      "javascript",
+      "self-hosted",
+      "webrtc"
+    ],
+    "createdAt": "2023-07-12"
+  },
+  "archived": false,
+  "createdAt": "2026-02-12T08:44:09.540Z",
+  "updatedAt": "2026-02-12T08:44:09.540Z"
+}
