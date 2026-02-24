@@ -1,0 +1,31 @@
+{
+  "id": "assppweb-r5DxnO",
+  "type": "repo",
+  "name": "AssppWeb",
+  "nameEn": "AssppWeb",
+  "url": "https://github.com/Lakr233/AssppWeb",
+  "summary": "部署文档：https://jasonchou0v0.notion.site/AssppWeb-3101b3f9c7a2806e9b0fc90f57cd6456\n一个基于 Web 的工具，用于在 App Store 之外获取和安装 iOS 应用。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/assppweb-r5DxnO/1.jpg"
+  ],
+  "thumbnail": "/assets/images/assppweb-r5DxnO/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "ipa",
+    "appstore"
+  ],
+  "github": {
+    "stars": 462,
+    "forks": 63,
+    "language": "TypeScript",
+    "license": "MIT",
+    "lastUpdate": "2026-02-24",
+    "topics": [],
+    "createdAt": "2026-02-08"
+  },
+  "archived": false,
+  "createdAt": "2026-02-24T09:07:37.673Z",
+  "updatedAt": "2026-02-24T09:07:37.673Z"
+}

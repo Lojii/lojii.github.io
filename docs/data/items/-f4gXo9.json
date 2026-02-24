@@ -1,0 +1,30 @@
+{
+  "id": "-f4gXo9",
+  "type": "repo",
+  "name": "爱啪思道",
+  "nameEn": "Asspp",
+  "url": "https://github.com/Lakr233/Asspp",
+  "summary": "多账号、多地区 App Store 管理神器。\n\nAsspp 专为需要管理多个 Apple ID 和跨区下载的用户打造。你可以在不同国家的 App Store 之间无缝切换，随意浏览和下载应用，完全无需退出系统账号。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/-f4gXo9/1.jpg"
+  ],
+  "thumbnail": "/assets/images/-f4gXo9/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "appstore"
+  ],
+  "github": {
+    "stars": 4495,
+    "forks": 410,
+    "language": "Swift",
+    "license": "MIT",
+    "lastUpdate": "2026-02-24",
+    "topics": [],
+    "createdAt": "2024-07-12"
+  },
+  "archived": false,
+  "createdAt": "2026-02-24T09:11:41.821Z",
+  "updatedAt": "2026-02-24T09:11:41.821Z"
+}
