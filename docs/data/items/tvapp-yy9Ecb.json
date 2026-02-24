@@ -1,0 +1,41 @@
+{
+  "id": "tvapp-yy9Ecb",
+  "type": "repo",
+  "name": "TVAPP",
+  "nameEn": "TVAPP",
+  "url": "https://github.com/youhunwl/TVAPP/",
+  "homepage": "https://app.iyouhun.com",
+  "summary": "https://app.iyouhun.com/\n\n 收集全网 Android TV电视盒子应用，涵盖影视、直播、K歌、工具、游戏等类型，整理优质APK资源，支持便捷下载与自动更新。提供安全验证、分类索引与兼容性标注，助力用户打造家庭影音娱乐中心！              \n\n✅ TVBox/影视仓等影音壳接口配置源。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/tvapp-yy9Ecb/1.jpg"
+  ],
+  "thumbnail": "/assets/images/tvapp-yy9Ecb/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "电视",
+    "影视",
+    "视频",
+    "apk"
+  ],
+  "github": {
+    "stars": 13210,
+    "forks": 1706,
+    "language": "JavaScript",
+    "license": "Apache-2.0",
+    "lastUpdate": "2026-02-24",
+    "topics": [
+      "android",
+      "android-tv",
+      "apk",
+      "app",
+      "tv",
+      "tv-box"
+    ],
+    "createdAt": "2025-03-11"
+  },
+  "archived": false,
+  "createdAt": "2026-02-24T08:36:09.833Z",
+  "updatedAt": "2026-02-24T08:36:09.833Z"
+}

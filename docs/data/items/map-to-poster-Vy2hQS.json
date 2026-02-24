@@ -1,0 +1,38 @@
+{
+  "id": "map-to-poster-Vy2hQS",
+  "type": "repo",
+  "name": "map-to-poster",
+  "nameEn": "map-to-poster",
+  "url": "https://github.com/dimartarmizi/map-to-poster",
+  "homepage": "https://maptoposter.tarmizi.id",
+  "summary": "MapToPoster JS 是一款客户端网页应用，可将任意地点转换为高分辨率、可自定义的地图海报，提供多种主题、布局和导出选项。\n\nhttps://maptoposter.tarmizi.id/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/map-to-poster-Vy2hQS/1.jpg"
+  ],
+  "thumbnail": "/assets/images/map-to-poster-Vy2hQS/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "地图"
+  ],
+  "github": {
+    "stars": 381,
+    "forks": 68,
+    "language": "JavaScript",
+    "license": "MIT",
+    "lastUpdate": "2026-02-24",
+    "topics": [
+      "gis",
+      "javascript",
+      "leaflet",
+      "map-poster",
+      "maplibre",
+      "maps"
+    ],
+    "createdAt": "2026-02-17"
+  },
+  "archived": false,
+  "createdAt": "2026-02-24T08:37:25.056Z",
+  "updatedAt": "2026-02-24T08:37:25.056Z"
+}
