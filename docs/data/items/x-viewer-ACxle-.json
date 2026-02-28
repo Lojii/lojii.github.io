@@ -1,0 +1,48 @@
+{
+  "id": "x-viewer-ACxle-",
+  "type": "repo",
+  "name": "x-viewer",
+  "nameEn": "x-viewer",
+  "url": "https://github.com/thingraph/dwg-viewer-example/",
+  "homepage": "https://dwg.thingraph.site/",
+  "summary": "x-viewer SDK 示例，这是一个基于 Three.js 和 Vue3 构建的 WebGL 2D 和 3D 查看器。用于查看 DWG/DXF/PDF 文件。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/x-viewer-ACxle-/1.gif",
+    "/assets/images/x-viewer-ACxle-/2.gif",
+    "/assets/images/x-viewer-ACxle-/3.gif",
+    "/assets/images/x-viewer-ACxle-/4.gif",
+    "/assets/images/x-viewer-ACxle-/5.gif"
+  ],
+  "thumbnail": "/assets/images/x-viewer-ACxle-/thumb.gif",
+  "category": "frontend",
+  "tags": [
+    "cad"
+  ],
+  "github": {
+    "stars": 86,
+    "forks": 17,
+    "language": "HTML",
+    "license": null,
+    "lastUpdate": "2026-02-27",
+    "topics": [
+      "cad",
+      "cad-viewer",
+      "dwg",
+      "dxf",
+      "dxf-viewer",
+      "javascript",
+      "javascript-library",
+      "pdf",
+      "threejs",
+      "typescript",
+      "wasm",
+      "webgl"
+    ],
+    "createdAt": "2024-01-01"
+  },
+  "archived": false,
+  "createdAt": "2026-02-28T02:51:33.738Z",
+  "updatedAt": "2026-02-28T02:51:33.738Z"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "bp3d-examples-XM1Rim",
+  "type": "repo",
+  "name": "bp3d-examples",
+  "nameEn": "bp3d-examples",
+  "url": "https://github.com/thingraph/bp3d-examples",
+  "homepage": "https://bp3d.thingraph.site/",
+  "summary": "bp3d是一个基于three.js的JavaScript库，使用户能够设计家居、公寓或店铺等室内空间。它支持大多数流行的3D模型格式，如glTF、obj、fbx、stl等。\n\nhttps://bp3d.thingraph.site/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/bp3d-examples-XM1Rim/1.gif",
+    "/assets/images/bp3d-examples-XM1Rim/2.gif",
+    "/assets/images/bp3d-examples-XM1Rim/3.gif"
+  ],
+  "thumbnail": "/assets/images/bp3d-examples-XM1Rim/thumb.gif",
+  "category": "frontend",
+  "tags": [
+    "cad"
+  ],
+  "github": {
+    "stars": 11,
+    "forks": 2,
+    "language": "HTML",
+    "license": null,
+    "lastUpdate": "2026-02-24",
+    "topics": [
+      "3dmodels",
+      "dae",
+      "fbx",
+      "gltf",
+      "javascript",
+      "obj",
+      "stl",
+      "threejs",
+      "webgl"
+    ],
+    "createdAt": "2025-01-20"
+  },
+  "archived": false,
+  "createdAt": "2026-02-28T03:06:16.388Z",
+  "updatedAt": "2026-02-28T03:06:16.388Z"
+}

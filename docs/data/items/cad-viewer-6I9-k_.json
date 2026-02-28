@@ -1,0 +1,42 @@
+{
+  "id": "cad-viewer-6I9-k_",
+  "type": "repo",
+  "name": "cad-viewer",
+  "nameEn": "cad-viewer",
+  "url": "https://github.com/mlightcad/cad-viewer",
+  "homepage": "https://mlightcad.github.io/cad-viewer/",
+  "summary": "CAD-Viewer 是全球首个完全运行在浏览器端、无需依赖任何后端服务的 Web 版 DXF/DWG 查看与编辑器。 通过在浏览器中直接完成 DWG/DXF 解析、几何处理和渲染，CAD-Viewer 实现了真正的无服务器（serverless）CAD 查看与编辑，非常适合云应用、离线使用以及对隐私敏感的工作场景。\nhttps://mlightcad.github.io/cad-viewer/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/cad-viewer-6I9-k_/1.gif"
+  ],
+  "thumbnail": "/assets/images/cad-viewer-6I9-k_/thumb.gif",
+  "category": "frontend",
+  "tags": [
+    "cad"
+  ],
+  "github": {
+    "stars": 412,
+    "forks": 72,
+    "language": "TypeScript",
+    "license": "MIT",
+    "lastUpdate": "2026-02-24",
+    "topics": [
+      "autocad",
+      "cad",
+      "dwg",
+      "dwg-reader",
+      "dwg-viewer",
+      "dxf",
+      "dxf-reader",
+      "dxf-viewer",
+      "threejs",
+      "webgl"
+    ],
+    "createdAt": "2025-10-10"
+  },
+  "archived": false,
+  "createdAt": "2026-02-25T01:32:42.618Z",
+  "updatedAt": "2026-02-25T01:32:42.618Z"
+}

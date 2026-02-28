@@ -1,0 +1,36 @@
+{
+  "id": "plan2scene-_ym2HL",
+  "type": "repo",
+  "name": "Plan2Scene",
+  "nameEn": "Plan2Scene",
+  "url": "https://github.com/3dlg-hcvc/plan2scene",
+  "summary": "Plan2Scene：将平面图转换为 3D 场景",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/plan2scene-_ym2HL/1.jpg"
+  ],
+  "thumbnail": "/assets/images/plan2scene-_ym2HL/thumb.jpg",
+  "category": "article",
+  "tags": [
+    "cad"
+  ],
+  "github": {
+    "stars": 587,
+    "forks": 77,
+    "language": "Python",
+    "license": "MIT",
+    "lastUpdate": "2026-02-26",
+    "topics": [
+      "3d-reconstruction",
+      "computer-vision",
+      "indoor-reconstruction",
+      "machine-learning",
+      "texture-synthesis"
+    ],
+    "createdAt": "2021-03-18"
+  },
+  "archived": false,
+  "createdAt": "2026-02-27T06:10:36.790Z",
+  "updatedAt": "2026-02-27T06:10:36.790Z"
+}

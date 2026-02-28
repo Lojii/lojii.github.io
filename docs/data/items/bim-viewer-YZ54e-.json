@@ -1,0 +1,47 @@
+{
+  "id": "bim-viewer-YZ54e-",
+  "type": "repo",
+  "name": "bim-viewer",
+  "nameEn": "bim-viewer",
+  "url": "https://github.com/thingraph/bim-viewer",
+  "homepage": "http://bim.thingraph.site/",
+  "summary": "基于WebGL的BIM查看器，构建于three.js和Vue之上。用于查看gltf、ifc、obj、dae、stl等模型。\n\nhttp://bim.thingraph.site/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/bim-viewer-YZ54e-/1.jpg",
+    "/assets/images/bim-viewer-YZ54e-/2.gif"
+  ],
+  "thumbnail": "/assets/images/bim-viewer-YZ54e-/thumb.jpg",
+  "category": "frontend",
+  "tags": [
+    "cad"
+  ],
+  "github": {
+    "stars": 310,
+    "forks": 93,
+    "language": "JavaScript",
+    "license": "MIT",
+    "lastUpdate": "2026-02-16",
+    "topics": [
+      "bim",
+      "bim-viewer",
+      "dae",
+      "gltf",
+      "ifc",
+      "javascript",
+      "obj",
+      "ply",
+      "threejs",
+      "typescript",
+      "viewer",
+      "vue",
+      "webgl",
+      "webgpu"
+    ],
+    "createdAt": "2021-09-01"
+  },
+  "archived": false,
+  "createdAt": "2026-02-28T03:08:15.544Z",
+  "updatedAt": "2026-02-28T03:08:15.544Z"
+}
