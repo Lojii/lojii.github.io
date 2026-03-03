@@ -1,0 +1,48 @@
+{
+  "id": "gopeed-7Cqxz7",
+  "type": "repo",
+  "name": "gopeed",
+  "nameEn": "gopeed",
+  "url": "https://github.com/GopeedLab/gopeed",
+  "homepage": "https://gopeed.com",
+  "summary": "Gopeed（全称Go Speed），直译过来中文名叫够快下载器（不是狗屁下载器！），是一款由Golang+Flutter开发的高速下载器，支持（HTTP、BitTorrent、Magnet）协议下载，并且支持全平台使用。除了基本的下载功能外，Gopeed还是一款高度可定制化的下载器，通过支持对接API或者安装和开发扩展来实现更多的功能。\n\nhttps://gopeed.com/zh",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/gopeed-7Cqxz7/1.jpg"
+  ],
+  "thumbnail": "/assets/images/gopeed-7Cqxz7/thumb.jpg",
+  "category": "flutter",
+  "tags": [
+    "下载",
+    "app"
+  ],
+  "github": {
+    "stars": 22849,
+    "forks": 1557,
+    "language": "Go",
+    "license": "GPL-3.0",
+    "lastUpdate": "2026-03-03",
+    "topics": [
+      "android",
+      "bittorrent",
+      "cross-platform",
+      "debian",
+      "downloader",
+      "flutter",
+      "golang",
+      "http",
+      "https",
+      "ios",
+      "macos",
+      "magnet",
+      "torrent",
+      "ubuntu",
+      "windows"
+    ],
+    "createdAt": "2019-04-21"
+  },
+  "archived": false,
+  "createdAt": "2026-03-03T05:52:47.604Z",
+  "updatedAt": "2026-03-03T05:52:47.604Z"
+}
