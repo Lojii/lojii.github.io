@@ -1,0 +1,21 @@
+{
+  "id": "sweet-home-3d-D1tqt3",
+  "type": "article",
+  "name": "Sweet Home 3D",
+  "nameEn": "Sweet Home 3D",
+  "url": "https://sourceforge.net/p/sweethome3d/code/HEAD/tree/trunk/",
+  "summary": "Sweet Home 3D 是一款功能强大且用户友好的室内设计软件，可帮助您轻松创建详细的房屋平面图和时尚的家居室内设计理念。无论您是专业的室内设计师，还是只想尝试房间布局创意，此工具都具备所有功能，可帮助您高效设计家居布局。\n\nhttps://www.sweethome3d.com/zh-cn/\n\n开源代码地址：\nhttps://sourceforge.net/p/sweethome3d/code/HEAD/tree/trunk/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/sweet-home-3d-D1tqt3/1.jpg"
+  ],
+  "thumbnail": "/assets/images/sweet-home-3d-D1tqt3/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "cad"
+  ],
+  "archived": false,
+  "createdAt": "2026-02-28T06:38:30.224Z",
+  "updatedAt": "2026-02-28T06:40:02.770Z"
+}
