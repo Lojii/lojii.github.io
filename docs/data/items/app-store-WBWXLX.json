@@ -1,0 +1,47 @@
+{
+  "id": "app-store-WBWXLX",
+  "type": "repo",
+  "name": "App Store 屏幕截图生成器",
+  "nameEn": "app-store-screenshots",
+  "url": "https://github.com/ParthJadhav/app-store-screenshots",
+  "homepage": "https://skills.sh/parthjadhav/app-store-screenshots/app-store-screenshots",
+  "summary": "一项适用于人工智能驱动的编码代理（例如 Claude Code、Cursor、Windsurf 等）的技能，用于生成符合 App Store 标准的 iOS 应用截图。它会搭建一个 Next.js 项目框架，设计广告风格的截图，并以所有苹果要求的分辨率导出。\n\n屏幕截图和应用已获苹果公司批准 - https://apps.apple.com/us/app/bloom-coffee-shelf-recipe/id6759914524",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/app-store-WBWXLX/1.jpg"
+  ],
+  "thumbnail": "/assets/images/app-store-WBWXLX/thumb.jpg",
+  "category": "tools",
+  "tags": [],
+  "github": {
+    "stars": 2212,
+    "forks": 148,
+    "language": null,
+    "license": "MIT",
+    "lastUpdate": "2026-03-13",
+    "topics": [
+      "agentic-ai",
+      "apple",
+      "appstore",
+      "automate",
+      "claude",
+      "cursor",
+      "design",
+      "generate",
+      "ios",
+      "ios-app",
+      "marketing",
+      "screenshot",
+      "skills",
+      "skills-sh",
+      "swift",
+      "swiftui",
+      "ui"
+    ],
+    "createdAt": "2026-03-07"
+  },
+  "archived": false,
+  "createdAt": "2026-03-13T03:25:19.134Z",
+  "updatedAt": "2026-03-13T03:25:19.134Z"
+}

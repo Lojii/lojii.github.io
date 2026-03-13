@@ -1,0 +1,37 @@
+{
+  "id": "mxdraw-TxpBcH",
+  "type": "repo",
+  "name": "mxdraw",
+  "nameEn": "mxdraw",
+  "url": "https://github.com/mxcad/mxdraw",
+  "homepage": "https://mxcad.github.io/mxdraw/en/start/abstract.html",
+  "summary": "mxdraw 是一个基于 HTML5 Canvas 的 JavaScript 框架，它基于 THREE.js 扩展和开发，为用户提供了一套更便捷、快速、高效的前端绘图解决方案。mxdraw 的本质是一个前端二维绘图平台。您可以使用 mxdraw 在画布上绘制图形，为图形添加事件，移动、缩放和旋转图形等等。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/mxdraw-TxpBcH/1.jpg"
+  ],
+  "thumbnail": "/assets/images/mxdraw-TxpBcH/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "cad"
+  ],
+  "github": {
+    "stars": 7,
+    "forks": 2,
+    "language": null,
+    "license": "MIT",
+    "lastUpdate": "2026-02-27",
+    "topics": [
+      "caddraw",
+      "canvas-draw",
+      "htmlcad",
+      "onlinecad",
+      "threejs"
+    ],
+    "createdAt": "2022-04-21"
+  },
+  "archived": false,
+  "createdAt": "2026-03-03T09:45:59.097Z",
+  "updatedAt": "2026-03-03T09:45:59.097Z"
+}

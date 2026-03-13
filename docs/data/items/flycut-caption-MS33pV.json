@@ -1,0 +1,33 @@
+{
+  "id": "flycut-caption-MS33pV",
+  "type": "repo",
+  "name": "flycut-caption",
+  "nameEn": "flycut-caption",
+  "url": "https://github.com/x007xyz/flycut-caption",
+  "homepage": "https://caption.flycut.co",
+  "summary": "AI 智能视频字幕生成器\n\n一个功能齐全的视频字幕编辑 React 组件，具备 AI 语音识别和视觉编辑功能。\n\nhttps://caption.flycut.co/",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/flycut-caption-MS33pV/1.jpg",
+    "/assets/images/flycut-caption-MS33pV/2.jpg",
+    "/assets/images/flycut-caption-MS33pV/3.jpg"
+  ],
+  "thumbnail": "/assets/images/flycut-caption-MS33pV/thumb.jpg",
+  "category": "tools",
+  "tags": [
+    "字幕"
+  ],
+  "github": {
+    "stars": 1217,
+    "forks": 161,
+    "language": "TypeScript",
+    "license": "NOASSERTION",
+    "lastUpdate": "2026-03-12",
+    "topics": [],
+    "createdAt": "2025-09-22"
+  },
+  "archived": false,
+  "createdAt": "2026-03-12T05:49:55.843Z",
+  "updatedAt": "2026-03-12T05:49:55.843Z"
+}
