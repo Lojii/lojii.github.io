@@ -1,0 +1,40 @@
+{
+  "id": "recordly-K2_AJL",
+  "type": "repo",
+  "name": "Recordly",
+  "nameEn": "Recordly",
+  "url": "https://github.com/webadderall/Recordly",
+  "homepage": "https://recordly.dev",
+  "summary": "创建精致、专业级的屏幕录制视频\nRecordly 是一款开源的录屏与视频编辑器，用于制作演示、教程、产品讲解和工作流视频。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/recordly-K2_AJL/1.gif"
+  ],
+  "thumbnail": "/assets/images/recordly-K2_AJL/thumb.gif",
+  "category": "tools",
+  "tags": [
+    "录屏"
+  ],
+  "github": {
+    "stars": 1517,
+    "forks": 87,
+    "language": "TypeScript",
+    "license": "MIT",
+    "lastUpdate": "2026-03-16",
+    "topics": [
+      "electron",
+      "free",
+      "linux",
+      "macos",
+      "open-source",
+      "screen-recorder",
+      "screen-studio",
+      "windows"
+    ],
+    "createdAt": "2026-03-12"
+  },
+  "archived": false,
+  "createdAt": "2026-03-16T01:43:50.944Z",
+  "updatedAt": "2026-03-16T01:43:50.944Z"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "vibe-coding-cn--AKXeK",
+  "type": "repo",
+  "name": "vibe-coding-cn",
+  "nameEn": "vibe-coding-cn",
+  "url": "https://github.com/2025Emma/vibe-coding-cn",
+  "summary": "Vibe Coding是一个与AI结对编程的终极工作流程，旨在帮助开发者丝滑想法变得更加现实。本指南详细介绍了从项目优化、技术选型、实施规划到具体开发、调试和扩展的全过程，强调以规划驱动和层级为核心，避免AI失控导致项目混乱。\n\n核心理念：规划就是一切。接口让AI自主规划，不然你的代码库会变成一团无法管理的乱麻。",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/vibe-coding-cn--AKXeK/1.jpg"
+  ],
+  "thumbnail": "/assets/images/vibe-coding-cn--AKXeK/thumb.jpg",
+  "category": "article",
+  "tags": [
+    "ai"
+  ],
+  "github": {
+    "stars": 14661,
+    "forks": 1614,
+    "language": "Python",
+    "license": "MIT",
+    "lastUpdate": "2026-03-16",
+    "topics": [],
+    "createdAt": "2025-12-17"
+  },
+  "archived": false,
+  "createdAt": "2026-03-16T01:59:39.358Z",
+  "updatedAt": "2026-03-16T01:59:39.358Z"
+}

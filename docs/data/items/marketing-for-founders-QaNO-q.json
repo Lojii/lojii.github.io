@@ -1,0 +1,41 @@
+{
+  "id": "marketing-for-founders-QaNO-q",
+  "type": "repo",
+  "name": "Marketing-for-Founders",
+  "nameEn": "Marketing-for-Founders",
+  "url": "https://github.com/EdoStra/Marketing-for-Founders",
+  "summary": "实用的营销资源，助您为 SaaS/App/初创公司获取前 10/100/1000 位用户",
+  "description": "",
+  "notes": "",
+  "images": [
+    "/assets/images/marketing-for-founders-QaNO-q/1.jpg"
+  ],
+  "thumbnail": "/assets/images/marketing-for-founders-QaNO-q/thumb.jpg",
+  "category": "article",
+  "tags": [
+    "推广"
+  ],
+  "github": {
+    "stars": 4396,
+    "forks": 445,
+    "language": null,
+    "license": "CC-BY-SA-4.0",
+    "lastUpdate": "2026-03-16",
+    "topics": [
+      "awesome",
+      "awesome-list",
+      "collection",
+      "educational",
+      "growth",
+      "list",
+      "marketing",
+      "resources",
+      "saas",
+      "startup"
+    ],
+    "createdAt": "2025-05-19"
+  },
+  "archived": false,
+  "createdAt": "2026-03-16T01:41:17.297Z",
+  "updatedAt": "2026-03-16T01:41:17.297Z"
+}

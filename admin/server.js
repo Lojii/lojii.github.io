@@ -3,7 +3,7 @@ import multer from 'multer';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getRepoInfo, getArticleInfo, parseGitHubUrl, getRepoStats, getRepoReadme, fetchArticleContent } from './scripts/utils/github-api.js';
+import { getRepoInfo, getArticleInfo, parseGitHubUrl, getRepoStats, getRepoReadme, fetchArticleContent, fetchPageImages } from './scripts/utils/github-api.js';
 import { processImages, deleteImages, generateItemId } from './scripts/utils/image-handler.js';
 import { readItem, saveItem, deleteItem } from './scripts/utils/item-storage.js';
 
@@ -103,6 +103,16 @@ app.post('/api/fetch-content', async (req, res) => {
         }
         res.json({ content });
     } catch (e) { res.status(400).json({ error: e.message }); }
+});
+
+// 提取网页图片
+app.post('/api/fetch-page-images', async (req, res) => {
+    try {
+        const { url } = req.body;
+        if (!url) return res.status(400).json({ error: '请提供 URL' });
+        const images = await fetchPageImages(url);
+        res.json({ images });
+    } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 // 添加收藏

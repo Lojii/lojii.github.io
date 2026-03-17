@@ -349,6 +349,100 @@ export async function getRepoReadme(url) {
 }
 
 /**
+ * 从网页中提取所有有意义的图片
+ * @param {string} url - 网页URL
+ * @returns {Promise<string[]>} - 图片URL数组
+ */
+export async function fetchPageImages(url) {
+    const images = [];
+    const seen = new Set();
+
+    function addImage(src) {
+        if (!src || seen.has(src)) return;
+        // 过滤掉 data URI、很小的图标、SVG 图标等
+        if (src.startsWith('data:')) return;
+        if (src.includes('favicon') || src.includes('.ico')) return;
+        if (src.includes('badge') && src.includes('shields.io')) return;
+        if (src.includes('img.shields.io')) return;
+        if (src.includes('github.com/fluidicon.png')) return;
+        if (src.includes('avatars.githubusercontent.com')) return;
+        seen.add(src);
+        images.push(src);
+    }
+
+    try {
+        const parsed = parseGitHubUrl(url);
+
+        if (parsed) {
+            // GitHub 仓库：从 README 提取图片
+            const { owner, repo } = parsed;
+
+            // 1. 先取 og:image
+            try {
+                const res = await fetch(url, {
+                    headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
+                });
+                const html = await res.text();
+                const $ = cheerio.load(html);
+                const ogImage = $('meta[property="og:image"]').attr('content');
+                if (ogImage) addImage(ogImage);
+            } catch { }
+
+            // 2. 从 README 提取图片
+            try {
+                const readme = await getRepoReadme(url);
+                if (readme) {
+                    const $r = cheerio.load(readme);
+                    $r('img').each((_, el) => {
+                        let src = $r(el).attr('src') || $r(el).attr('data-src');
+                        if (src && !src.startsWith('http')) {
+                            src = `https://raw.githubusercontent.com/${owner}/${repo}/HEAD/${src.replace(/^\.?\//, '')}`;
+                        }
+                        addImage(src);
+                    });
+                }
+            } catch { }
+        } else {
+            // 普通网页：提取所有图片
+            const res = await fetch(url, {
+                headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
+            });
+            const html = await res.text();
+            const $ = cheerio.load(html);
+            const urlObj = new URL(url);
+            const baseUrl = `${urlObj.protocol}//${urlObj.host}`;
+
+            // og:image 优先
+            const ogImage = $('meta[property="og:image"]').attr('content');
+            if (ogImage) {
+                addImage(ogImage.startsWith('http') ? ogImage : baseUrl + (ogImage.startsWith('/') ? '' : '/') + ogImage);
+            }
+
+            // twitter:image
+            const twitterImage = $('meta[name="twitter:image"]').attr('content') || $('meta[property="twitter:image"]').attr('content');
+            if (twitterImage) {
+                addImage(twitterImage.startsWith('http') ? twitterImage : baseUrl + (twitterImage.startsWith('/') ? '' : '/') + twitterImage);
+            }
+
+            // 页面内所有 img
+            $('img').each((_, el) => {
+                let src = $(el).attr('src') || $(el).attr('data-src') || $(el).attr('data-original');
+                if (src) {
+                    if (!src.startsWith('http') && !src.startsWith('data:')) {
+                        src = src.startsWith('/') ? baseUrl + src : baseUrl + '/' + src;
+                    }
+                    addImage(src);
+                }
+            });
+        }
+    } catch (error) {
+        console.error('提取页面图片失败:', error.message);
+    }
+
+    return images;
+}
+
+/**
  * 抓取文章内容
  */
 export async function fetchArticleContent(url) {
