@@ -9,7 +9,9 @@
     "update": "node admin/scripts/update.js",
     "delete": "node admin/scripts/delete.js",
     "batch-update": "node admin/scripts/batch-update.js",
-    "dev": "npx serve docs -p 3000"
+    "dev": "npx serve docs -p 3000",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "@octokit/rest": "^20.0.2",
@@ -23,6 +25,7 @@
     "sharp": "^0.33.2"
   },
   "devDependencies": {
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "wrangler": "^4.85.0"
   }
 }
